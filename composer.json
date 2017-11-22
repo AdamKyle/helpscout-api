@@ -1,0 +1,35 @@
+{
+    "name": "adambalan/helpscout-api",
+    "description": "A simple library to help manage data from helpscout",
+    "type": "library",
+    "keywords": ["library", "http", "fetching", "api", "helpscout"],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.4",
+        "phpunit/php-code-coverage": "^5.2",
+        "dcramble/phpdoc-md" : "~0.1.1",
+        "phpdocumentor/phpdocumentor": "2.9.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adam Balan",
+            "email": "a-kyle@hotmail.com"
+        }
+    ],
+    "autoload": {
+       "psr-4": {
+           "HelpscoutApi\\": "src/"
+       }
+   },
+   "autoload-dev": {
+      "psr-4": {
+            "HelpscoutApi\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+      "generate:docs": "vendor/bin/phpdoc -d ./src -t docs/ --template='xml' && rm -r docs/phpdoc-cache-* && vendor/bin/phpdocmd docs/structure.xml docs/"
+    }
+}
