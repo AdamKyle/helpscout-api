@@ -1,7 +1,7 @@
 # Helpscout API Library
 
 [![Build Status](https://travis-ci.org/AdamKyle/helpscout-api.svg?branch=master)](https://travis-ci.org/AdamKyle/helpscout-api)
-[![Packagist](https://img.shields.io/packagist/v/evemarket/eve-market-details.svg?style=flat)](https://packagist.org/packages/evemarket/eve-market-details)
+[![Packagist](https://img.shields.io/packagist/v/adambalan/helpscout-api.svg?style=flat)](https://packagist.org/packages/adambalan/helpscout-api)
 [![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)]()
 [![Made With Love](https://img.shields.io/badge/Made%20With-Love-green.svg)]()
 
@@ -32,3 +32,5 @@ The contracts are interfaces which are basic value objects - get/set methods bas
 - `Collection`
 
 These are implemented and then passed to the Endpoint class.
+
+For further documentation see [the generated documentation](https://github.com/AdamKyle/helpscout-api/blob/master/docs/ApiIndex.md);
