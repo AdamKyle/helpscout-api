@@ -19,7 +19,7 @@ class Collections {
 
     public function __construct(Client $client, ApiKey $apiKey) {
         $this->client = $client;
-        $this->apiKey = $apiKey;
+        $this->apiKey = $apiKey->getKey();
     }
 
     /**
