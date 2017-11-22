@@ -45,7 +45,7 @@ class Articles {
                     'Accept' => 'application/json',
                     'Content-Type' => 'application/json',
                  ],
-                'auth' => $this->apiKey
+                'auth' => [$this->apiKey, 'X']
             ]
         );
 
