@@ -41,18 +41,4 @@ Get id of category
 
 --
 
-public **getName** (  )
-
-
-Get name of category
-
-
-
-
-
-
-
-
---
-
 [API Index](ApiIndex.md)

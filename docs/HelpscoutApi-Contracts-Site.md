@@ -1,7 +1,7 @@
 [API Index](ApiIndex.md)
 
 
-HelpscoutApi\Contracts\Article
+HelpscoutApi\Contracts\Site
 ---------------
 
 
@@ -11,7 +11,7 @@ HelpscoutApi\Contracts\Article
     
 
 
-**Interface name**: Article
+**Interface name**: Site
 
 **Namespace**: HelpscoutApi\Contracts
 
@@ -30,7 +30,7 @@ Methods
 public **getId** (  )
 
 
-Get id of article
+Get id of Site
 
 
 

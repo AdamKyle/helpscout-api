@@ -15,7 +15,7 @@ HelpscoutApi\Api\Get\Collections
 
 
 
-    
+    Deals with GET Collection API from helpscout.
 
     
 

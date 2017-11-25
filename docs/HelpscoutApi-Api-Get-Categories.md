@@ -15,7 +15,7 @@ HelpscoutApi\Api\Get\Categories
 
 
 
-    Get all categories based on a collection
+    Deals with GET Category API from helpscout.
 
     
 

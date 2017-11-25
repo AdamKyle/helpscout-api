@@ -41,18 +41,4 @@ Get id of collection
 
 --
 
-public **getName** (  )
-
-
-Get name of collection
-
-
-
-
-
-
-
-
---
-
 [API Index](ApiIndex.md)

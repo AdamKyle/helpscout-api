@@ -15,9 +15,9 @@ HelpscoutApi\Api\Get\Articles
 
 
 
-    Gets all or a single article based on a category passed in.
+    Deals with GET Articles API from helpscout.
 
-    
+    @@link https://developer.helpscout.com/docs-api/categories/list/
 
 
 
@@ -115,6 +115,48 @@ Gets the article based on the article information, such as id.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | $articleValue | HelpscoutApi\Api\Get\CategoryValue |  |
+
+--
+
+public **getRelatedArticles** ( CategoryValue $articleValue )
+
+
+Get all related articles for a specific article
+
+Gets all related articles based on the article information, such as id.
+
+
+
+
+
+
+**Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| $articleValue | HelpscoutApi\Api\Get\CategoryValue |  |
+
+--
+
+public **searchArticles** ( Article $articleQuery )
+
+
+Search the articles based on an article query
+
+The article query is a string which is built from seting values
+and then using the &lt;code&gt;getQuery&lt;/code&gt; to get the query for the
+endpoint.
+
+
+
+
+
+
+**Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| $articleQuery | [Article](HelpscoutApi-Query-Article.md) |  |
 
 --
 

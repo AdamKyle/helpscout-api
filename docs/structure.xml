@@ -1,7 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project title="API Documentation" version="2.8.5">
   <partials/>
-  <file path="Api/Get/Categories.php" generated-path="Api.Get.Categories.html" hash="f71bb161d368a2cbca128f6966baa594" package="Default">
+  <file path="Api/Get/Articles.php" generated-path="Api.Get.Articles.html" hash="42d36f0fc2fbf01e9d6bbc1a0e28e548" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="ApiClient">\App\HelpScout\lib\HelpScout\Api\ApiClient</namespace-alias>
+    <namespace-alias name="ApiKey">\HelpscoutApi\Contracts\ApiKey</namespace-alias>
+    <namespace-alias name="Article">\HelpscoutApi\Contracts\Article</namespace-alias>
+    <namespace-alias name="Category">\HelpscoutApi\Contracts\Category</namespace-alias>
+    <namespace-alias name="ArticleQuery">\HelpscoutApi\Query\Article</namespace-alias>
+    <namespace-alias name="Client">\GuzzleHttp\Client</namespace-alias>
+    <class final="false" abstract="false" namespace="HelpscoutApi\Api\Get" line="17" package="Default">
+      <extends/>
+      <name>Articles</name>
+      <full_name>\HelpscoutApi\Api\Get\Articles</full_name>
+      <docblock line="17">
+        <description>Deals with GET Articles API from helpscout.</description>
+        <long-description>@@link https://developer.helpscout.com/docs-api/categories/list/</long-description>
+        <tag name="package" line="17" description="Default"/>
+      </docblock>
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Get" line="22" package="Default">
+        <name>$client</name>
+        <full_name>\HelpscoutApi\Api\Get\Articles::client</full_name>
+        <default></default>
+        <docblock line="22">
+          <description>GuzzleHttp\Client</description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Get" line="27" package="Default">
+        <name>$apiKey</name>
+        <full_name>\HelpscoutApi\Api\Get\Articles::apiKey</full_name>
+        <default></default>
+        <docblock line="27">
+          <description>HelpscoutApi\Contracts\ApiKey;</description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="29" package="Default">
+        <name>__construct</name>
+        <full_name>\HelpscoutApi\Api\Get\Articles::__construct()</full_name>
+        <docblock line="29">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$client</name>
+          <default></default>
+          <type>\GuzzleHttp\Client</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$apiKey</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\ApiKey</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="42" package="Default">
+        <name>getAll</name>
+        <full_name>\HelpscoutApi\Api\Get\Articles::getAll()</full_name>
+        <docblock line="42">
+          <description>Get all articles and return as JSON.</description>
+          <long-description>Uses the category to get the article information.</long-description>
+          <tag name="param" line="42" description="" type="\HelpscoutApi\Api\Get\CategoryValue" variable="$categoryValue">
+            <type>\HelpscoutApi\Api\Get\CategoryValue</type>
+          </tag>
+          <tag name="return" line="42" description="" type="\HelpscoutApi\Api\Get\JSON">
+            <type>\HelpscoutApi\Api\Get\JSON</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$categoryValue</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\Category</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="66" package="Default">
+        <name>getSingle</name>
+        <full_name>\HelpscoutApi\Api\Get\Articles::getSingle()</full_name>
+        <docblock line="66">
+          <description>Get an article and return as JSON.</description>
+          <long-description>Gets the article based on the article information, such as id.</long-description>
+          <tag name="param" line="66" description="" type="\HelpscoutApi\Api\Get\CategoryValue" variable="$articleValue">
+            <type>\HelpscoutApi\Api\Get\CategoryValue</type>
+          </tag>
+          <tag name="return" line="66" description="" type="\HelpscoutApi\Api\Get\JSON">
+            <type>\HelpscoutApi\Api\Get\JSON</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$articleValue</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\Article</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="90" package="Default">
+        <name>getRelatedArticles</name>
+        <full_name>\HelpscoutApi\Api\Get\Articles::getRelatedArticles()</full_name>
+        <docblock line="90">
+          <description>Get all related articles for a specific article</description>
+          <long-description>Gets all related articles based on the article information, such as id.</long-description>
+          <tag name="param" line="90" description="" type="\HelpscoutApi\Api\Get\CategoryValue" variable="$articleValue">
+            <type>\HelpscoutApi\Api\Get\CategoryValue</type>
+          </tag>
+          <tag name="return" line="90" description="" type="\HelpscoutApi\Api\Get\JSON">
+            <type>\HelpscoutApi\Api\Get\JSON</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$articleValue</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\Article</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="116" package="Default">
+        <name>searchArticles</name>
+        <full_name>\HelpscoutApi\Api\Get\Articles::searchArticles()</full_name>
+        <docblock line="116">
+          <description>Search the articles based on an article query</description>
+          <long-description>The article query is a string which is built from seting values
+and then using the &lt;code&gt;getQuery&lt;/code&gt; to get the query for the
+endpoint.</long-description>
+          <tag name="param" line="116" description="" type="\HelpscoutApi\Query\Article" variable="$articleQuery">
+            <type>\HelpscoutApi\Query\Article</type>
+          </tag>
+          <tag name="return" line="116" description="" type="\HelpscoutApi\Api\Get\JSON">
+            <type>\HelpscoutApi\Api\Get\JSON</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$articleQuery</name>
+          <default></default>
+          <type>\HelpscoutApi\Query\Article</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="29" code="PPC:ERR-50015">Argument $client is missing from the Docblock of __construct</error>
+      <error line="29" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
+      <error line="29" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="42" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $categoryValue in getAll()</error>
+      <error line="66" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $articleValue in getSingle()</error>
+      <error line="90" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $articleValue in getRelatedArticles()</error>
+    </parse_markers>
+    <source>eJztVt9P2zAQfs9fcQ9ISVHbvG/Q0bEJ2KT9KpsmrQi5zpV4cx1jO6Ay8b/PduI0DQU2DSQesIQa+7777nz+znjnlcxlFAmyQC0JRThELjUtSjOWbOr+DtC8jKJSI4ylnDrzxJmnnM1asxq9zxkKi3fwNab9QhhFqNEO9R6Xd0OUYZTjnZh9YvCsUJuIPpeoloEEiIb6069X+IPy6orjoTFyGlKO0u3tCLbhDRKu4ZKZHA7eHgdfS/LpCOaqWEAeYg0t3Hns7XEmfkFu2fSLNM3wAnkhUQ1XSFos0qygekAkS2mVOkOdcqZNajnSiHKi9Sra7ygCO3xObmzfTLk2pP5XKnZhaWGLhu103O85jY1cpDZWq+WMMwrzUlDDCgGnp7QQ2qiSmqRKKATvQ8UaCHp2N1CPLZMzPRhVQNhd5dsBVJ4OUH0NRmdo7G/Sq6DXN+uDBgjnQEIJichAoSmVcBp4N/n4YVhjg8tXbWEmR6hPZAmmABvHr9U8wMS8UAvi9tz135NEkQUEKX4jvMTGVod2cder26mjjTfmPAkktiJturXaKdujtuboytKu42Ck8LxEbZIG60Zs9Rv315da2oth2Anmi3yUJT1ridNQyA7Fj7WZJ82RZKh0DLujDWYPGVOK0nhETKS0FfAVTX/qQnQCND5OpW53x0uJf+95cnMtJqXJq+zW5NWH+Ht8sgZfzXq17t2oz9KFPM2QFhkmzWH4or0uMitN/1lnrZPe3VIVjcLuF6p10GuinBGNGVj13KLUPuiS5o6OZY+l2gkTZxyTcM9u1Wk8imyDFivRtiM1mn1W6WOo1F6oCrmVSra6WK3KgICWSNncaqJe3yTZje5PQbtfqqTCv9snI2J/8dYVe753H1rREyTKKqulu5YaWxfyuXsodpR33BKrtwPTrguMstcgXObMEtuVWcm4qd6JGo0zXbgD1oHG3fU2voBSO6NLZcfty+3Av093Uj9tv0SqcK7r7CwQochkwYS5pUPaT95/bhDt69RtDs/V6NbPHrpDqsCrl0erT3y8QVOm5/v+v7vjOvoDWI/riA==</source>
+  </file>
+  <file path="Api/Get/Categories.php" generated-path="Api.Get.Categories.html" hash="fde609f282b6c657a3d37054cd4da66b" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -10,37 +157,120 @@
     <namespace-alias name="Client">\GuzzleHttp\Client</namespace-alias>
     <namespace-alias name="Collection">\HelpscoutApi\Contracts\Collection</namespace-alias>
     <namespace-alias name="ApiKey">\HelpscoutApi\Contracts\ApiKey</namespace-alias>
-    <class final="false" abstract="false" namespace="HelpscoutApi\Api\Get" line="12" package="Default">
+    <class final="false" abstract="false" namespace="HelpscoutApi\Api\Get" line="14" package="Default">
       <extends/>
       <name>Categories</name>
       <full_name>\HelpscoutApi\Api\Get\Categories</full_name>
-      <docblock line="12">
-        <description>Get all categories based on a collection</description>
+      <docblock line="14">
+        <description>Deals with GET Category API from helpscout.</description>
         <long-description></long-description>
-        <tag name="package" line="12" description="Default"/>
+        <tag name="link" line="14" description="https://developer.helpscout.com/docs-api/categories/list/" link="https://developer.helpscout.com/docs-api/categories/list/"/>
+        <tag name="package" line="14" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Get" line="17" package="Default">
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Get" line="19" package="Default">
         <name>$client</name>
         <full_name>\HelpscoutApi\Api\Get\Categories::client</full_name>
         <default></default>
-        <docblock line="17">
+        <docblock line="19">
           <description>GuzzleHttp\Client;</description>
           <long-description></long-description>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Get" line="22" package="Default">
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Get" line="24" package="Default">
         <name>$apiKey</name>
         <full_name>\HelpscoutApi\Api\Get\Categories::apiKey</full_name>
         <default></default>
-        <docblock line="22">
+        <docblock line="24">
           <description>HelpscoutApi\Contracts\ApiKey;</description>
           <long-description></long-description>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="24" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="26" package="Default">
         <name>__construct</name>
         <full_name>\HelpscoutApi\Api\Get\Categories::__construct()</full_name>
-        <docblock line="24">
+        <docblock line="26">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$client</name>
+          <default></default>
+          <type>\GuzzleHttp\Client</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$apiKey</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\ApiKey</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="37" package="Default">
+        <name>getAll</name>
+        <full_name>\HelpscoutApi\Api\Get\Categories::getAll()</full_name>
+        <docblock line="37">
+          <description>Get all collections.</description>
+          <long-description></long-description>
+          <tag name="param" line="37" description="" type="\HelpscoutApi\Contracts\Collection" variable="$collection">
+            <type>\HelpscoutApi\Contracts\Collection</type>
+          </tag>
+          <tag name="return" line="37" description="" type="\HelpscoutApi\Api\Get\JSON">
+            <type>\HelpscoutApi\Api\Get\JSON</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$collection</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\Collection</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="26" code="PPC:ERR-50015">Argument $client is missing from the Docblock of __construct</error>
+      <error line="26" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
+      <error line="26" code="PPC:ERR-50008">No summary for method __construct()</error>
+    </parse_markers>
+    <source>eJyNUm1v0zAQ/p5fcR8mJa3a+juwslJQN5AAiX2YtE2VcW6LwY2N7Qx10/47Z+etySrgpCj23XMvz/l589YUJklKvkNnuEA4R2Wc0JVfGXkTvg3610lSOYRN9fio8Nx7c7NWEkvyB/cgY61Lb7nwjk5KofBSl3+F0e0T7qkDm04TmMJ75MrBb+kL2Hy4hDX3eK/tHlZfL+DO6h0UbZ0FwUPGmZLlTyhoLPeKsRwfUGmDdtEDhd6xXAs350YyUVeU6JiSzjMqwRKhuHNtMwrBU5IAWRwq2PQY+zrC4t9Y+UDpcCKa4Dj/H/yP1uLtcqK3+q6kgLuqjFuF7Vbo0nlbCZ/VE7XNZ1BXbQtMiA40duIL6ebLGgin/bwjQJ0ZAPVpvrxHT/9sUkOfXy4IPXClQHQP7xZNrIWcGW75DnppdAGLvrIlfPz25fNwFSPSNMRKqayvQAS684CnJUHTCBgoHHKeLy3+qtD5rMMGS0lt6WzoOmDCUlgctorruMizCbnTA02NSlwPbrFogTxH61I4XR4JR8hKCDQ+IlJuDC2Ah57sh9PlqEGXExQV2F3uDf535u1LV8orX9TDDZQwg/QqvR3A+9ukkWiw5iVDx22OQueYdW8Rt/ZO56SieGyGdtmkU9Vz8gczaU9X</source>
+  </file>
+  <file path="Api/Get/Collections.php" generated-path="Api.Get.Collections.html" hash="f1aa1b4ecf17d06877ee97b225ed5d86" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Client">\GuzzleHttp\Client</namespace-alias>
+    <namespace-alias name="ApiKey">\HelpscoutApi\Contracts\ApiKey</namespace-alias>
+    <class final="false" abstract="false" namespace="HelpscoutApi\Api\Get" line="13" package="Default">
+      <extends/>
+      <name>Collections</name>
+      <full_name>\HelpscoutApi\Api\Get\Collections</full_name>
+      <docblock line="13">
+        <description>Deals with GET Collection API from helpscout.</description>
+        <long-description></long-description>
+        <tag name="link" line="13" description="https://developer.helpscout.com/docs-api/collections/list/" link="https://developer.helpscout.com/docs-api/collections/list/"/>
+        <tag name="package" line="13" description="Default"/>
+      </docblock>
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Get" line="18" package="Default">
+        <name>$client</name>
+        <full_name>\HelpscoutApi\Api\Get\Collections::client</full_name>
+        <default></default>
+        <docblock line="18">
+          <description>GuzzleHttp\Client;</description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Get" line="23" package="Default">
+        <name>$apiKey</name>
+        <full_name>\HelpscoutApi\Api\Get\Collections::apiKey</full_name>
+        <default></default>
+        <docblock line="23">
+          <description>HelpscoutApi\Contracts\ApiKey;</description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="25" package="Default">
+        <name>__construct</name>
+        <full_name>\HelpscoutApi\Api\Get\Collections::__construct()</full_name>
+        <docblock line="25">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -57,179 +287,23 @@
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="35" package="Default">
         <name>getAll</name>
-        <full_name>\HelpscoutApi\Api\Get\Categories::getAll()</full_name>
+        <full_name>\HelpscoutApi\Api\Get\Collections::getAll()</full_name>
         <docblock line="35">
-          <description>Get all collections.</description>
+          <description>Get all collections</description>
           <long-description></long-description>
-          <tag name="param" line="35" description="" type="\HelpscoutApi\Contracts\Collection" variable="$collection">
-            <type>\HelpscoutApi\Contracts\Collection</type>
-          </tag>
           <tag name="return" line="35" description="" type="\HelpscoutApi\Api\Get\JSON">
             <type>\HelpscoutApi\Api\Get\JSON</type>
           </tag>
         </docblock>
-        <argument line="0" by_reference="false">
-          <name>$collection</name>
-          <default></default>
-          <type>\HelpscoutApi\Contracts\Collection</type>
-        </argument>
       </method>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="24" code="PPC:ERR-50015">Argument $client is missing from the Docblock of __construct</error>
-      <error line="24" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
-      <error line="24" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="25" code="PPC:ERR-50015">Argument $client is missing from the Docblock of __construct</error>
+      <error line="25" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
+      <error line="25" code="PPC:ERR-50008">No summary for method __construct()</error>
     </parse_markers>
-    <source>eJyNUttOwzAMfc9X+AGp7cTWDwAGY0LjIsEDvAGaQmq2opCEXJAG4t9J0svaMgGWqib28fGx48NjtVaECPqKRlGGcI5cGSadnanyIXwLtAeEOIOwcB8fHM+tVQ9zXqLw/uDuZcylsJoya/yJc2S2lOJXmL9d4cZXyEcjAiPw5YByDoxaXEldooEnarAAKYACa0k9NieMU2NgvoV+EgLeIlew0S7RVSSPf6XLd58Oe6wODvP/kL2TizY9Ra974iWDZyeiblgumRTGasdsWilqiu9DxdoQZL4dqG3PrksznlZAONrqHQCqzACgHYVfP8fSjLkdqJnUsQZyoqimrzDvjLwOaLROC7i8vbnuD2DQ6grtjPN0y+Blt+ded9pvn5eAQXi30/FU45tDY9MWGyxZnN0l+31Xp5M8gUm31HjqlVwUaebdSb7drAHFfe8WSddIC9QmgaPpjnCEzBhDZSMioUr5AdBQM38xUgwKtDlhj0J3dxuF/858/OlKqLPrSNB7/h7usb1l9UYGq58wlFoWyGSBafsIcVynstikWTzWak2aZc06fZFvUlkxkw==</source>
-  </file>
-  <file path="Api/Get/Articles.php" generated-path="Api.Get.Articles.html" hash="2628b1e8cfeadd96d78ca7fbfe9ad870" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <namespace-alias name="ApiClient">\App\HelpScout\lib\HelpScout\Api\ApiClient</namespace-alias>
-    <namespace-alias name="ApiKey">\HelpscoutApi\Contracts\ApiKey</namespace-alias>
-    <namespace-alias name="Article">\HelpscoutApi\Contracts\Article</namespace-alias>
-    <namespace-alias name="Category">\HelpscoutApi\Contracts\Category</namespace-alias>
-    <namespace-alias name="Client">\GuzzleHttp\Client</namespace-alias>
-    <class final="false" abstract="false" namespace="HelpscoutApi\Api\Get" line="14" package="Default">
-      <extends/>
-      <name>Articles</name>
-      <full_name>\HelpscoutApi\Api\Get\Articles</full_name>
-      <docblock line="14">
-        <description>Gets all or a single article based on a category passed in.</description>
-        <long-description></long-description>
-        <tag name="package" line="14" description="Default"/>
-      </docblock>
-      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Get" line="19" package="Default">
-        <name>$client</name>
-        <full_name>\HelpscoutApi\Api\Get\Articles::client</full_name>
-        <default></default>
-        <docblock line="19">
-          <description>GuzzleHttp\Client</description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Get" line="24" package="Default">
-        <name>$apiKey</name>
-        <full_name>\HelpscoutApi\Api\Get\Articles::apiKey</full_name>
-        <default></default>
-        <docblock line="24">
-          <description>HelpscoutApi\Contracts\ApiKey;</description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="26" package="Default">
-        <name>__construct</name>
-        <full_name>\HelpscoutApi\Api\Get\Articles::__construct()</full_name>
-        <docblock line="26">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$client</name>
-          <default></default>
-          <type>\GuzzleHttp\Client</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$apiKey</name>
-          <default></default>
-          <type>\HelpscoutApi\Contracts\ApiKey</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="39" package="Default">
-        <name>getAll</name>
-        <full_name>\HelpscoutApi\Api\Get\Articles::getAll()</full_name>
-        <docblock line="39">
-          <description>Get all articles and return as JSON.</description>
-          <long-description>Uses the category to get the article information.</long-description>
-          <tag name="param" line="39" description="" type="\HelpscoutApi\Api\Get\CategoryValue" variable="$categoryValue">
-            <type>\HelpscoutApi\Api\Get\CategoryValue</type>
-          </tag>
-          <tag name="return" line="39" description="" type="\HelpscoutApi\Api\Get\JSON">
-            <type>\HelpscoutApi\Api\Get\JSON</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$categoryValue</name>
-          <default></default>
-          <type>\HelpscoutApi\Contracts\Category</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="63" package="Default">
-        <name>getSingle</name>
-        <full_name>\HelpscoutApi\Api\Get\Articles::getSingle()</full_name>
-        <docblock line="63">
-          <description>Get an article and return as JSON.</description>
-          <long-description>Gets the article based on the article information, such as id.</long-description>
-          <tag name="param" line="63" description="" type="\HelpscoutApi\Api\Get\CategoryValue" variable="$articleValue">
-            <type>\HelpscoutApi\Api\Get\CategoryValue</type>
-          </tag>
-          <tag name="return" line="63" description="" type="\HelpscoutApi\Api\Get\JSON">
-            <type>\HelpscoutApi\Api\Get\JSON</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$articleValue</name>
-          <default></default>
-          <type>\HelpscoutApi\Contracts\Article</type>
-        </argument>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="26" code="PPC:ERR-50015">Argument $client is missing from the Docblock of __construct</error>
-      <error line="26" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
-      <error line="26" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="39" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $categoryValue in getAll()</error>
-      <error line="63" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $articleValue in getSingle()</error>
-    </parse_markers>
-    <source>eJztVF1v0zAUfc+vuA+TklZt8wNghVKhDpDgoWMvdKpc564xch3jD6QO7b9jO06WpKNDSHvDUpTY99xzr49P/PqNLGWSCHJALQlFuEIuNa2sWUi28c8KzasksRphIeXGh9c+vOFs15lF9JIzFA7v4T2mZSWMItRoj/qEx/MQZRjleBazJAb3lYpEK3t/z/HKGLlpWkjy8TiBMbj+NRDOoVJAQDOx5wikrgA7orGASrgIjYQgifaLTMxcep5Q7uYQW9LwK0nAjUDux/i0dgzk4S0V++mY4YI2fQ3Sn5HpSS4Sg/Wq3XFG4c4KapjbynZLK6GNstRkdUNN8QnUrA3ByO0G4rgwJdPTeQ2Ey8d+B4A60wNIp8OHU1XQBNVJIxwRBSg0VjmxNXxcf/k8i9gm5at2MFPi41GYCvaOx681J8bEXaUOxO90mP9WEkUO0DjjhnCLbSyW9nX7mg7Uc/UWnGcNidOhS9dTTLlfximNXoyuetO5wh8WtclarB/p6v11OukvRXKGOk9hNig2nbtmPhTZyEXSvBFyQPGtNwukJZIClU7hcv5EOEAWlKI0AZESKZ0CQdH8u67EoECb473pd3d9lPj3mbenaymxpgwMPU/1cLftbBRt7kc8RF9rWyCtCszaUwhqvauKYzYKn7FdnY1GZz0qWms979Bwl3Td2N4ff7DoBLSlpadjxUvZdR2utCzeUO6/rD9exK+NCWu3diu1Zv1vz3+150PyG/X8IKI=</source>
-  </file>
-  <file path="Contracts/Category.php" generated-path="Contracts.Category.html" hash="fa5e483868cc05945d04434d8103f007" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <interface namespace="HelpscoutApi\Contracts" line="5" package="Default">
-      <name>Category</name>
-      <full_name>\HelpscoutApi\Contracts\Category</full_name>
-      <docblock line="5">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="5" description="Default"/>
-      </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="12" package="Default">
-        <name>getId</name>
-        <full_name>\HelpscoutApi\Contracts\Category::getId()</full_name>
-        <docblock line="12">
-          <description>Get id of category</description>
-          <long-description></long-description>
-          <tag name="return" line="12" description="" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="19" package="Default">
-        <name>getName</name>
-        <full_name>\HelpscoutApi\Contracts\Category::getName()</full_name>
-        <docblock line="19">
-          <description>Get name of category</description>
-          <long-description></long-description>
-          <tag name="return" line="19" description="" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </method>
-    </interface>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="5" code="PPC:ERR-50009">No summary for interface \HelpscoutApi\Contracts\Category</error>
-    </parse_markers>
-    <source>eJytjjEOwjAMRXefwiNk6QGKBKgDsPQELCF1QqTiRIkzIMTdaaOwMeLlS/aT39/t4z0CsH5QjtoQnmmO2YQix+ivQ2BJ2kjuATwLJbsigxZyIT3xBYDLdErVRIUnEvQTBoumQe3yBQ6JpCTGLMmza9uuZiy32Ru0hY34wOhILtNm2/+UrIX/phmXZ1X0hg+IZEzp</source>
+    <source>eJyNUsFu2zAMvesreChgJ0iq+7ZmzdIi3QZsA9bDgLUIVJmd1SqWJtEd2qH/PsmyndgNsBIwLJHvkY+k3r23pWWsElv0VkiEC9TWS1PT0qqr+K2R3jJWe4R1/fSk8YLIXq20wir4o3vAWJmKnJDkI/czPgYqn04ZTOEMhfbwR1EJ6/NLWBmtUZIyFSy/fYRbZ7ZQdpmOAyFyTrWq7qEMFf0bzgt8QG0suuMdUJotL4z0c2EVl31Oz7XyxEMOzqQW3u/V8/CXMQjWCIs2PdRaivDmb516EIRwJNvgmP+fGRzMJboBNd76RisJt3WVZrLZyKCUXC0pT4q64jNIWbsEk9AOtHZEpfLzRQLCyU7vCJCYEZBO88UvpPDPJwn6/HJASCC0hr0Rt6EOceqQalfBp+9fvwwbHrUWSi21zge6XXh9ISVGSfs9zBcOf9foKe+x0bLwgrLZ0LWnbBT6Obg14BJFgc5ncLI4EG4gSynRUoPIhLWhBRGT8ztvqlGBnhM3H1VfPlp8NfP6pSsTNZVJ3GBjM8h+ZNcD+O42aZ9StHYXseKmQGkKzPsZN8v+YIqw7ebYivb5pN/+M/sHd3glXQ==</source>
   </file>
   <file path="Contracts/ApiKey.php" generated-path="Contracts.ApiKey.html" hash="b17ddde82af0b53a8f63d0ad9e45e48c" package="Default">
     <docblock line="0">
@@ -263,7 +337,7 @@
     </parse_markers>
     <source>eJw1jbEOwjAMRHd/hUfI0g8oEiAWJDbmLiFyW4viWIkzVIh/J0TllpPuPekOR50VQPyLsvpAeKVFc4jFzsrDJYolHyz3ACxGafwpldxoxTcA1nTOtUaHd7KSJKPNhF4Zn7Ru6G+cUlMwW2KZtrVrreWxcMCxSDCOghNZfdnte/jAF8BfMTo=</source>
   </file>
-  <file path="Contracts/Article.php" generated-path="Contracts.Article.html" hash="4b0af2e1af6c2c94a8910bd9eedc59c1" package="Default">
+  <file path="Contracts/Article.php" generated-path="Contracts.Article.html" hash="3ed2598e56067bd08e041a44ad84febb" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -277,121 +351,13 @@
         <long-description></long-description>
         <tag name="package" line="5" description="Default"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="11" package="Default">
-        <name>setName</name>
-        <full_name>\HelpscoutApi\Contracts\Article::setName()</full_name>
-        <docblock line="11">
-          <description>Set name of article</description>
-          <long-description></long-description>
-          <tag name="param" line="11" description="" type="string" variable="$name">
-            <type>string</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$name</name>
-          <default></default>
-          <type>\HelpscoutApi\Contracts\string</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="18" package="Default">
-        <name>setText</name>
-        <full_name>\HelpscoutApi\Contracts\Article::setText()</full_name>
-        <docblock line="18">
-          <description>Set text of article</description>
-          <long-description></long-description>
-          <tag name="param" line="18" description="" type="string" variable="$text">
-            <type>string</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$text</name>
-          <default></default>
-          <type>\HelpscoutApi\Contracts\string</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="25" package="Default">
-        <name>setCollection</name>
-        <full_name>\HelpscoutApi\Contracts\Article::setCollection()</full_name>
-        <docblock line="25">
-          <description>Set collection name article belongs to</description>
-          <long-description></long-description>
-          <tag name="param" line="25" description="" type="string" variable="$collection">
-            <type>string</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$collection</name>
-          <default></default>
-          <type>\HelpscoutApi\Contracts\string</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="32" package="Default">
-        <name>setCategory</name>
-        <full_name>\HelpscoutApi\Contracts\Article::setCategory()</full_name>
-        <docblock line="32">
-          <description>Set category name article belongs to</description>
-          <long-description></long-description>
-          <tag name="param" line="32" description="" type="string" variable="$category">
-            <type>string</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$category</name>
-          <default></default>
-          <type>\HelpscoutApi\Contracts\string</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="39" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="12" package="Default">
         <name>getId</name>
         <full_name>\HelpscoutApi\Contracts\Article::getId()</full_name>
-        <docblock line="39">
+        <docblock line="12">
           <description>Get id of article</description>
           <long-description></long-description>
-          <tag name="return" line="39" description="" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="46" package="Default">
-        <name>getName</name>
-        <full_name>\HelpscoutApi\Contracts\Article::getName()</full_name>
-        <docblock line="46">
-          <description>Get name of article</description>
-          <long-description></long-description>
-          <tag name="return" line="46" description="" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="53" package="Default">
-        <name>getCollection</name>
-        <full_name>\HelpscoutApi\Contracts\Article::getCollection()</full_name>
-        <docblock line="53">
-          <description>Get collection artcile belongs to</description>
-          <long-description></long-description>
-          <tag name="return" line="53" description="" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="60" package="Default">
-        <name>getCategory</name>
-        <full_name>\HelpscoutApi\Contracts\Article::getCategory()</full_name>
-        <docblock line="60">
-          <description>Get category article belongs to</description>
-          <long-description></long-description>
-          <tag name="return" line="60" description="" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="67" package="Default">
-        <name>getText</name>
-        <full_name>\HelpscoutApi\Contracts\Article::getText()</full_name>
-        <docblock line="67">
-          <description>Get text for an article</description>
-          <long-description></long-description>
-          <tag name="return" line="67" description="" type="string">
+          <tag name="return" line="12" description="" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -400,14 +366,42 @@
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
       <error line="5" code="PPC:ERR-50009">No summary for interface \HelpscoutApi\Contracts\Article</error>
-      <error line="11" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $name in setName()</error>
-      <error line="18" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $text in setText()</error>
-      <error line="25" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $collection in setCollection()</error>
-      <error line="32" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $category in setCategory()</error>
     </parse_markers>
-    <source>eJy1k7FuwyAQhnee4oYMqZc8QCslUYamS5d27ELI2UUigI6z1Krquxdj7GQISa2mLEhw/N/P/fCw9O9eCCsPGLxUCFs0PijX8trrt42zTFJxuBdCW0aqu5I1sVYG4UtAHIuqSjNU8IIMnRK4GmRflLeGipWXJA8QmLRt8uIizb7dGa2gbq1i7SwE5OcoNe9LYdbp3kUbZ5CMH3wj5GuUGpGdbgGpnDHYn0oXzmjYoXG2CcDuLy42o/ro5QgsOZKMjaPPf/GTtY9u8sIZL4/Ri95fiIOQW7K/ITfIT/t5gXHlnU2ipIdW4JwkHVFKX2zqJOpJyiX2kOn1OKeRhzwL3PShakcg7U36m35VZH2LH0cqQb4=</source>
+    <source>eJw1ijEOAjEMBHu/wiWkuQccEpwogD/QBJ9zWApOlDgV4u9AOLbYlXZmt8/3DKD+wTV7YjxzzJVSsynL9ZjUiierI4CocQlfZSomFBmfgJ/0Gpzriw5PbCgzpoD+563gzw+FrRXFakV0Wd+hb263KIShKZkkxYXtMm+2I7zgDdc+MK4=</source>
   </file>
-  <file path="Contracts/Collection.php" generated-path="Contracts.Collection.html" hash="f8993b23b554b0dab094c6854fe841b4" package="Default">
+  <file path="Contracts/Category.php" generated-path="Contracts.Category.html" hash="6f711472b46557a8e5d4c650e8f1755b" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <interface namespace="HelpscoutApi\Contracts" line="5" package="Default">
+      <name>Category</name>
+      <full_name>\HelpscoutApi\Contracts\Category</full_name>
+      <docblock line="5">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="5" description="Default"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="12" package="Default">
+        <name>getId</name>
+        <full_name>\HelpscoutApi\Contracts\Category::getId()</full_name>
+        <docblock line="12">
+          <description>Get id of category</description>
+          <long-description></long-description>
+          <tag name="return" line="12" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="5" code="PPC:ERR-50009">No summary for interface \HelpscoutApi\Contracts\Category</error>
+    </parse_markers>
+    <source>eJw1jTEOAjEMBHu/wiWkuQeABOgK4A80weeESIcTOU6BEH/nOIVtRtodafeH8igA4p9ciyfGC8+lUm52Kuk2ZjH1ZHUHkMRYw08ZvXHM+sI3AC4ZnFuJDs9smCbMAalLffkLR2VrKlhNk8TeDitLu8+JMDQhS1kwsl2nzXa5/sAXAtgxLA==</source>
+  </file>
+  <file path="Contracts/Collection.php" generated-path="Contracts.Collection.html" hash="0b3887dff27abb9cf1f6c7f2991726cd" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -432,13 +426,34 @@
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="19" package="Default">
-        <name>getName</name>
-        <full_name>\HelpscoutApi\Contracts\Collection::getName()</full_name>
-        <docblock line="19">
-          <description>Get name of collection</description>
+    </interface>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="5" code="PPC:ERR-50009">No summary for interface \HelpscoutApi\Contracts\Collection</error>
+    </parse_markers>
+    <source>eJw9jbEOwjAMRHd/hUfI0g8ACVAH4B+6hNQploJjJc6E+HdKKdxy0t3T3f6gdwUQ/6CqPhBeKGkNudlJeeizWPHB6g6AxajED9LnlCgYZ8EnAM7qnFscHZ7JkEfMEcMfW7sfcixkrQhWKyzTmnaLa7slDhibfPcnsuu42c73L3gD/0gyyA==</source>
+  </file>
+  <file path="Contracts/Site.php" generated-path="Contracts.Site.html" hash="5f66a43b68e24beba4f68ebc5f4b68bd" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <interface namespace="HelpscoutApi\Contracts" line="5" package="Default">
+      <name>Site</name>
+      <full_name>\HelpscoutApi\Contracts\Site</full_name>
+      <docblock line="5">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="5" description="Default"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="12" package="Default">
+        <name>getId</name>
+        <full_name>\HelpscoutApi\Contracts\Site::getId()</full_name>
+        <docblock line="12">
+          <description>Get id of Site</description>
           <long-description></long-description>
-          <tag name="return" line="19" description="" type="string">
+          <tag name="return" line="12" description="" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -446,83 +461,167 @@
     </interface>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="5" code="PPC:ERR-50009">No summary for interface \HelpscoutApi\Contracts\Collection</error>
+      <error line="5" code="PPC:ERR-50009">No summary for interface \HelpscoutApi\Contracts\Site</error>
     </parse_markers>
-    <source>eJytjjEOwjAMRXefwiN06QGKBKgDsHAClpA6xVJwosSZEHenDYWJES9fsp/+82YbbxFAzJ1yNJbwSD5mG4ruI1/6IJqM1dwBsCglNyN98J6schB8AOA0bdPUxAYPpMgDBof2iy23D7JLpCUJZk0s47Jta8Zy9WzRFXn3j6SnYbXufmrmp/8oOk91VfWEF+BBT1M=</source>
+    <source>eJw1jbEOwjAMRHd/hUfI0g8AqSAGYO7KkqZOsVQcK3EmxL9TonLLk+6edMdenwog/kVFfSC80aIlpGpn5ccliWUfrBwAWIxy/CkDG+EbANd0zjWiwysZ8oQpNmFr/+Mpk9UsWCyzzFvbNWodFw4YqwTjJDiT3afdfr38wBcM0S26</source>
   </file>
-  <file path="Api/Get/Collections.php" generated-path="Api.Get.Collections.html" hash="aa57f88d71b2f2110719a4ae871597fc" package="Default">
+  <file path="Query/Article.php" generated-path="Query.Article.html" hash="55fbf17231f1051c295b63fd2edb30f2" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <namespace-alias name="Client">\GuzzleHttp\Client</namespace-alias>
-    <namespace-alias name="ApiKey">\HelpscoutApi\Contracts\ApiKey</namespace-alias>
-    <class final="false" abstract="false" namespace="HelpscoutApi\Api\Get" line="8" package="Default">
+    <namespace-alias name="Collection">\HelpscoutApi\Contracts\Collection</namespace-alias>
+    <namespace-alias name="Site">\HelpscoutApi\Contracts\Site</namespace-alias>
+    <class final="false" abstract="false" namespace="HelpscoutApi\Query" line="13" package="Default">
       <extends/>
-      <name>Collections</name>
-      <full_name>\HelpscoutApi\Api\Get\Collections</full_name>
-      <docblock line="8">
-        <description></description>
+      <name>Article</name>
+      <full_name>\HelpscoutApi\Query\Article</full_name>
+      <docblock line="13">
+        <description>Used to build a query for the article search</description>
         <long-description></long-description>
-        <tag name="package" line="8" description="Default"/>
+        <tag name="link" line="13" description="https://developer.helpscout.com/docs-api/articles/search/" link="https://developer.helpscout.com/docs-api/articles/search/"/>
+        <tag name="package" line="13" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Get" line="13" package="Default">
-        <name>$client</name>
-        <full_name>\HelpscoutApi\Api\Get\Collections::client</full_name>
-        <default></default>
-        <docblock line="13">
-          <description>GuzzleHttp\Client;</description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Get" line="18" package="Default">
-        <name>$apiKey</name>
-        <full_name>\HelpscoutApi\Api\Get\Collections::apiKey</full_name>
-        <default></default>
+      <property static="false" visibility="protected" namespace="HelpscoutApi\Query" line="18" package="Default">
+        <name>$params</name>
+        <full_name>\HelpscoutApi\Query\Article::params</full_name>
+        <default>array()</default>
         <docblock line="18">
-          <description>HelpscoutApi\Contracts\ApiKey;</description>
+          <description>The params for the article search</description>
           <long-description></long-description>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="20" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Query" line="20" package="Default">
         <name>__construct</name>
-        <full_name>\HelpscoutApi\Api\Get\Collections::__construct()</full_name>
+        <full_name>\HelpscoutApi\Query\Article::__construct()</full_name>
         <docblock line="20">
           <description></description>
           <long-description></long-description>
         </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Query" line="32" package="Default">
+        <name>createQuery</name>
+        <full_name>\HelpscoutApi\Query\Article::createQuery()</full_name>
+        <docblock line="32">
+          <description>Create a query</description>
+          <long-description>&lt;code&gt;?query=''&lt;/code&gt; is string related to the article search.</long-description>
+          <tag name="param" line="32" description="" type="String" variable="$query">
+            <type>String</type>
+          </tag>
+          <tag name="link" line="32" description="https://developer.helpscout.com/docs-api/articles/search/" link="https://developer.helpscout.com/docs-api/articles/search/"/>
+        </docblock>
         <argument line="0" by_reference="false">
-          <name>$client</name>
-          <default></default>
-          <type>\GuzzleHttp\Client</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$apiKey</name>
-          <default></default>
-          <type>\HelpscoutApi\Contracts\ApiKey</type>
+          <name>$query</name>
+          <default>'*'</default>
+          <type>\HelpscoutApi\Query\String</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="30" package="Default">
-        <name>getAll</name>
-        <full_name>\HelpscoutApi\Api\Get\Collections::getAll()</full_name>
-        <docblock line="30">
-          <description>Get all collections</description>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Query" line="43" package="Default">
+        <name>setPage</name>
+        <full_name>\HelpscoutApi\Query\Article::setPage()</full_name>
+        <docblock line="43">
+          <description>Sets the page for the url param</description>
+          <long-description>Takes in a string.</long-description>
+          <tag name="param" line="43" description="" type="String" variable="$page">
+            <type>String</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$page</name>
+          <default>'1'</default>
+          <type>\HelpscoutApi\Query\String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Query" line="52" package="Default">
+        <name>setCollectionId</name>
+        <full_name>\HelpscoutApi\Query\Article::setCollectionId()</full_name>
+        <docblock line="52">
+          <description>Sets the collectionID for the url param</description>
           <long-description></long-description>
-          <tag name="return" line="30" description="" type="\HelpscoutApi\Api\Get\JSON">
-            <type>\HelpscoutApi\Api\Get\JSON</type>
+          <tag name="param" line="52" description="" type="\HelpscoutApi\Contracts\Collection" variable="$collection">
+            <type>\HelpscoutApi\Contracts\Collection</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$collection</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\Collection</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Query" line="61" package="Default">
+        <name>setSiteId</name>
+        <full_name>\HelpscoutApi\Query\Article::setSiteId()</full_name>
+        <docblock line="61">
+          <description>Sets the siteId for the url param</description>
+          <long-description></long-description>
+          <tag name="param" line="61" description="" type="\HelpscoutApi\Contracts\Site" variable="$site">
+            <type>\HelpscoutApi\Contracts\Site</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$site</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\Site</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Query" line="74" package="Default">
+        <name>setStatus</name>
+        <full_name>\HelpscoutApi\Query\Article::setStatus()</full_name>
+        <docblock line="74">
+          <description>Sets the status for the url param</description>
+          <long-description>Accepted statuses are: &lt;code&gt;all&lt;/code&gt;, &lt;code&gt;published&lt;/code&gt; and &lt;code&gt;notpublished&lt;/code&gt;
+
+We default to &lt;code&gt;all&lt;/code&gt; if we don't match on anything.</long-description>
+          <tag name="param" line="74" description="" type="String" variable="$status">
+            <type>String</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$status</name>
+          <default></default>
+          <type>\HelpscoutApi\Query\String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Query" line="99" package="Default">
+        <name>setVisibility</name>
+        <full_name>\HelpscoutApi\Query\Article::setVisibility()</full_name>
+        <docblock line="99">
+          <description>Sets the visibility for the url param</description>
+          <long-description>Accepted statuses are: &lt;code&gt;all&lt;/code&gt;, &lt;code&gt;public&lt;/code&gt; and &lt;code&gt;private&lt;/code&gt;
+
+We default to &lt;code&gt;all&lt;/code&gt; if we don't match on anything.</long-description>
+          <tag name="param" line="99" description="" type="String" variable="$visibility">
+            <type>String</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$visibility</name>
+          <default></default>
+          <type>\HelpscoutApi\Query\String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Query" line="120" package="Default">
+        <name>getQuery</name>
+        <full_name>\HelpscoutApi\Query\Article::getQuery()</full_name>
+        <docblock line="120">
+          <description>Builds and returns the query for the search endpoint</description>
+          <long-description></long-description>
+          <tag name="return" line="120" description="" type="String">
+            <type>String</type>
           </tag>
         </docblock>
       </method>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="8" code="PPC:ERR-50005">No summary for class \HelpscoutApi\Api\Get\Collections</error>
-      <error line="20" code="PPC:ERR-50015">Argument $client is missing from the Docblock of __construct</error>
-      <error line="20" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
       <error line="20" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="32" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $query in createQuery()</error>
+      <error line="43" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $page in setPage()</error>
+      <error line="74" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $status in setStatus()</error>
+      <error line="99" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $visibility in setVisibility()</error>
     </parse_markers>
-    <source>eJyNUttOwzAMfe9X+GFS22nTPgBWGBPaBBI8sDeGppAaWhTakDhIG9q/k6SXrd0ksFS1sc85ObZ7eSUzGQQF+0QtGUdYopCal4ZmMl+7Z4F0EQRGIyzMbidwSSTXc5FjYfMu3WHMy4IU46Qd9x63lsoF0xrmpRDIKS8LDT9BADYmw6F/w/CcdFWZ+LdU+TcjhAGvi33+Hx7OarHGoM+aV5FzeDOF9wibDbdOSRlOUeWouXwElWojENt2oI4BZbkeJxUQpge/PUDFdAB25HB/OhYkYEIAPwyvLjWIa4VkVAF3T48P3TZ7Db0jzYSIOm6V3bmVRGfk2Pk4UfhlUFPUYl2Ei9tVOOqmjpz1Ss+dkwdnyFJUOoRpcqbsITPOUZJHhExK2wJz4pMPXRa9C1qO27dzvdpK/Dfz5TQVMkOZF+isqYN7aU9x/ee4qJfgrtqkyMsUo3a448SO/qZMt1HsP2u3OorjZu374Bd3GvYX</source>
+    <source>eJzNVk1P4zAQvedXzKEipYJGXCktdNmVltuuuh8HFiHjTIlVN8naTlG14r/v2A75aqFFiNXm0Cb2eN68N8+Jz87zJA+ClC1R54wjfEaZa54VZpqLX18LVOtREBS6M3GZpUYxbjTdSYnciCwdvRQ2EwYpUTQYBDCA7xpjMBncFULGwOC3xYF5psAkCEwZwSWCRqZ4QvF2yYUU6QISY3J9GkUxrlBmOaph8oQ35NkyijOuj1kuojKHjnySiFJEAZdMa5iW6f8EAdDlSrLXAL4ReM4UW+pna3GBkfvPVWaIOTHplYvGcH0z8lnz4k4KDvMiddrA7S3PUm1UwU3/kKChvHomEfp4whUyg07u/uHIzT5ulHfpgp7kKkefJs94FuPk3E2Nw/Ascs8gNBCqSO9BoWTGy75JbNjJduEYwcwtrQbf2oKmeB19mgJ4VOiVXAbhFsG84tehiwlvSHof/px2MzTa8c7ZPVbdLZT0De/Q/8YWqEGkpLVXbx99thPTaL4QZEXK4o/Dk5c42RBPyd7tZMSrHXj1cSezsvB61+4qvo68ivv1A/Rq2BeoNGqLPaV65Hhyj4aSPuv3iqGml8dVvC83+6rZxWrmMvbtH/Rs+hc4eHRfvb1/Rd2GmULvrHvKOeZ2a/p4ch5TeFruaCZluZePyhFHRycYP+1xlsblVJqZ7mwH6ydCjHNWSGNfBF0IEHN4oIgsDQ0smeEJkF4sXZMib9wEM8et2gaealN1/SAsXn/LlL04o49LSKWGp63xbQ1zCcqGufvRxpI7et8sRlsQKv3eGafZqneDKlv9mvRO4jrL4y6Pr4QWd0IKs34Xn/NNk+dKrOhb8Z/5+0elQ+XxWpqtPt8+XTtkL6/XSbw56ufXep7/KzDfvndH29f7HZg9/f/Bnly1c6VCU6jU74b2QdYffADTOM9Earr28gv38Rd9cMqzYfMz5cGo5PNGwX50qhRbN8+j9iLz9+mYlpp+S4JDmMBJ14JRVB439SmcL3A9XjFZ4AEMh8NWHFH9xHjSzghMQ48WwXhCbbMLu+k7lV67BtsVQwjHIf36Ze2OPgbB5noYjkEsc0nbux8ehEfNtIeNPgJKjXuRbIM4GkC/HdFGz9TSodHymp26aXqrui2t0D7DPgZ/AfkI0/Q=</source>
   </file>
   <package name="Default" full_name="Default"/>
   <package name="global" full_name="global"/>
@@ -531,6 +630,7 @@
       <namespace name="Get" full_name="HelpscoutApi\Api\Get"/>
     </namespace>
     <namespace name="Contracts" full_name="HelpscoutApi\Contracts"/>
+    <namespace name="Query" full_name="HelpscoutApi\Query"/>
   </namespace>
   <deprecated count="0"/>
 </project>
