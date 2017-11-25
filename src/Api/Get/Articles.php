@@ -6,6 +6,7 @@ use App\HelpScout\lib\HelpScout\Api\ApiClient;
 use HelpscoutApi\Contracts\ApiKey;
 use HelpscoutApi\Contracts\Article;
 use HelpscoutApi\Contracts\Category;
+use HelpscoutApi\Contracts\Revision;
 use HelpscoutApi\Query\Article as ArticleQuery;
 use GuzzleHttp\Client;
 
@@ -117,6 +118,50 @@ class Articles {
         $response = $this->client->request(
             'GET',
             'search/articles' . $articleQuery->getQuery(),
+            [
+                'headers' => [
+                    'Accept' => 'application/json',
+                    'Content-Type' => 'application/json',
+                 ],
+                'auth' => [$this->apiKey, 'X']
+            ]
+        );
+
+        return json_decode($response->getBody()->getContents());
+    }
+
+    /**
+     * Get all article revisions
+     *
+     * @param Article
+     * @return JSON
+     */
+    public function getRevisions(Article $article) {
+        $response = $this->client->request(
+            'GET',
+            'articles/' . $article->getId() . '/revisions',
+            [
+                'headers' => [
+                    'Accept' => 'application/json',
+                    'Content-Type' => 'application/json',
+                 ],
+                'auth' => [$this->apiKey, 'X']
+            ]
+        );
+
+        return json_decode($response->getBody()->getContents());
+    }
+
+    /**
+     * Get an article revision
+     *
+     * @param Revision
+     * @return JSON
+     */
+    public function getRevision(Article $article) {
+        $response = $this->client->request(
+            'GET',
+            'revisions/' . $article->getId(),
             [
                 'headers' => [
                     'Accept' => 'application/json',

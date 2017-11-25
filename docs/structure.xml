@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project title="API Documentation" version="2.8.5">
   <partials/>
-  <file path="Api/Get/Articles.php" generated-path="Api.Get.Articles.html" hash="42d36f0fc2fbf01e9d6bbc1a0e28e548" package="Default">
+  <file path="Api/Get/Articles.php" generated-path="Api.Get.Articles.html" hash="a3a19db4befa0c98c52bd11944b6e24f" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -11,39 +11,40 @@
     <namespace-alias name="ApiKey">\HelpscoutApi\Contracts\ApiKey</namespace-alias>
     <namespace-alias name="Article">\HelpscoutApi\Contracts\Article</namespace-alias>
     <namespace-alias name="Category">\HelpscoutApi\Contracts\Category</namespace-alias>
+    <namespace-alias name="Revision">\HelpscoutApi\Contracts\Revision</namespace-alias>
     <namespace-alias name="ArticleQuery">\HelpscoutApi\Query\Article</namespace-alias>
     <namespace-alias name="Client">\GuzzleHttp\Client</namespace-alias>
-    <class final="false" abstract="false" namespace="HelpscoutApi\Api\Get" line="17" package="Default">
+    <class final="false" abstract="false" namespace="HelpscoutApi\Api\Get" line="18" package="Default">
       <extends/>
       <name>Articles</name>
       <full_name>\HelpscoutApi\Api\Get\Articles</full_name>
-      <docblock line="17">
+      <docblock line="18">
         <description>Deals with GET Articles API from helpscout.</description>
         <long-description>@@link https://developer.helpscout.com/docs-api/categories/list/</long-description>
-        <tag name="package" line="17" description="Default"/>
+        <tag name="package" line="18" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Get" line="22" package="Default">
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Get" line="23" package="Default">
         <name>$client</name>
         <full_name>\HelpscoutApi\Api\Get\Articles::client</full_name>
         <default></default>
-        <docblock line="22">
+        <docblock line="23">
           <description>GuzzleHttp\Client</description>
           <long-description></long-description>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Get" line="27" package="Default">
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Get" line="28" package="Default">
         <name>$apiKey</name>
         <full_name>\HelpscoutApi\Api\Get\Articles::apiKey</full_name>
         <default></default>
-        <docblock line="27">
+        <docblock line="28">
           <description>HelpscoutApi\Contracts\ApiKey;</description>
           <long-description></long-description>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="29" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="30" package="Default">
         <name>__construct</name>
         <full_name>\HelpscoutApi\Api\Get\Articles::__construct()</full_name>
-        <docblock line="29">
+        <docblock line="30">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -58,16 +59,16 @@
           <type>\HelpscoutApi\Contracts\ApiKey</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="42" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="43" package="Default">
         <name>getAll</name>
         <full_name>\HelpscoutApi\Api\Get\Articles::getAll()</full_name>
-        <docblock line="42">
+        <docblock line="43">
           <description>Get all articles and return as JSON.</description>
           <long-description>Uses the category to get the article information.</long-description>
-          <tag name="param" line="42" description="" type="\HelpscoutApi\Api\Get\CategoryValue" variable="$categoryValue">
+          <tag name="param" line="43" description="" type="\HelpscoutApi\Api\Get\CategoryValue" variable="$categoryValue">
             <type>\HelpscoutApi\Api\Get\CategoryValue</type>
           </tag>
-          <tag name="return" line="42" description="" type="\HelpscoutApi\Api\Get\JSON">
+          <tag name="return" line="43" description="" type="\HelpscoutApi\Api\Get\JSON">
             <type>\HelpscoutApi\Api\Get\JSON</type>
           </tag>
         </docblock>
@@ -77,16 +78,16 @@
           <type>\HelpscoutApi\Contracts\Category</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="66" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="67" package="Default">
         <name>getSingle</name>
         <full_name>\HelpscoutApi\Api\Get\Articles::getSingle()</full_name>
-        <docblock line="66">
+        <docblock line="67">
           <description>Get an article and return as JSON.</description>
           <long-description>Gets the article based on the article information, such as id.</long-description>
-          <tag name="param" line="66" description="" type="\HelpscoutApi\Api\Get\CategoryValue" variable="$articleValue">
+          <tag name="param" line="67" description="" type="\HelpscoutApi\Api\Get\CategoryValue" variable="$articleValue">
             <type>\HelpscoutApi\Api\Get\CategoryValue</type>
           </tag>
-          <tag name="return" line="66" description="" type="\HelpscoutApi\Api\Get\JSON">
+          <tag name="return" line="67" description="" type="\HelpscoutApi\Api\Get\JSON">
             <type>\HelpscoutApi\Api\Get\JSON</type>
           </tag>
         </docblock>
@@ -96,16 +97,16 @@
           <type>\HelpscoutApi\Contracts\Article</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="90" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="91" package="Default">
         <name>getRelatedArticles</name>
         <full_name>\HelpscoutApi\Api\Get\Articles::getRelatedArticles()</full_name>
-        <docblock line="90">
+        <docblock line="91">
           <description>Get all related articles for a specific article</description>
           <long-description>Gets all related articles based on the article information, such as id.</long-description>
-          <tag name="param" line="90" description="" type="\HelpscoutApi\Api\Get\CategoryValue" variable="$articleValue">
+          <tag name="param" line="91" description="" type="\HelpscoutApi\Api\Get\CategoryValue" variable="$articleValue">
             <type>\HelpscoutApi\Api\Get\CategoryValue</type>
           </tag>
-          <tag name="return" line="90" description="" type="\HelpscoutApi\Api\Get\JSON">
+          <tag name="return" line="91" description="" type="\HelpscoutApi\Api\Get\JSON">
             <type>\HelpscoutApi\Api\Get\JSON</type>
           </tag>
         </docblock>
@@ -115,18 +116,18 @@
           <type>\HelpscoutApi\Contracts\Article</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="116" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="117" package="Default">
         <name>searchArticles</name>
         <full_name>\HelpscoutApi\Api\Get\Articles::searchArticles()</full_name>
-        <docblock line="116">
+        <docblock line="117">
           <description>Search the articles based on an article query</description>
           <long-description>The article query is a string which is built from seting values
 and then using the &lt;code&gt;getQuery&lt;/code&gt; to get the query for the
 endpoint.</long-description>
-          <tag name="param" line="116" description="" type="\HelpscoutApi\Query\Article" variable="$articleQuery">
+          <tag name="param" line="117" description="" type="\HelpscoutApi\Query\Article" variable="$articleQuery">
             <type>\HelpscoutApi\Query\Article</type>
           </tag>
-          <tag name="return" line="116" description="" type="\HelpscoutApi\Api\Get\JSON">
+          <tag name="return" line="117" description="" type="\HelpscoutApi\Api\Get\JSON">
             <type>\HelpscoutApi\Api\Get\JSON</type>
           </tag>
         </docblock>
@@ -136,17 +137,56 @@ endpoint.</long-description>
           <type>\HelpscoutApi\Query\Article</type>
         </argument>
       </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="139" package="Default">
+        <name>getRevisions</name>
+        <full_name>\HelpscoutApi\Api\Get\Articles::getRevisions()</full_name>
+        <docblock line="139">
+          <description>Get all article revisions</description>
+          <long-description></long-description>
+          <tag name="param" line="139" description="" type="\HelpscoutApi\Contracts\Article" variable="$article">
+            <type>\HelpscoutApi\Contracts\Article</type>
+          </tag>
+          <tag name="return" line="139" description="" type="\HelpscoutApi\Api\Get\JSON">
+            <type>\HelpscoutApi\Api\Get\JSON</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$article</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\Article</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="161" package="Default">
+        <name>getRevision</name>
+        <full_name>\HelpscoutApi\Api\Get\Articles::getRevision()</full_name>
+        <docblock line="161">
+          <description>Get an article revision</description>
+          <long-description></long-description>
+          <tag name="param" line="161" description="" type="\HelpscoutApi\Contracts\Revision" variable="$article">
+            <type>\HelpscoutApi\Contracts\Revision</type>
+          </tag>
+          <tag name="return" line="161" description="" type="\HelpscoutApi\Api\Get\JSON">
+            <type>\HelpscoutApi\Api\Get\JSON</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$article</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\Article</type>
+        </argument>
+      </method>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="29" code="PPC:ERR-50015">Argument $client is missing from the Docblock of __construct</error>
-      <error line="29" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
-      <error line="29" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="42" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $categoryValue in getAll()</error>
-      <error line="66" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $articleValue in getSingle()</error>
-      <error line="90" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $articleValue in getRelatedArticles()</error>
+      <error line="30" code="PPC:ERR-50015">Argument $client is missing from the Docblock of __construct</error>
+      <error line="30" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
+      <error line="30" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="43" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $categoryValue in getAll()</error>
+      <error line="67" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $articleValue in getSingle()</error>
+      <error line="91" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $articleValue in getRelatedArticles()</error>
+      <error line="161" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $article in getRevision()</error>
     </parse_markers>
-    <source>eJztVt9P2zAQfs9fcQ9ISVHbvG/Q0bEJ2KT9KpsmrQi5zpV4cx1jO6Ay8b/PduI0DQU2DSQesIQa+7777nz+znjnlcxlFAmyQC0JRThELjUtSjOWbOr+DtC8jKJSI4ylnDrzxJmnnM1asxq9zxkKi3fwNab9QhhFqNEO9R6Xd0OUYZTjnZh9YvCsUJuIPpeoloEEiIb6069X+IPy6orjoTFyGlKO0u3tCLbhDRKu4ZKZHA7eHgdfS/LpCOaqWEAeYg0t3Hns7XEmfkFu2fSLNM3wAnkhUQ1XSFos0qygekAkS2mVOkOdcqZNajnSiHKi9Sra7ygCO3xObmzfTLk2pP5XKnZhaWGLhu103O85jY1cpDZWq+WMMwrzUlDDCgGnp7QQ2qiSmqRKKATvQ8UaCHp2N1CPLZMzPRhVQNhd5dsBVJ4OUH0NRmdo7G/Sq6DXN+uDBgjnQEIJichAoSmVcBp4N/n4YVhjg8tXbWEmR6hPZAmmABvHr9U8wMS8UAvi9tz135NEkQUEKX4jvMTGVod2cder26mjjTfmPAkktiJturXaKdujtuboytKu42Ck8LxEbZIG60Zs9Rv315da2oth2Anmi3yUJT1ridNQyA7Fj7WZJ82RZKh0DLujDWYPGVOK0nhETKS0FfAVTX/qQnQCND5OpW53x0uJf+95cnMtJqXJq+zW5NWH+Ht8sgZfzXq17t2oz9KFPM2QFhkmzWH4or0uMitN/1lnrZPe3VIVjcLuF6p10GuinBGNGVj13KLUPuiS5o6OZY+l2gkTZxyTcM9u1Wk8imyDFivRtiM1mn1W6WOo1F6oCrmVSra6WK3KgICWSNncaqJe3yTZje5PQbtfqqTCv9snI2J/8dYVe753H1rREyTKKqulu5YaWxfyuXsodpR33BKrtwPTrguMstcgXObMEtuVWcm4qd6JGo0zXbgD1oHG3fU2voBSO6NLZcfty+3Av093Uj9tv0SqcK7r7CwQochkwYS5pUPaT95/bhDt69RtDs/V6NbPHrpDqsCrl0erT3y8QVOm5/v+v7vjOvoDWI/riA==</source>
+    <source>eJztl1tP2zAUgN/zK84DUtqKkvcNOhibgE3aBdg0aSBknAPx5ibGdkBl4r/Pduw0SUvZGJ14qKWqsc/VJ59P3c1XIhNRlJMxKkEowj5yoWhR6h3BTuxnD/XLKCoVwo4QJ1Z8ZMUnnJ03Zl57lzPMjb5Vb3naLXItCdXKar3HyWIVqRnluFBnl2i8LORiR4d4zRQr8jlKn0uUkxAJiAL/6NYr/b3y9pbjvtbiJOwrSgaDCAbwBglXcMN0Bntvj4OtcfLpAC5kMYYsxNow6tZie5uz/Cdkxpt6kSQpXiMvBMqNqSYtxklaUDUkgiW02h9DlXCmdGJ8JBHlRKlptF9RBGa4nOwYzKbsBYn7FpJdG7ewRsN2OuYPvLK5vogXVqvlOWcULsqcalN3ODujRa60LKnuVQmF4OtQeQ0O+mY34MeazpgajipF2Jrm21GoLK1C9TQcXaI2371+pXo3Wx/UQDgHEkpI8hQk6lLmloF3Rx8/bHjdYPJFGTWdIfg3MgFdgInj1rwfYPlFIcfE7rlrvy2IJGMIvH4lvMRa5kPbuO3qdupo4u1w3gtOTEWa7lq1k+Ygm5qjLUuzjsORxKsSle7VunbEht94vb3UYC+GjU4wV+SDtNc3kjgJhey4+N6aOacZkhSlimFrNEfsVHYoRaGdRkyEMBVwFU1+qCLvBKhtLKV2d8cTgX9ueTq7FpNSZ1V2LbzWIf4Wn7bUp7O+594O/y5tyLMUaZFir34Zrmivi9Sg6R591qrXX4xqXhP2MKjGQLWgPCcKUzD03EPqOqiSZtYdS5dF7RHLLzn2Qp9d82ksBdvAYgVtM1LN7IrSZVBqGqpEblBJp43VUAYElEDKLgwTfn0esnPNnwO7h1VS4ef22UDsGq+v2KrvPjXRR0ikIavBXYPGRkO+shfFDnnHDVidHJiyp0BL0wbhJmPGsVk5LxnX1T1Robaia/uCVXBje72Jn0OprNCmsmn3ZXfg7qebiZs2byJVOHvqzCw4wjwVBcv1PSekeeX96wOiXJ26h8P5qrl1s6c+IVXg6c2jcU5cvGFdplW/X1q/D5RL/w9LLSTscd3Xe57pu/+l5Xa7rU9m1W+XfM8NlZ7P02Fb+iigls5TDct8oFYE/SNBd9FvpK0kWg==</source>
   </file>
   <file path="Api/Get/Categories.php" generated-path="Api.Get.Categories.html" hash="fde609f282b6c657a3d37054cd4da66b" package="Default">
     <docblock line="0">

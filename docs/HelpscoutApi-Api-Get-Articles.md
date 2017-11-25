@@ -160,4 +160,44 @@ endpoint.
 
 --
 
+public **getRevisions** ( Article $article )
+
+
+Get all article revisions
+
+
+
+
+
+
+
+
+**Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| $article | [Article](HelpscoutApi-Contracts-Article.md) |  |
+
+--
+
+public **getRevision** ( Revision $article )
+
+
+Get an article revision
+
+
+
+
+
+
+
+
+**Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| $article | HelpscoutApi\Contracts\Revision |  |
+
+--
+
 [API Index](ApiIndex.md)

@@ -39,12 +39,12 @@ class ArticlesTest extends TestCase {
         $categoryStub = $this->createMock(Category::class);
 
         $categoryStub->method('getId')
-             ->willReturn('1');
+                     ->willReturn('1');
 
-         $apiKeySub = $this->createMock(ApiKey::class);
+        $apiKeySub = $this->createMock(ApiKey::class);
 
-         $apiKeySub->method('getKey')
-              ->willReturn('fakeApiKey');
+        $apiKeySub->method('getKey')
+                  ->willReturn('fakeApiKey');
 
         $articles = new Articles($client, $apiKeySub);
         $response = $articles->getAll($categoryStub);
@@ -58,12 +58,12 @@ class ArticlesTest extends TestCase {
         $articleSub = $this->createMock(Article::class);
 
         $articleSub->method('getId')
-             ->willReturn('1');
+                   ->willReturn('1');
 
-         $apiKeySub = $this->createMock(ApiKey::class);
+        $apiKeySub = $this->createMock(ApiKey::class);
 
-         $apiKeySub->method('getKey')
-              ->willReturn('fakeApiKey');
+        $apiKeySub->method('getKey')
+                  ->willReturn('fakeApiKey');
 
         $articles = new Articles($client, $apiKeySub);
         $response = $articles->getSingle($articleSub);
@@ -77,12 +77,12 @@ class ArticlesTest extends TestCase {
         $articleSub = $this->createMock(Article::class);
 
         $articleSub->method('getId')
-             ->willReturn('1');
+                   ->willReturn('1');
 
-         $apiKeySub = $this->createMock(ApiKey::class);
+        $apiKeySub = $this->createMock(ApiKey::class);
 
-         $apiKeySub->method('getKey')
-              ->willReturn('fakeApiKey');
+        $apiKeySub->method('getKey')
+                  ->willReturn('fakeApiKey');
 
         $articles = new Articles($client, $apiKeySub);
         $response = $articles->getRelatedArticles($articleSub);
@@ -93,16 +93,54 @@ class ArticlesTest extends TestCase {
     public function testGetArticleSearchResponse() {
         $client = $this->fakeClient();
 
-         $apiKeySub = $this->createMock(ApiKey::class);
+        $apiKeySub = $this->createMock(ApiKey::class);
 
-         $apiKeySub->method('getKey')
-              ->willReturn('fakeApiKey');
+        $apiKeySub->method('getKey')
+                  ->willReturn('fakeApiKey');
 
         $articleQuery = new ArticleQuery();
         $articleQuery->setPage('16');
 
         $articles = new Articles($client, $apiKeySub);
         $response = $articles->searchArticles($articleQuery);
+
+        $this->assertNotEmpty($response);
+    }
+
+    public function testGetAllRevisions() {
+        $client = $this->fakeClient();
+
+        $articleSub = $this->createMock(Article::class);
+
+        $articleSub->method('getId')
+                   ->willReturn('1');
+
+        $apiKeySub = $this->createMock(ApiKey::class);
+
+        $apiKeySub->method('getKey')
+                  ->willReturn('fakeApiKey');
+
+        $articles = new Articles($client, $apiKeySub);
+        $response = $articles->getRevisions($articleSub);
+
+        $this->assertNotEmpty($response);
+    }
+
+    public function testGetSingleRevision() {
+        $client = $this->fakeClient();
+
+        $articleSub = $this->createMock(Article::class);
+
+        $articleSub->method('getId')
+                   ->willReturn('1');
+
+        $apiKeySub = $this->createMock(ApiKey::class);
+
+        $apiKeySub->method('getKey')
+                  ->willReturn('fakeApiKey');
+
+        $articles = new Articles($client, $apiKeySub);
+        $response = $articles->getRevision($articleSub);
 
         $this->assertNotEmpty($response);
     }
