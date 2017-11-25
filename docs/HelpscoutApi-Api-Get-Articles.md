@@ -17,7 +17,7 @@ HelpscoutApi\Api\Get\Articles
 
     Deals with GET Articles API from helpscout.
 
-    @@link https://developer.helpscout.com/docs-api/categories/list/
+    
 
 
 

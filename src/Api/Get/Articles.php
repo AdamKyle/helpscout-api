@@ -13,7 +13,7 @@ use GuzzleHttp\Client;
 /**
  * Deals with GET Articles API from helpscout.
  *
- * @@link https://developer.helpscout.com/docs-api/categories/list/
+ * @link https://developer.helpscout.com/docs-api/categories/list/
  */
 class Articles {
 
