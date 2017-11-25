@@ -4,7 +4,7 @@ use HelpscoutApi\Query\Article;
 use HelpscoutApi\Contracts\Collection;
 use HelpscoutApi\Contracts\Site;
 
-class ArticleTest extends TestCase {
+class ArticleQueryTest extends TestCase {
 
     public function testDefaultQuery() {
         $article = new Article();

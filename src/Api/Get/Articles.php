@@ -6,8 +6,10 @@ use App\HelpScout\lib\HelpScout\Api\ApiClient;
 use HelpscoutApi\Contracts\ApiKey;
 use HelpscoutApi\Contracts\Article;
 use HelpscoutApi\Contracts\Category;
+use HelpscoutApi\Contracts\Collection;
 use HelpscoutApi\Contracts\Revision;
 use HelpscoutApi\Query\Article as ArticleQuery;
+use HelpscoutApi\Params\Article as ArticleParams;
 use GuzzleHttp\Client;
 
 /**
@@ -33,17 +35,69 @@ class Articles {
     }
 
     /**
-     * Get all articles and return as JSON.
+     * Get all articles from a category and return as JSON.
      *
      * Uses the category to get the article information.
      *
+     * You can pass in an optional ArticleParams object in which you set
+     * the order in which the articles are sorted by.
+     *
      * @param CategoryValue
+     * @param ArticleParams - Optional
      * @return JSON
+     * @see ArticleParams
      */
-    public function getAll(Category $categoryValue) {
+    public function getAllFromCategory(
+        Category $categoryValue,
+        ArticleParams $articleParams = null)
+    {
+        $params = '';
+
+        if ($articleParams !== null) {
+            $params = $articleParams->getParams();
+        }
+
         $response = $this->client->request(
             'GET',
-            'categories/' . $categoryValue->getId() . '/articles',
+            'categories/' . $categoryValue->getId() . '/articles' . $params,
+            [
+                'headers' => [
+                    'Accept' => 'application/json',
+                    'Content-Type' => 'application/json',
+                 ],
+                'auth' => [$this->apiKey, 'X']
+            ]
+        );
+
+        return json_decode($response->getBody()->getContents());
+    }
+
+    /**
+     * Get all articles from a collection and return as JSON.
+     *
+     * Uses the collection to get the article information.
+     *
+     * You can pass in an optional ArticleParams object in which you set
+     * the order in which the articles are sorted by.
+     *
+     * @param CategoryValue
+     * @param ArticleParams - Optional
+     * @return JSON
+     * @see ArticleParams
+     */
+    public function getAllFromCollection(
+        Collection $collection,
+        ArticleParams $articleParams = null)
+    {
+        $params = '';
+
+        if ($articleParams !== null) {
+            $params = $articleParams->getParams();
+        }
+
+        $response = $this->client->request(
+            'GET',
+            'categories/' . $collection->getId() . '/articles' . $params,
             [
                 'headers' => [
                     'Accept' => 'application/json',
@@ -61,13 +115,17 @@ class Articles {
      *
      * Gets the article based on the article information, such as id.
      *
+     * Optional param is draft, which gets back or allows you to get back a draft
+     * article.
+     *
+     * @param Boolean - optional
      * @param CategoryValue
      * @return JSON
      */
-    public function getSingle(Article $articleValue) {
+    public function getSingle(Article $articleValue, bool $draft = false) {
         $response = $this->client->request(
             'GET',
-            'articles/' . $articleValue->getId(),
+            'articles/' . $articleValue->getId() . '?draft=' . $draft,
             [
                 'headers' => [
                     'Accept' => 'application/json',
@@ -85,13 +143,27 @@ class Articles {
      *
      * Gets all related articles based on the article information, such as id.
      *
+     * We also allow you to pass in an optional ArticleParams which allows you to set the
+     * params of the url to be passed in.
+     *
      * @param CategoryValue
+     * @param ArticleParams - Optional
      * @return JSON
+     * @see ArticleParams
      */
-    public function getRelatedArticles(Article $articleValue) {
+    public function getRelatedArticles(
+        Article $articleValue,
+        ArticleParams $articleParams = null)
+    {
+        $params = '';
+
+        if ($articleParams !== null) {
+            $params = $articleParams->getParams();
+        }
+
         $response = $this->client->request(
             'GET',
-            'articles/' . $articleValue->getId() . '/related',
+            'articles/' . $articleValue->getId() . '/related' . $params,
             [
                 'headers' => [
                     'Accept' => 'application/json',
@@ -133,13 +205,23 @@ class Articles {
     /**
      * Get all article revisions
      *
+     * You can pass in an optinal param called page which sets the page of revisions to
+     * get back.
+     *
      * @param Article
+     * @param String
      * @return JSON
      */
-    public function getRevisions(Article $article) {
+    public function getRevisions(Article $article, Sting $page = null) {
+        $params = '';
+
+        if ($page !== null) {
+            $params = '?page=' . $page;
+        }
+
         $response = $this->client->request(
             'GET',
-            'articles/' . $article->getId() . '/revisions',
+            'articles/' . $article->getId() . '/revisions' . $params,
             [
                 'headers' => [
                     'Accept' => 'application/json',

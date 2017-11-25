@@ -6,6 +6,7 @@ use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Request;
 use HelpscoutApi\Api\Get\Articles;
 use HelpscoutApi\Contracts\Category;
+use HelpscoutApi\Contracts\Collection;
 use HelpscoutApi\Contracts\ApiKey;
 use HelpscoutApi\Contracts\Article;
 use HelpscoutApi\Query\Article as ArticleQuery;
@@ -32,8 +33,7 @@ class ArticlesTest extends TestCase {
         ]);
     }
 
-
-    public function testGetAllArticles() {
+    public function testGetAllArticlesBasedOnCategory() {
         $client = $this->fakeClient();
 
         $categoryStub = $this->createMock(Category::class);
@@ -47,7 +47,26 @@ class ArticlesTest extends TestCase {
                   ->willReturn('fakeApiKey');
 
         $articles = new Articles($client, $apiKeySub);
-        $response = $articles->getAll($categoryStub);
+        $response = $articles->getAllFromCategory($categoryStub);
+
+        $this->assertNotEmpty($response);
+    }
+
+    public function testGetAllArticlesBasedOnCollection() {
+        $client = $this->fakeClient();
+
+        $collectionSub = $this->createMock(Collection::class);
+
+        $collectionSub->method('getId')
+                      ->willReturn('1');
+
+        $apiKeySub = $this->createMock(ApiKey::class);
+
+        $apiKeySub->method('getKey')
+                  ->willReturn('fakeApiKey');
+
+        $articles = new Articles($client, $apiKeySub);
+        $response = $articles->getAllFromCollection($collectionSub);
 
         $this->assertNotEmpty($response);
     }

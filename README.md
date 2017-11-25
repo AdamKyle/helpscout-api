@@ -41,9 +41,18 @@ For further documentation see [the generated documentation](https://github.com/A
 The core thing to understand is that the structure and flow goes like this:
 
 - Get all collections
- - Get all categories
-  - Get all articles
+ - Get all categories (Based on collection ID)
+  - Get all articles (Based on category ID)
     - Get single article based on article id's returned from above.
+
+You can also get Articles through the collections:
+
+- Get all Collections
+ - Get all Articles (Based on Collection ID)
+   - Get Single Article based on Article ID from above.
+
+Articles Will return a list of articles, unfortunately you have to use the article ID to get
+specific information like text from a single article.
 
 ### Get All Articles
 
@@ -67,6 +76,40 @@ $categoryValue = new CategoryValue('12345667');
 
 $articles = new Article($client, $apiKey);
 $articleJSON = $articles->getAll($categoryValue);
+
+// Do something with $articleJSON.
+
+```
+
+### Get All Articles with params
+
+
+```php
+
+use HelpscoutApi\Api\Get\Articles;
+use HelpscoutApi\Contracts\ApiKey; // We will pretend we implemented this as ApiKeyValue;
+use HelpscoutApi\Contracts\Category; // We will pretend we implemented this as CategoryValue;
+use HelpscoutApi\Params\Article as ArticleParams;
+use GuzzleHttp\Client;
+
+$client = new Client([
+    'base_uri' => 'https://docsapi.helpscout.net/v1/',
+]);
+
+$apiKey = new ApiKeyValue('xxxxxxxxxx');
+
+$categoryValue = new CategoryValue('12345667');
+
+// You can set the url params that come back as `?sort=number&status=number`:
+
+$articleParams = new ArticleParams();
+$articleParams->sort('number');
+$articleParams->status('name');
+
+$articles = new Article($client, $apiKey);
+
+// We then pass $articleParams
+$articleJSON = $articles->getAll($categoryValue, $articleParams);
 
 // Do something with $articleJSON.
 

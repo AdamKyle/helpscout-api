@@ -15,7 +15,7 @@ class Article {
     /**
      * The params for the article search
      */
-    protected $params = [];
+    private $params = [];
 
     public function __construct() {
         $this->createQuery();
