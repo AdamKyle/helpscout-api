@@ -11,11 +11,4 @@ interface Category {
      */
     public function getId();
 
-    /**
-     * Get name of category
-     *
-     * @return string
-     */
-    public function getName();
-
 }

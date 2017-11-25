@@ -2,12 +2,13 @@
 
 namespace HelpscoutApi\Contracts;
 
-interface Article {
-    
+interface Site {
+
     /**
-     * Get id of article
+     * Get id of Site
      *
      * @return string
      */
     public function getId();
+
 }

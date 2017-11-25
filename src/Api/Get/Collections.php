@@ -5,6 +5,11 @@ namespace HelpscoutApi\Api\Get;
 use GuzzleHttp\Client;
 use HelpscoutApi\Contracts\ApiKey;
 
+/**
+ * Deals with GET Collection API from helpscout.
+ *
+ * @link https://developer.helpscout.com/docs-api/collections/list/
+ */
 class Collections {
 
     /**

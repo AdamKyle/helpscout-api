@@ -6,10 +6,13 @@ use App\HelpScout\lib\HelpScout\Api\ApiClient;
 use HelpscoutApi\Contracts\ApiKey;
 use HelpscoutApi\Contracts\Article;
 use HelpscoutApi\Contracts\Category;
+use HelpscoutApi\Query\Article as ArticleQuery;
 use GuzzleHttp\Client;
 
 /**
- * Gets all or a single article based on a category passed in.
+ * Deals with GET Articles API from helpscout.
+ *
+ * @@link https://developer.helpscout.com/docs-api/categories/list/
  */
 class Articles {
 
@@ -64,6 +67,56 @@ class Articles {
         $response = $this->client->request(
             'GET',
             'articles/' . $articleValue->getId(),
+            [
+                'headers' => [
+                    'Accept' => 'application/json',
+                    'Content-Type' => 'application/json',
+                 ],
+                'auth' => [$this->apiKey, 'X']
+            ]
+        );
+
+        return json_decode($response->getBody()->getContents());
+    }
+
+    /**
+     * Get all related articles for a specific article
+     *
+     * Gets all related articles based on the article information, such as id.
+     *
+     * @param CategoryValue
+     * @return JSON
+     */
+    public function getRelatedArticles(Article $articleValue) {
+        $response = $this->client->request(
+            'GET',
+            'articles/' . $articleValue->getId() . '/related',
+            [
+                'headers' => [
+                    'Accept' => 'application/json',
+                    'Content-Type' => 'application/json',
+                 ],
+                'auth' => [$this->apiKey, 'X']
+            ]
+        );
+
+        return json_decode($response->getBody()->getContents());
+    }
+
+    /**
+     * Search the articles based on an article query
+     *
+     * The article query is a string which is built from seting values
+     * and then using the <code>getQuery</code> to get the query for the
+     * endpoint.
+     *
+     * @param ArticleQuery
+     * @return JSON
+     */
+    public function searchArticles(ArticleQuery $articleQuery) {
+        $response = $this->client->request(
+            'GET',
+            'search/articles' . $articleQuery->getQuery(),
             [
                 'headers' => [
                     'Accept' => 'application/json',

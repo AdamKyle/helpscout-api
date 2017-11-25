@@ -7,7 +7,9 @@ use HelpscoutApi\Contracts\Collection;
 use HelpscoutApi\Contracts\ApiKey;
 
 /**
- * Get all categories based on a collection
+ * Deals with GET Category API from helpscout.
+ *
+ * @link https://developer.helpscout.com/docs-api/categories/list/
  */
 class Categories {
 

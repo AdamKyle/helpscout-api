@@ -8,6 +8,7 @@ use HelpscoutApi\Api\Get\Articles;
 use HelpscoutApi\Contracts\Category;
 use HelpscoutApi\Contracts\ApiKey;
 use HelpscoutApi\Contracts\Article;
+use HelpscoutApi\Query\Article as ArticleQuery;
 use PHPUnit\Framework\TestCase;
 
 class ArticlesTest extends TestCase {
@@ -66,6 +67,42 @@ class ArticlesTest extends TestCase {
 
         $articles = new Articles($client, $apiKeySub);
         $response = $articles->getSingle($articleSub);
+
+        $this->assertNotEmpty($response);
+    }
+
+    public function testGetRelatedArticles() {
+        $client = $this->fakeClient();
+
+        $articleSub = $this->createMock(Article::class);
+
+        $articleSub->method('getId')
+             ->willReturn('1');
+
+         $apiKeySub = $this->createMock(ApiKey::class);
+
+         $apiKeySub->method('getKey')
+              ->willReturn('fakeApiKey');
+
+        $articles = new Articles($client, $apiKeySub);
+        $response = $articles->getRelatedArticles($articleSub);
+
+        $this->assertNotEmpty($response);
+    }
+
+    public function testGetArticleSearchResponse() {
+        $client = $this->fakeClient();
+
+         $apiKeySub = $this->createMock(ApiKey::class);
+
+         $apiKeySub->method('getKey')
+              ->willReturn('fakeApiKey');
+
+        $articleQuery = new ArticleQuery();
+        $articleQuery->setPage('16');
+
+        $articles = new Articles($client, $apiKeySub);
+        $response = $articles->searchArticles($articleQuery);
 
         $this->assertNotEmpty($response);
     }
