@@ -108,7 +108,7 @@ class Articles {
      * Search the articles based on an article query
      *
      * The article query is a string which is built from seting values
-     * and then using the <code>getQuery</code> to get the query for the
+     * and then using the `getQuery` to get the query for the
      * endpoint.
      *
      * @param ArticleQuery

@@ -24,7 +24,7 @@ class Article {
     /**
      * Create a query
      *
-     * <code>?query=''</code> is string related to the article search.
+     * `?query=''` is string related to the article search.
      *
      * @param String
      * @link https://developer.helpscout.com/docs-api/articles/search/
@@ -65,9 +65,9 @@ class Article {
     /**
      * Sets the status for the url param
      *
-     * Accepted statuses are: <code>all</code>, <code>published</code> and <code>notpublished</code>
+     * Accepted statuses are: `all`, `published` and `notpublished`
      *
-     * We default to <code>all</code> if we don't match on anything.
+     * We default to `all` if we don't match on anything.
      *
      * @param String
      */
@@ -90,9 +90,9 @@ class Article {
     /**
      * Sets the visibility for the url param
      *
-     * Accepted statuses are: <code>all</code>, <code>public</code> and <code>private</code>
+     * Accepted statuses are: `all`, `public` and `private`
      *
-     * We default to <code>all</code> if we don't match on anything.
+     * We default to `all` if we don't match on anything.
      *
      * @param String
      */

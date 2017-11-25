@@ -82,7 +82,7 @@ class Redirects {
      * The response url could be null if the given url does not redirect
      * anyway.
      *
-     * The url can be: <code>/old/path/123</code> for example, which,
+     * The url can be: `/old/path/123` for example, which,
      * if it has a redirect will return the redirected path.
      *
      * @param String
