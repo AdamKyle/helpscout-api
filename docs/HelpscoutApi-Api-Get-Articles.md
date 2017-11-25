@@ -78,12 +78,15 @@ public **__construct** (  $client,  $apiKey )
 
 --
 
-public **getAll** ( CategoryValue $categoryValue )
+public **getAllFromCategory** ( CategoryValue $categoryValue, Article $articleParams )
 
 
-Get all articles and return as JSON.
+Get all articles from a category and return as JSON.
 
 Uses the category to get the article information.
+
+You can pass in an optional ArticleParams object in which you set
+the order in which the articles are sorted by.
 
 
 
@@ -95,16 +98,48 @@ Uses the category to get the article information.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | $categoryValue | HelpscoutApi\Api\Get\CategoryValue |  |
+| $articleParams | [Article](HelpscoutApi-Params-Article.md) | &lt;ul&gt;
+&lt;li&gt;Optional&lt;/li&gt;
+&lt;/ul&gt; |
 
 --
 
-public **getSingle** ( CategoryValue $articleValue )
+public **getAllFromCollection** ( CategoryValue $collection, Article $articleParams )
+
+
+Get all articles from a collection and return as JSON.
+
+Uses the collection to get the article information.
+
+You can pass in an optional ArticleParams object in which you set
+the order in which the articles are sorted by.
+
+
+
+
+
+
+**Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| $collection | HelpscoutApi\Api\Get\CategoryValue |  |
+| $articleParams | [Article](HelpscoutApi-Params-Article.md) | &lt;ul&gt;
+&lt;li&gt;Optional&lt;/li&gt;
+&lt;/ul&gt; |
+
+--
+
+public **getSingle** ( Boolean $articleValue, CategoryValue $draft )
 
 
 Get an article and return as JSON.
 
 Gets the article based on the article information, such as id.
 
+Optional param is draft, which gets back or allows you to get back a draft
+article.
+
 
 
 
@@ -114,17 +149,23 @@ Gets the article based on the article information, such as id.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| $articleValue | HelpscoutApi\Api\Get\CategoryValue |  |
+| $articleValue | Boolean | &lt;ul&gt;
+&lt;li&gt;optional&lt;/li&gt;
+&lt;/ul&gt; |
+| $draft | HelpscoutApi\Api\Get\CategoryValue |  |
 
 --
 
-public **getRelatedArticles** ( CategoryValue $articleValue )
+public **getRelatedArticles** ( CategoryValue $articleValue, Article $articleParams )
 
 
 Get all related articles for a specific article
 
 Gets all related articles based on the article information, such as id.
 
+We also allow you to pass in an optional ArticleParams which allows you to set the
+params of the url to be passed in.
+
 
 
 
@@ -135,6 +176,9 @@ Gets all related articles based on the article information, such as id.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | $articleValue | HelpscoutApi\Api\Get\CategoryValue |  |
+| $articleParams | [Article](HelpscoutApi-Params-Article.md) | &lt;ul&gt;
+&lt;li&gt;Optional&lt;/li&gt;
+&lt;/ul&gt; |
 
 --
 
@@ -144,7 +188,7 @@ public **searchArticles** ( Article $articleQuery )
 Search the articles based on an article query
 
 The article query is a string which is built from seting values
-and then using the &lt;code&gt;getQuery&lt;/code&gt; to get the query for the
+and then using the `getQuery` to get the query for the
 endpoint.
 
 
@@ -160,12 +204,13 @@ endpoint.
 
 --
 
-public **getRevisions** ( Article $article )
+public **getRevisions** ( Article $article, String $page )
 
 
 Get all article revisions
 
-
+You can pass in an optinal param called page which sets the page of revisions to
+get back.
 
 
 
@@ -177,6 +222,7 @@ Get all article revisions
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | $article | [Article](HelpscoutApi-Contracts-Article.md) |  |
+| $page | String |  |
 
 --
 

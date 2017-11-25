@@ -128,7 +128,7 @@ The url is the url in which will resolve the redirect.
 The response url could be null if the given url does not redirect
 anyway.
 
-The url can be: &lt;code&gt;/old/path/123&lt;/code&gt; for example, which,
+The url can be: `/old/path/123` for example, which,
 if it has a redirect will return the redirected path.
 
 

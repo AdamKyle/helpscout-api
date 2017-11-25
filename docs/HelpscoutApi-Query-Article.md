@@ -33,7 +33,7 @@ The params for the article search
 
 
 
-    protected  $params = array()
+    private  $params = array()
 
 
 
@@ -63,7 +63,7 @@ public **createQuery** ( String $query )
 
 Create a query
 
-&lt;code&gt;?query=&#039;&#039;&lt;/code&gt; is string related to the article search.
+`?query=&#039;&#039;` is string related to the article search.
 
 
 
@@ -143,9 +143,9 @@ public **setStatus** ( String $status )
 
 Sets the status for the url param
 
-Accepted statuses are: &lt;code&gt;all&lt;/code&gt;, &lt;code&gt;published&lt;/code&gt; and &lt;code&gt;notpublished&lt;/code&gt;
+Accepted statuses are: `all`, `published` and `notpublished`
 
-We default to &lt;code&gt;all&lt;/code&gt; if we don&#039;t match on anything.
+We default to `all` if we don&#039;t match on anything.
 
 
 
@@ -165,9 +165,9 @@ public **setVisibility** ( String $visibility )
 
 Sets the visibility for the url param
 
-Accepted statuses are: &lt;code&gt;all&lt;/code&gt;, &lt;code&gt;public&lt;/code&gt; and &lt;code&gt;private&lt;/code&gt;
+Accepted statuses are: `all`, `public` and `private`
 
-We default to &lt;code&gt;all&lt;/code&gt; if we don&#039;t match on anything.
+We default to `all` if we don&#039;t match on anything.
 
 
 

@@ -16,6 +16,8 @@ API Index
         * [Collection](HelpscoutApi-Contracts-Collection.md)
         * [Redirect](HelpscoutApi-Contracts-Redirect.md)
         * [Site](HelpscoutApi-Contracts-Site.md)
+    * HelpscoutApi\Params
+        * [Article](HelpscoutApi-Params-Article.md)
     * HelpscoutApi\Query
         * [Article](HelpscoutApi-Query-Article.md)
 
