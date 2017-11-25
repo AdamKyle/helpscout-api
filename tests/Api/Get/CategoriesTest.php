@@ -39,10 +39,10 @@ class CategoriesTest extends TestCase {
         $collectionSub->method('getId')
              ->willReturn('1');
 
-         $apiKeySub = $this->createMock(ApiKey::class);
+        $apiKeySub = $this->createMock(ApiKey::class);
 
-         $apiKeySub->method('getKey')
-              ->willReturn('fakeApiKey');
+        $apiKeySub->method('getKey')
+                  ->willReturn('fakeApiKey');
 
         $categories = new Categories($client, $apiKeySub);
         $response = $categories->getAll($collectionSub);

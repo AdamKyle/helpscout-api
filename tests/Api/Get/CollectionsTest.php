@@ -33,10 +33,10 @@ class CollectionsTest extends TestCase {
     public function testGetAllArticles() {
         $client = $this->fakeClient();
 
-         $apiKeySub = $this->createMock(ApiKey::class);
+        $apiKeySub = $this->createMock(ApiKey::class);
 
-         $apiKeySub->method('getKey')
-              ->willReturn('fakeApiKey');
+        $apiKeySub->method('getKey')
+                  ->willReturn('fakeApiKey');
 
         $collections = new Collections($client, $apiKeySub);
         $response = $collections->getAll();
