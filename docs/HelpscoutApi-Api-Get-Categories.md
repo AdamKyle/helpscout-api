@@ -78,10 +78,10 @@ public **__construct** (  $client,  $apiKey )
 
 --
 
-public **getAll** ( Collection $collection )
+public **getAll** ( Collection $collection,  $categoryParams )
 
 
-Get all collections.
+Get all collections by id.
 
 
 
@@ -95,6 +95,47 @@ Get all collections.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | $collection | [Collection](HelpscoutApi-Contracts-Collection.md) |  |
+| $categoryParams | [HelpscoutApi\Params\Category](HelpscoutApi-Params-Category.md) |  |
+
+--
+
+public **getCategoryById** ( Category $category )
+
+
+Get a single category based off the ID
+
+
+
+
+
+
+
+
+**Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| $category | [Category](HelpscoutApi-Contracts-Category.md) |  |
+
+--
+
+public **getCategoryByNumber** ( Category $category )
+
+
+Get a single category based off the number
+
+
+
+
+
+
+
+
+**Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| $category | [Category](HelpscoutApi-Contracts-Category.md) |  |
 
 --
 

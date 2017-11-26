@@ -10,6 +10,7 @@ HelpscoutApi\Params\Article
 **Namespace**: HelpscoutApi\Params
 
 
+**Parent class**: [HelpscoutApi\Params\Base](HelpscoutApi-Params-Base.md)
 
 
 
@@ -33,7 +34,7 @@ Array of params
 
 
 
-    private  $params = array()
+    protected  $params = array()
 
 
 
@@ -43,26 +44,6 @@ Array of params
 Methods
 -------
 
-
-public **page** ( String $page )
-
-
-Set the page number
-
-
-
-
-
-
-
-
-**Parameters**:
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| $page | String |  |
-
---
 
 public **status** ( String $status )
 
@@ -83,6 +64,46 @@ The default is `all`
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | $status | String |  |
+
+--
+
+public **pageSize** ( Integer $pageSize )
+
+
+Set the page size.
+
+The maximum is 100.
+
+
+
+
+
+
+**Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| $pageSize | Integer |  |
+
+--
+
+public **page** ( String $page )
+
+
+Set the page number
+
+
+
+
+
+
+
+
+**Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| $page | String |  |
 
 --
 
@@ -126,26 +147,6 @@ We accept `asc` and `desc` with the default of `asc`
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | $order | String |  |
-
---
-
-public **pageSize** ( Integer $pageSize )
-
-
-Set the page size.
-
-The maximum is 100.
-
-
-
-
-
-
-**Parameters**:
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| $pageSize | Integer |  |
 
 --
 

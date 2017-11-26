@@ -18,6 +18,8 @@ API Index
         * [Site](HelpscoutApi-Contracts-Site.md)
     * HelpscoutApi\Params
         * [Article](HelpscoutApi-Params-Article.md)
+        * [Base](HelpscoutApi-Params-Base.md)
+        * [Category](HelpscoutApi-Params-Category.md)
     * HelpscoutApi\Query
         * [Article](HelpscoutApi-Query-Article.md)
 
