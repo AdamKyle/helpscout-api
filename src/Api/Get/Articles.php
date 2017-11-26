@@ -125,7 +125,7 @@ class Articles {
     public function getSingle(Article $articleValue, bool $draft = false) {
 
         // Convert draft to string
-        $stringDraft = ($draft) ? 'true' : 'false'
+        $stringDraft = ($draft) ? 'true' : 'false';
 
         $response = $this->client->request(
             'GET',
