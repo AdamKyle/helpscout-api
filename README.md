@@ -114,3 +114,5 @@ $articleJSON = $articles->getAll($categoryValue, $articleParams);
 // Do something with $articleJSON.
 
 ```
+
+You can view the [tests](https://github.com/AdamKyle/helpscout-api/tree/master/tests) to get a better understanding of how you would use the endpoints.
