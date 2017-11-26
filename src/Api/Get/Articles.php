@@ -123,9 +123,13 @@ class Articles {
      * @return JSON
      */
     public function getSingle(Article $articleValue, bool $draft = false) {
+
+        // Convert draft to string
+        $stringDraft = ($draft) ? 'true' : 'false'
+
         $response = $this->client->request(
             'GET',
-            'articles/' . $articleValue->getId() . '?draft=' . $draft,
+            'articles/' . $articleValue->getId() . '?draft=' . $stringDraft,
             [
                 'headers' => [
                     'Accept' => 'application/json',
