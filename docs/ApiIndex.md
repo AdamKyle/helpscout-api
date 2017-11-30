@@ -9,9 +9,12 @@ API Index
             * [Collections](HelpscoutApi-Api-Get-Collections.md)
             * [Redirects](HelpscoutApi-Api-Get-Redirects.md)
             * [Sites](HelpscoutApi-Api-Get-Sites.md)
+        * HelpscoutApi\Api\Post
+            * [Article](HelpscoutApi-Api-Post-Article.md)
     * HelpscoutApi\Contracts
         * [ApiKey](HelpscoutApi-Contracts-ApiKey.md)
         * [Article](HelpscoutApi-Contracts-Article.md)
+        * [ArticlePostBody](HelpscoutApi-Contracts-ArticlePostBody.md)
         * [Category](HelpscoutApi-Contracts-Category.md)
         * [Collection](HelpscoutApi-Contracts-Collection.md)
         * [Redirect](HelpscoutApi-Contracts-Redirect.md)

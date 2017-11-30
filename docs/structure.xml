@@ -729,6 +729,87 @@ if it has a redirect will return the redirected path.</long-description>
     </parse_markers>
     <source>eJztVVFv0zAQfs+vuIdKSau2Ea/AupUB20CCoe4BiU6V59wWg2sb2xna0P47PifplnSCaWhvs1TFufvuu8++r8rrXVOaJFFsjc4wjnCI0jiuKz83Ykm/A/SvkqRyCHNjlpReUHopxdmdtwa9LwWqgCd4h2lfK28Z945QH/Hqr5CF8HgP4EuF9mo5t15wicAcNNsYr/EH1fW1xEPvzbKVkuSjUQIjeItMOvglfAkH706AegSG4yM4t3oNZdtoGrAE35NC/YAyMLmXeV7gJUpt0E5vgVyv80JzN2FG5I7ocimcz0N1nnDJnGua/E4SCCvqoDXaltkk8vg0VlwyjzDg7RF65f+42Xu5WJOso9WZFBzOK8W90ApWK66V87biPqsFtc3HULO2BMNwGmjWwJfCTWY1EHZu9fYAdSUB6t1kdoE+PLNhDb3Zvh/0wKSEeKtNsM3tWfSVVfBh8flT96i9Q4UmcymzjmIbXB5OiiTmrvrJzOLPCp3PNlhaaXBKOu6GoqZe8FvnLcJKZAVal8LO7J50hMw5R+MjImXGBPGMhOffnVa9BpsamjbpPbky+PDK0+1Yyipf1uo6YxpD+jU97cBv34aNf2g1Y6CWqwK5LjDbXG+c8BtdhBHHbaPaZcOHjRzOtQUGhtEfvJLMhu0F9o0Q0mwNC2+FunikO95rexyYMxdJYEBtgjfSF+mT2GaX+HdSmNadnk30FCZSwNpPhCraDuFrQZaY9jwUChz4EjclZ8xhAcEfd4NCBT+u4+2MwVW8JDpR9MlaQ4ZJP8aOi+BAiRmVw4Ds8iQWzKP7aBsv9ajIhs82/E8b3iR/AAL/gZ4=</source>
   </file>
+  <file path="Api/Post/Article.php" generated-path="Api.Post.Article.html" hash="53bfc0a5616952d60d044517653cb785" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Client">\GuzzleHttp\Client</namespace-alias>
+    <namespace-alias name="ArticlePostBody">\HelpscoutApi\Contracts\ArticlePostBody</namespace-alias>
+    <namespace-alias name="ApiKey">\HelpscoutApi\Contracts\ApiKey</namespace-alias>
+    <class final="false" abstract="false" namespace="HelpscoutApi\Api\Post" line="14" package="Default">
+      <extends/>
+      <name>Article</name>
+      <full_name>\HelpscoutApi\Api\Post\Article</full_name>
+      <docblock line="14">
+        <description>Allows you to post an article to Helpscout using the API.</description>
+        <long-description></long-description>
+        <tag name="link" line="14" description="https://developer.helpscout.com/docs-api/articles/create/" link="https://developer.helpscout.com/docs-api/articles/create/"/>
+        <tag name="package" line="14" description="Default"/>
+      </docblock>
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Post" line="19" package="Default">
+        <name>$client</name>
+        <full_name>\HelpscoutApi\Api\Post\Article::client</full_name>
+        <default></default>
+        <docblock line="19">
+          <description>GuzzleHttp\Client</description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Post" line="24" package="Default">
+        <name>$apiKey</name>
+        <full_name>\HelpscoutApi\Api\Post\Article::apiKey</full_name>
+        <default></default>
+        <docblock line="24">
+          <description>HelpscoutApi\Contracts\ApiKey;</description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Post" line="26" package="Default">
+        <name>__construct</name>
+        <full_name>\HelpscoutApi\Api\Post\Article::__construct()</full_name>
+        <docblock line="26">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$client</name>
+          <default></default>
+          <type>\GuzzleHttp\Client</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$apiKey</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\ApiKey</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Post" line="37" package="Default">
+        <name>create</name>
+        <full_name>\HelpscoutApi\Api\Post\Article::create()</full_name>
+        <docblock line="37">
+          <description>Post an article to the Helpscout API.</description>
+          <long-description></long-description>
+          <tag name="param" line="37" description="" type="\HelpscoutApi\Contracts\ArticlePostBody" variable="$articlePostBody">
+            <type>\HelpscoutApi\Contracts\ArticlePostBody</type>
+          </tag>
+          <tag name="link" line="37" description="https://developer.helpscout.com/docs-api/articles/create/" link="https://developer.helpscout.com/docs-api/articles/create/"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$articlePostBody</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\ArticlePostBody</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="26" code="PPC:ERR-50015">Argument $client is missing from the Docblock of __construct</error>
+      <error line="26" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
+      <error line="26" code="PPC:ERR-50008">No summary for method __construct()</error>
+    </parse_markers>
+    <source>eJylU8FuEzEQvfsr5hBpkyjJ3oGmXXqgiAOR6AGJVJXrDF2DYxt7XJSi/ju2d51kEwmQWGnl9cy85+c3s28ubWsZ03yL3nKBcIPKemECNVau07synl4zFjzCu/D8rPCGyK6vlUQd4yk8gFwbTY4L8uvGkRQKE/6t2ez+XGvlB4wlrJ5OGUyhUcr89LAzAciAjRTANfCOMYX2PBC81I9ALUKzer+I4IS/UlJ/hzYq9a/qeoNPqIxFt2gLbCHMtt4Y4efcyron9rVwyAnrSFEzobj30N8CfjEGkNVB5D9zIocjDqyTT5ECRqJ36Bj2l9ufcfBiS4yFByUFfA1akDQa7u+F0Z5cEDTuJJQjZ9DxFfgkaof8jKiVfr7syuDioHGQ7lAp3X3Nl49IcR1PUuHL4EKr886kThy60/UEoK+/stzxLZyMRp/7354V906c6vLjkzPj7YaBYtPIxT8hWovJgWPD5kuHPwJ6Gvd+VauPn26rWdkVQfvIl37N2Rb5Bp2v4GI5SORkIwRayrmKWxvl8yS9/uaN3tPtq9PgJD23O4v/grk73lU8UNupGPR7BtXnalj5EF3JladWRUeyp2U/nhTcXV4neWIBHFJw+uBoPz8v7DeHJ10u</source>
+  </file>
   <file path="Contracts/ApiKey.php" generated-path="Contracts.ApiKey.html" hash="b17ddde82af0b53a8f63d0ad9e45e48c" package="Default">
     <docblock line="0">
       <description></description>
@@ -792,6 +873,95 @@ if it has a redirect will return the redirected path.</long-description>
       <error line="5" code="PPC:ERR-50009">No summary for interface \HelpscoutApi\Contracts\Article</error>
     </parse_markers>
     <source>eJw1ijEOAjEMBHu/wiWkuQccEpwogD/QBJ9zWApOlDgV4u9AOLbYlXZmt8/3DKD+wTV7YjxzzJVSsynL9ZjUiierI4CocQlfZSomFBmfgJ/0Gpzriw5PbCgzpoD+563gzw+FrRXFakV0Wd+hb263KIShKZkkxYXtMm+2I7zgDdc+MK4=</source>
+  </file>
+  <file path="Contracts/ArticlePostBody.php" generated-path="Contracts.ArticlePostBody.html" hash="9d4f37c0076be2c6f77fda4c5b45fe0d" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <interface namespace="HelpscoutApi\Contracts" line="10" package="Default">
+      <name>ArticlePostBody</name>
+      <full_name>\HelpscoutApi\Contracts\ArticlePostBody</full_name>
+      <docblock line="10">
+        <description>An Article interface for creating only the required fields.</description>
+        <long-description></long-description>
+        <tag name="link" line="10" description="https://developer.helpscout.com/docs-api/articles/create/" link="https://developer.helpscout.com/docs-api/articles/create/"/>
+        <tag name="package" line="10" description="Default"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="17" package="Default">
+        <name>collectionID</name>
+        <full_name>\HelpscoutApi\Contracts\ArticlePostBody::collectionID()</full_name>
+        <docblock line="17">
+          <description>Set the collection ID the aerticle belongs to.</description>
+          <long-description></long-description>
+          <tag name="param" line="17" description="" type="String" variable="$collectionId">
+            <type>String</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$collectionId</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="24" package="Default">
+        <name>name</name>
+        <full_name>\HelpscoutApi\Contracts\ArticlePostBody::name()</full_name>
+        <docblock line="24">
+          <description>Set the name of the aerticle.</description>
+          <long-description></long-description>
+          <tag name="param" line="24" description="" type="String" variable="$name">
+            <type>String</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="31" package="Default">
+        <name>text</name>
+        <full_name>\HelpscoutApi\Contracts\ArticlePostBody::text()</full_name>
+        <docblock line="31">
+          <description>Set the text of the aerticle.</description>
+          <long-description></long-description>
+          <tag name="param" line="31" description="" type="String" variable="$text">
+            <type>String</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$text</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="46" package="Default">
+        <name>createPostBody</name>
+        <full_name>\HelpscoutApi\Contracts\ArticlePostBody::createPostBody()</full_name>
+        <docblock line="46">
+          <description>Create the JSON aspect of the post body.</description>
+          <long-description>```php
+{
+  collectionId: 'xxxx',
+  name: 'sample',
+  text: 'Some text here ...',
+}
+````</long-description>
+          <tag name="return" line="46" description="" type="\HelpscoutApi\Contracts\JSON">
+            <type>\HelpscoutApi\Contracts\JSON</type>
+          </tag>
+        </docblock>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="17" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $collectionId in collectionID()</error>
+      <error line="24" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $name in name()</error>
+      <error line="31" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $text in text()</error>
+    </parse_markers>
+    <source>eJylksFPwjAUxu/9K97BBCS63cFEEA7iQU24eqB0b6yxa2v7ZiCE/922Y4BGDsZdtr71fb/v6+vdva0sY5rX6C0XCI+orBemoYmVb1OjyXFBfsRYPhgwGMBEw8SRFApBakJXxqbSOBAOOUm9BqPVFqhCcPjRSIcFlBJV4bPQHhXGSup3qIisH+Z5gZ+ojEWXVR05E6bOCyP8Lbcy5y3N5wmAeZDI2Ql9MPNqPD2YYgs7xgCSVwisBVKyIoxSKEgaDfNZqnA8pFgFvF57IJOlnrZxbLnjNSzIhUipFMBgm5WSAspGt1on2fms3+6Fq7NicT361U48bjDlNyN/p0eVIzUuLtAIN/R/WlQ50uLiB22axpMgT4uXZ+DehlPouDbMB1ZhQOfg5XIZb1/63rUvOD/TYgi9TXh6N93PmDIUPa+twlM52gnlhakPaSt0CFmWdVv2R+DyPLhDapxOfi/POOXq7lc/pN6zLz9/+Bk=</source>
   </file>
   <file path="Contracts/Category.php" generated-path="Contracts.Category.html" hash="4e6da38e98bde409c1772135d0bf8d27" package="Default">
     <docblock line="0">
@@ -1422,6 +1592,7 @@ We default to `all` if we don't match on anything.</long-description>
   <namespace name="HelpscoutApi" full_name="HelpscoutApi">
     <namespace name="Api" full_name="HelpscoutApi\Api">
       <namespace name="Get" full_name="HelpscoutApi\Api\Get"/>
+      <namespace name="Post" full_name="HelpscoutApi\Api\Post"/>
     </namespace>
     <namespace name="Contracts" full_name="HelpscoutApi\Contracts"/>
     <namespace name="Params" full_name="HelpscoutApi\Params"/>
