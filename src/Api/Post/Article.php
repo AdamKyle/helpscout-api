@@ -1,6 +1,6 @@
 <?php
 
-namespace HelpscoutApi\Post;
+namespace HelpscoutApi\Api\Post;
 
 use GuzzleHttp\Client;
 use HelpscoutApi\Contracts\ArticlePostBody;
