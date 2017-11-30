@@ -4,6 +4,7 @@ namespace HelpscoutApi\Api\Post;
 
 use GuzzleHttp\Client;
 use HelpscoutApi\Contracts\ArticlePostBody;
+use HelpscoutApi\Contracts\ApiKey;
 
 /**
  * Allows you to post an article to Helpscout using the API.
