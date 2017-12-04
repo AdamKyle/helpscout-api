@@ -31,6 +31,7 @@ The contracts are interfaces which are basic value objects - get/set methods bas
 - `Collection`
 - `Redirect`
 - `site`
+- `ArticlePostBody`
 
 These are implemented and then passed to the Endpoint class methods where needed.
 
@@ -85,7 +86,6 @@ $articleJSON = $articles->getAll($categoryValue);
 
 
 ```php
-
 use HelpscoutApi\Api\Get\Articles;
 use HelpscoutApi\Contracts\ApiKey; // We will pretend we implemented this as ApiKeyValue;
 use HelpscoutApi\Contracts\Category; // We will pretend we implemented this as CategoryValue;
@@ -112,7 +112,31 @@ $articles = new Article($client, $apiKey);
 $articleJSON = $articles->getAll($categoryValue, $articleParams);
 
 // Do something with $articleJSON.
+```
 
+### Post an article
+
+```php
+use HelpscoutApi\Api\Post\Article;
+use HelpscoutApi\Contracts\ApiKey; // We will pretend we implemented this as ApiKeyValue;
+use HelpscoutApi\Contracts\ArticlePostBody; // We will pretend we implemented this as ArticlePostBody;
+use GuzzleHttp\Client;
+
+$client = new Client([
+    'base_uri' => 'https://docsapi.helpscout.net/v1/',
+]);
+
+$apiKey = new ApiKeyValue('xxxxxxxxxx');
+
+$articlePostBodyValue->collectionID('123');
+$articlePostBodyValue->name('article name');
+$articlePostBodyValue->text('something');
+
+$article = new Article($client, $apiKey);
+$article->create($articlePostBodyValue);
+
+// This will return a response, see https://developer.helpscout.com/docs-api/articles/create/
+// for more information.
 ```
 
 You can view the [tests](https://github.com/AdamKyle/helpscout-api/tree/master/tests) to get a better understanding of how you would use the endpoints.
