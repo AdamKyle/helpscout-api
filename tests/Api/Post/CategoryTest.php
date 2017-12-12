@@ -4,12 +4,12 @@ use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Request;
-use HelpscoutApi\Api\Post\Article;
-use HelpscoutApi\Contracts\ArticlePostBody;
+use HelpscoutApi\Api\Post\Category;
+use HelpscoutApi\Contracts\CategoryPostBody;
 use PHPUnit\Framework\TestCase;
 use HelpscoutApi\Contracts\ApiKey;
 
-class ArticleTest extends TestCase {
+class CategoryTest extends TestCase {
 
     public function fakeClient() {
 
@@ -33,15 +33,15 @@ class ArticleTest extends TestCase {
     public function testPostArticle() {
         $client = $this->fakeClient();
 
-        $articlePostBodyStub = $this->createMock(ArticlePostBody::class);
+        $categoryPostBody = $this->createMock(CategoryPostBody::class);
 
         $apiKeySub = $this->createMock(ApiKey::class);
 
         $apiKeySub->method('getKey')
                   ->willReturn('fakeApiKey');
 
-        $article = new Article($client, $apiKeySub);
-        $response = $article->create($articlePostBodyStub);
+        $category = new Category($client, $apiKeySub);
+        $response = $category->create($categoryPostBody);
 
         $this->assertNotEmpty($response);
     }

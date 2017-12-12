@@ -32,6 +32,8 @@ The contracts are interfaces which are basic value objects - get/set methods bas
 - `Redirect`
 - `site`
 - `ArticlePostBody`
+- `CategoryPostBody`
+- `CollectionPostBody`
 
 These are implemented and then passed to the Endpoint class methods where needed.
 
@@ -115,6 +117,9 @@ $articleJSON = $articles->getAll($categoryValue, $articleParams);
 ```
 
 ### Post an article
+
+The same concept will work for posting a category or collection, just swap out
+the `ArticlePostBody` for the Category or Collection post body contract.
 
 ```php
 use HelpscoutApi\Api\Post\Article;
