@@ -37,7 +37,7 @@ The contracts are interfaces which are basic value objects - get/set methods bas
 
 These are implemented and then passed to the Endpoint class methods where needed.
 
-For further documentation see [the generated documentation](https://github.com/AdamKyle/helpscout-api/blob/master/docs/ApiIndex.md);
+For further documentation see [the generated documentation](https://github.com/AdamKyle/helpscout-api/blob/master/docs/ApiIndex.md).
 
 ## Examples
 
