@@ -29,4 +29,6 @@ API Index
         * [Category](HelpscoutApi-Params-Category.md)
     * HelpscoutApi\Query
         * [Article](HelpscoutApi-Query-Article.md)
+    * HelpscoutApi\Response
+        * [Response](HelpscoutApi-Response-Response.md)
 

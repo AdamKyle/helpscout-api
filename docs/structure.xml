@@ -1891,6 +1891,78 @@ We default to `all` if we don't match on anything.</long-description>
     </parse_markers>
     <source>eJzFVslu2zAQvesr5mBEjpFYyNWu7bhpgebWwl0OaRDT1DgiTEsqSTkwCv97uSjavAZpWh1siuS8mffmSeK7URqlnheTJcqUUIRPyFNJk0yNU/bzS4Zi3fe8TDYWbpJYCUKV1CPOkSqWxP1D2yZMoQYKOh0POvBNYggqgVnGeAgEfpk8ME8EqAiBCMUoR5BIBI30fhNyzVm8gEipVPaCIMQV8iRF0Y2e83VpsgzChMpLkrIgx5CBAwk0ROBRTqSEcQ7/2/NAX7Ykc3Xgq06eEkGWcm8tdmNg/1PBVkQhtPKQAdzd9x1mms04ozDPYqsMPDzQJJZKZFS1z3ViyK+Wipi8HFKBGsiK3T7v29XNVnE3dtOzWPns8+J0ZGcHvj8FJkGnYvEjCOQ6xCq9zaXbgLi2NGBiQ4vJ16pe1ashSpW1ywqtnEXH36GSk/nOt3v8e623275PsAkqaXmn5BGLhmaCux436H8lC5TAYi2wU+8UfXYTk6g+65QFKZN/4F8d4mS2OEpmdJQRLR662w9HmeWFlw/qseLLnbdhu7yBVpn2AJVKbaGjVM5cDh9RadC9Ji8YSv2+uA1P5WbeLsdYTSxi2/xBy8Af4OCyu+rN+AV1K6IyebTuMaWYmkfT7dfOIwJ7MCWcTy9gasuXEYZTIHEI0zhR5VQD6gdCiHOScWWec4sAbA5PejqJfQVLomgEWgMSrzXLVxp7YustrO3Kryopn5jJ196xZC5K9DfC10X6vdr8riZYgLwJdtzfCpnpd8iivyNDIdcb56l25s1S5f19CbyVuETZHPPtikk2Y5yp9V/xLs2Nm38j/69nvxfcCt+WdHd6d/dy2fWT/FuCuIaX9y/1Mf1XyVy33jzbqX5upDnR0+/NoVJa/wlUmYidw+tnTHdAAYzDNGGxatrLBZ7iL/1hyA9u1c+JS6ZLHlUKdrNjIci6elg0lzZ/Wx+nYtWuSXAOQ7hqWjAI8rOg7MFogevBivAMz6Db7db2aaofCY3qiEAktHQQDIa6bSawCd+o9M422ER0wR/4+teF1Tu68bzteOgOgC1TnoTY9s/8iyrseaWPgFziSSTrSSwN0L8N0fp7amnQqHnNLN1XvVUMcyvUz5ob7w8YmLLE</source>
   </file>
+  <file path="Response/Response.php" generated-path="Response.Response.html" hash="d856fdc566daf3cd0d7a10e9358c5c60" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="GuzzleResponse">\GuzzleHttp\Psr7\Response</namespace-alias>
+    <class final="false" abstract="false" namespace="HelpscoutApi\Response" line="14" package="Default">
+      <extends/>
+      <name>Response</name>
+      <full_name>\HelpscoutApi\Response\Response</full_name>
+      <docblock line="14">
+        <description>Response builder for the api POST/UPDATE/DELETE requests.</description>
+        <long-description>This class is used to information from the response object,
+such as location of the created or updated response and the
+id of created or updated resources.</long-description>
+        <tag name="package" line="14" description="Default"/>
+      </docblock>
+      <property static="false" visibility="private" namespace="HelpscoutApi\Response" line="19" package="Default">
+        <name>$response</name>
+        <full_name>\HelpscoutApi\Response\Response::response</full_name>
+        <default></default>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+          <tag name="link" line="19" description="http://docs.guzzlephp.org/en/stable/psr7.html#responses" link="http://docs.guzzlephp.org/en/stable/psr7.html#responses"/>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Response" line="21" package="Default">
+        <name>__construct</name>
+        <full_name>\HelpscoutApi\Response\Response::__construct()</full_name>
+        <docblock line="21">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$response</name>
+          <default></default>
+          <type>\GuzzleHttp\Psr7\Response</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Response" line="32" package="Default">
+        <name>getLocation</name>
+        <full_name>\HelpscoutApi\Response\Response::getLocation()</full_name>
+        <docblock line="32">
+          <description>Get the location of created resource.</description>
+          <long-description>When a resource is created, the header contains a 'Location' key and value.</long-description>
+          <tag name="return" line="32" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Response" line="41" package="Default">
+        <name>getCreatedId</name>
+        <full_name>\HelpscoutApi\Response\Response::getCreatedId()</full_name>
+        <docblock line="41">
+          <description>Get the created resources id from the location.</description>
+          <long-description></long-description>
+          <tag name="return" line="41" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="21" code="PPC:ERR-50015">Argument $response is missing from the Docblock of __construct</error>
+      <error line="21" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="19" code="PPC:ERR-50007">No summary for property $response</error>
+    </parse_markers>
+    <source>eJylkltrGzEQhd/3VwzU4AuO1bdC06QxjYkLgZrUpQ9JCLJ27FUjS6ouoUnJf+9I3l3fCn2oXnbRnDM680kfPtrKFoXma/SWC4QpKuuFiWFs5d0NbRrt8bQooke4ii8vCqch2LuZd+/aMnBf13YMbDAoYACtZhGlKtHB0jgIFXmshNmXr3P2bXY5nk/Y5eR6Mp+Aw58RffAjMif/vJIehOLeA/1QihKCAampzZoHaTQsnVnnjq45yix+oAjDZPdRVCmeMmKjNsusFQ55oF4UJtoy/7Z2rsukSXZZJsPfxSY6gTknKzYB21l/FwXQygjSGsCFkvoRKkL3nrHSCD9aZWBEf2TciqFmPvCFQmaJ7KgKa/WmCeTrJix/rZNPFAE6bss678eFkgKWUYs86MODoGpwUYTe/uVsrX1KCvXqBCJ9ct5SONs9IQlej4a6wpBh7sJtWDWARrW48XyvUANvy+lSa8sw96qQp1dC2QOX2pO0e12378IjPufbeeIqHnW+cBii00AzS73aZ3bAZoWhadrbZVB3OEBxck76ac7le/3bbZ7727f3/2JzyMOnN9U+2Ybc/83yaXPG53JvmE57LWfNRHtznx4rx87xZ5LjL6tMib0u6w631R1HHQ912ds39xser8UfP+1d9g==</source>
+  </file>
   <package name="Default" full_name="Default"/>
   <package name="global" full_name="global"/>
   <namespace name="HelpscoutApi" full_name="HelpscoutApi">
@@ -1901,6 +1973,7 @@ We default to `all` if we don't match on anything.</long-description>
     <namespace name="Contracts" full_name="HelpscoutApi\Contracts"/>
     <namespace name="Params" full_name="HelpscoutApi\Params"/>
     <namespace name="Query" full_name="HelpscoutApi\Query"/>
+    <namespace name="Response" full_name="HelpscoutApi\Response"/>
   </namespace>
   <deprecated count="0"/>
 </project>
