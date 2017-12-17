@@ -145,3 +145,22 @@ $article->create($articlePostBodyValue);
 ```
 
 You can view the [tests](https://github.com/AdamKyle/helpscout-api/tree/master/tests) to get a better understanding of how you would use the endpoints.
+
+### Dealing with responses
+
+Helpscout doesn't return a response body with JSON about created objects, instead a lot of the information you might want are in the header, on piece of information
+that is important, at least when you create new resources, is the location and the id of the resource.
+
+```php
+use HelpscoutApi\Request\Request;
+
+// See above for creating an article:
+
+$response = $article->create($articlePostBodyValue);
+$responseObject = new Request($response);
+
+$responseObject->getLocation();  // Returns the location of the created object.
+$responseObject->getCreatedId(); // Returns the created id, which is the last part of the location.
+```
+
+[See class docs for Response](https://github.com/AdamKyle/helpscout-api/blob/master/docs/HelpscoutApi-Response-Response.md)
