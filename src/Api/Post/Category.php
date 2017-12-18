@@ -3,6 +3,7 @@
 namespace HelpscoutApi\Api\Post;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\BadResponseException;
 use HelpscoutApi\Contracts\CategoryPostBody;
 use HelpscoutApi\Contracts\ApiKey;
 
@@ -34,19 +35,23 @@ class Category {
      * @link https://developer.helpscout.com/docs-api/categories/create/
      */
     public function create(CategoryPostBody $categoryPostBody) {
-      $response = $this->client->request(
-        'POST',
-        'categories',
-        [
-            'headers' => [
-                'Accept' => 'application/json',
-                'Content-Type' => 'application/json',
-             ],
-            'auth' => [$this->apiKey, 'X'],
-            'body' => $categoryPostBody->createPostBody(),
-        ]
-      );
+        try {
+            $response = $this->client->request(
+                'POST',
+                'categories',
+                [
+                    'headers' => [
+                        'Accept' => 'application/json',
+                        'Content-Type' => 'application/json',
+                    ],
+                    'auth' => [$this->apiKey, 'X'],
+                    'body' => $categoryPostBody->createPostBody(),
+                ]
+            );
 
-      return $response;
+            return $response;
+        } catch (BadResponseException $e) {
+            return $e->getResponse();
+        }
     }
 }
