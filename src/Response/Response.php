@@ -42,6 +42,6 @@ class Response {
      * @return
      */
     public function getCreated() {
-        json_decode($this->response->getBody()->getContents());
+        return json_decode($this->response->getBody()->getContents());
     }
 }
