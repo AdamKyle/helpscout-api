@@ -160,7 +160,7 @@ $response = $article->create($articlePostBodyValue);
 $responseObject = new Request($response);
 
 $responseObject->getLocation();  // Returns the location of the created object.
-$responseObject->getCreatedId(); // Returns the created id, which is the last part of the location.
+$responseObject->getContents();  // Returns the contents of the returned body.
 ```
 
 [See class docs for Response](https://github.com/AdamKyle/helpscout-api/blob/master/docs/HelpscoutApi-Response-Response.md)

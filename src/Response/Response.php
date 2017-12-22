@@ -34,14 +34,11 @@ class Response {
     }
 
     /**
-     * Gets the created object.
-     *
-     * Only works if you passed { 'reload': true } to the body of the
-     * create request.
+     * Gets the body contents of the response
      *
      * @return
      */
-    public function getCreated() {
+    public function getContents() {
         return json_decode($this->response->getBody()->getContents());
     }
 }

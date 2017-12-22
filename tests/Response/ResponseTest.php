@@ -32,6 +32,6 @@ class ResponseTest extends TestCase {
     public function testGetBodyOfRequest() {
         $response = $this->client->request('POST', '/');
         $resp = new Response($response);
-        $this->assertEquals('xxxx', $resp->getCreated()->something->id);
+        $this->assertEquals('xxxx', $resp->getContents()->something->id);
     }
 }
