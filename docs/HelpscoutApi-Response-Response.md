@@ -80,10 +80,10 @@ When a resource is created, the header contains a &#039;Location&#039; key and v
 
 --
 
-public **getCreatedId** (  )
+public **getContents** (  )
 
 
-Get the created resources id from the location.
+Gets the body contents of the response
 
 
 
