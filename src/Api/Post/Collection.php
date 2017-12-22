@@ -38,7 +38,7 @@ class Collection {
         try {
             $response = $this->client->request(
                 'POST',
-                'categories',
+                'collections',
                 [
                     'headers' => [
                         'Accept' => 'application/json',

@@ -34,13 +34,14 @@ class Response {
     }
 
     /**
-     * Get the created resources id from the location.
+     * Gets the created object.
      *
-     * @return string
+     * Only works if you passed { 'reload': true } to the body of the
+     * create request.
+     *
+     * @return
      */
-    public function getCreatedId() {
-        $location = $this->getLocation();
-        $locationArray = explode('/', $location);
-        return end($locationArray);
+    public function getCreated() {
+        json_decode($this->response->getBody()->getContents());
     }
 }
