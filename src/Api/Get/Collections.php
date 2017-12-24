@@ -30,7 +30,7 @@ class Collections {
     /**
      * Get all collections
      *
-     * @return JSON
+     * @return \stdClass
      */
     public function getAll() {
         $response = $this->client->request(

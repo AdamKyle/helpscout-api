@@ -34,7 +34,7 @@ interface CategoryPostBody {
    * }
    * ````
    *
-   * @return JSON
+   * @return \stdClass
    */
   public function createPostBody();
 }

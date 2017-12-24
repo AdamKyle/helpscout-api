@@ -44,7 +44,7 @@ class Articles {
      *
      * @param CategoryValue
      * @param ArticleParams - Optional
-     * @return JSON
+     * @return \stdClass
      * @see ArticleParams
      */
     public function getAllFromCategory(
@@ -82,7 +82,7 @@ class Articles {
      *
      * @param CategoryValue
      * @param ArticleParams - Optional
-     * @return JSON
+     * @return \stdClass
      * @see ArticleParams
      */
     public function getAllFromCollection(
@@ -120,7 +120,7 @@ class Articles {
      *
      * @param Boolean - optional
      * @param CategoryValue
-     * @return JSON
+     * @return \stdClass
      */
     public function getSingle(Article $articleValue, bool $draft = false) {
 
@@ -152,7 +152,7 @@ class Articles {
      *
      * @param CategoryValue
      * @param ArticleParams - Optional
-     * @return JSON
+     * @return \stdClass
      * @see ArticleParams
      */
     public function getRelatedArticles(
@@ -188,7 +188,7 @@ class Articles {
      * endpoint.
      *
      * @param ArticleQuery
-     * @return JSON
+     * @return \stdClass
      */
     public function searchArticles(ArticleQuery $articleQuery) {
         $response = $this->client->request(
@@ -214,9 +214,9 @@ class Articles {
      *
      * @param Article
      * @param String
-     * @return JSON
+     * @return \stdClass
      */
-    public function getRevisions(Article $article, Sting $page = null) {
+    public function getRevisions(Article $article, string $page = null) {
         $params = '';
 
         if ($page !== null) {
@@ -242,7 +242,7 @@ class Articles {
      * Get an article revision
      *
      * @param Revision
-     * @return JSON
+     * @return \stdClass
      */
     public function getRevision(Article $article) {
         $response = $this->client->request(

@@ -33,7 +33,7 @@ class Sites {
     /**
      * Get all sites
      *
-     * @return JSON
+     * @return \stdClass
      */
     public function getAll() {
         $response = $this->client->request(
@@ -55,7 +55,7 @@ class Sites {
      * Get all sites for a particular page
      *
      * @param String
-     * @return JSON
+     * @return \stdClass
      */
     public function getAllForPage(string $page = '1') {
         $response = $this->client->request(
@@ -79,7 +79,7 @@ class Sites {
      * Gets the article based on the article information, such as id.
      *
      * @param Site
-     * @return JSON
+     * @return \stdClass
      */
     public function getSingle(Site $site) {
         $response = $this->client->request(

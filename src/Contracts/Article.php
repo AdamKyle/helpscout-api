@@ -3,11 +3,11 @@
 namespace HelpscoutApi\Contracts;
 
 interface Article {
-    
+
     /**
      * Get id of article
      *
      * @return string
      */
-    public function getId();
+    public function getId(): string;
 }

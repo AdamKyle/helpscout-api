@@ -8,6 +8,7 @@ use HelpscoutApi\Api\Post\Article;
 use HelpscoutApi\Contracts\ArticlePostBody;
 use PHPUnit\Framework\TestCase;
 use HelpscoutApi\Contracts\ApiKey;
+use GuzzleHttp\Promise;
 
 class ArticleTest extends TestCase {
 
@@ -44,5 +45,56 @@ class ArticleTest extends TestCase {
         $response = $article->create($articlePostBodyStub);
 
         $this->assertNotEmpty($response);
+    }
+
+    public function testPostAsyncArticle() {
+        $client = $this->fakeClient();
+
+        $articlePostBodyStub = $this->createMock(ArticlePostBody::class);
+
+        $apiKeySub = $this->createMock(ApiKey::class);
+
+        $apiKeySub->method('getKey')
+                  ->willReturn('fakeApiKey');
+
+        $article = new Article($client, $apiKeySub);
+        $async = $article->createAsync($articlePostBodyStub);
+
+        $results = Promise\settle($async)->wait();
+
+        $this->assertNotEmpty($results);
+    }
+
+    public function testCreateAsyncArticleIsPormise() {
+        $client = $this->fakeClient();
+
+        $articlePostBodyStub = $this->createMock(ArticlePostBody::class);
+
+        $apiKeySub = $this->createMock(ApiKey::class);
+
+        $apiKeySub->method('getKey')
+                  ->willReturn('fakeApiKey');
+
+        $article = new Article($client, $apiKeySub);
+        $async = $article->createAsync($articlePostBodyStub);
+
+        $this->assertInstanceOf('GuzzleHttp\Promise\Promise', $async);
+    }
+
+    public function testCreateRequestArticle() {
+        $client = $this->fakeClient();
+
+        $articlePostBodyStub = $this->createMock(ArticlePostBody::class);
+
+        $apiKeySub = $this->createMock(ApiKey::class);
+
+        $apiKeySub->method('getKey')
+                  ->willReturn('fakeApiKey');
+
+        $article = new Article($client, $apiKeySub);
+        $result = $article->createRequest($articlePostBodyStub);
+
+
+        $this->assertInstanceOf('GuzzleHttp\Psr7\Request', $result);
     }
 }

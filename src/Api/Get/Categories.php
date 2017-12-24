@@ -34,7 +34,7 @@ class Categories {
      * Get all collections by id.
      *
      * @param Collection
-     * @return JSON
+     * @return \stdClass
      */
     public function getAll(
         Collection $collection,
@@ -65,7 +65,7 @@ class Categories {
      * Get a single category based off the ID
      *
      * @param Category
-     * @return JSON
+     * @return \stdClass
      */
     public function getCategoryById(Category $category) {
         $response = $this->client->request(
@@ -87,7 +87,7 @@ class Categories {
      * Get a single category based off the number
      *
      * @param Category
-     * @return JSON
+     * @return \stdClass
      */
     public function getCategoryByNumber(Category $category) {
         $response = $this->client->request(

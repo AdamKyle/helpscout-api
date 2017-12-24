@@ -9,13 +9,13 @@ interface Category {
      *
      * @return string
      */
-    public function getId();
+    public function getId(): string;
 
     /**
      * get number of Category
      *
      * @return string
      */
-    public function getNumber();
+    public function getNumber(): string;
 
 }

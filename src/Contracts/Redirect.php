@@ -9,6 +9,6 @@ interface Redirect {
      *
      * @return string
      */
-    public function getId();
+    public function getId(): string;
 
 }

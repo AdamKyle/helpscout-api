@@ -34,7 +34,7 @@ class Redirects {
      * Get all redirects based on a site.
      *
      * @param Site
-     * @return JSON
+     * @return \stdClass
      */
     public function getAll(Site $site) {
         $response = $this->client->request(
@@ -56,7 +56,7 @@ class Redirects {
      * Get a single redirect based on redirect id
      *
      * @param Redirect
-     * @return JSON
+     * @return \stdClass
      */
     public function getSingle(Redirect $redirect) {
         $response = $this->client->request(
@@ -87,7 +87,7 @@ class Redirects {
      *
      * @param String
      * @param Site
-     * @return JSON
+     * @return \stdClass
      * @link https://developer.helpscout.com/docs-api/redirects/find/
      */
     public function findRedirect(string $url, Site $site) {

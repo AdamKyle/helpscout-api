@@ -34,7 +34,7 @@ interface CollectionPostBody {
    * }
    * ````
    *
-   * @return JSON
+   * @return \stdClass
    */
   public function createPostBody();
 }

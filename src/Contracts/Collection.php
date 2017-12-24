@@ -9,6 +9,6 @@ interface Collection {
      *
      * @return string
      */
-    public function getId();
+    public function getId(): string;
 
 }

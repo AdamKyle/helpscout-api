@@ -146,7 +146,67 @@ $article->create($articlePostBodyValue);
 
 You can view the [tests](https://github.com/AdamKyle/helpscout-api/tree/master/tests) to get a better understanding of how you would use the endpoints.
 
-### Dealing with responses
+### Request Async and Pools
+
+> ## ATTN!!
+>
+> Currently this only works with articles.
+
+When you want to do things in an async matter or you have an undefined amount of entities to post to a particular endpoint you can use the `createAsync` and `createRequest`.
+One will return a [Promise](http://docs.guzzlephp.org/en/stable/quickstart.html#async-requests) and the other is intended to be used with [Guzzels Pools](http://docs.guzzlephp.org/en/stable/quickstart.html?highlight=pool#concurrent-requests);
+
+Lets look at how you might do that.
+
+#### `createAsync()`
+
+```php
+use Psr\Http\Message\ResponseInterface;
+use GuzzleHttp\Exception\RequestException;
+
+// ... Set up your article info to be posted, see previous examples.
+
+$promise = $article->createAsync($articlePostBodyValue);
+$promise->then(function(ResponseInterface $ri) {
+  echo $ri->getStatusCode();
+},
+function(RequestException $e) {
+  echo $e->getMessage();
+});
+```
+
+As we can see `createAsync()` simply returns a promise.
+
+#### `createRequest()`
+
+Create request is meant to be used with the contract [`RequestPool`](https://github.com/AdamKyle/helpscout-api/blob/master/docs/HelpscoutApi-Contracts-RequestPool.md)
+to set the requests, as this method only returns a request object. You then set the requests to the pool array and then pass the `RequestPool` instance to the [`Pool`](https://github.com/AdamKyle/helpscout-api/blob/master/docs/HelpscoutApi-Api-Pool.md) class, along with the client instance.
+
+From there you call `pool` with a rejected call back function and an optional success callback function.
+
+```php
+use HelpscoutApi\Contracts\RequestPool;
+use HelpscoutApi\Api\Pool;
+
+// ... Set up your article info to be posted, see previous examples.
+
+$request = $article->createRequest($articlePostBodyValue);
+
+$requestPool->pushRequest($request); // Push the request
+$request->setConcurrency(1); // How many should we do before we wait for them all to complete?
+
+$pool = new Pool($client, $requestPool);
+$pool->pool(function($reason, $index){ ... }, function($response){ ... });
+
+// The first call back function is called when we are rejected.
+// The second is optional and only called on success.
+```
+
+> ## ATTN!!
+>
+> If concurrency is not set or is less then or equal to 0, we will set
+> the default to 20.
+
+## Dealing with responses
 
 Helpscout doesn't return a response body with JSON about created objects, instead a lot of the information you might want are in the header, on piece of information
 that is important, at least when you create new resources, is the location and the id of the resource.

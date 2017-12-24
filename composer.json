@@ -10,7 +10,8 @@
         "phpunit/phpunit": "^6.4",
         "phpunit/php-code-coverage": "^5.2",
         "dcramble/phpdoc-md" : "~0.1.1",
-        "phpdocumentor/phpdocumentor": "2.9.0"
+        "phpdocumentor/phpdocumentor": "2.9.0",
+        "codedungeon/phpunit-result-printer": "^0.4.4"
     },
     "license": "MIT",
     "authors": [

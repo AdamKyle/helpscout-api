@@ -41,7 +41,7 @@ interface ArticlePostBody {
    * }
    * ````
    *
-   * @return JSON
+   * @return \stdClass
    */
   public function createPostBody();
 }
