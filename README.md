@@ -34,6 +34,7 @@ The contracts are interfaces which are basic value objects - get/set methods bas
 - `ArticlePostBody`
 - `CategoryPostBody`
 - `CollectionPostBody`
+- `RequestPool`
 
 These are implemented and then passed to the Endpoint class methods where needed.
 
