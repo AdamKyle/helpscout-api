@@ -729,7 +729,7 @@ if it has a redirect will return the redirected path.</long-description>
     </parse_markers>
     <source>eJztVd9P2zAQfs9fcQ+VklZto71uo9CxDdikjak8TFpRZZyDeHNtz3aYYOJ/n89JCknRhoZ4w1IV5+677359VV7vmtIkiWJrdIZxhEOUxnFd+bkRS/odoH+VJJVDmBuzJPeC3Espzu68Neh9KVAFPME7TPtaecu4d4T6iFd/hSyEx3sAXyq0V8u59YJLBOaguUZ7jT+orq8lHnpvlm0pST4aJTCCt8ikg1/Cl3Dw7gQoR2A4PoJzq9dQtommAUvwPSnUDygDk3uZ5wVeotQG7fQWyPU6LzR3E2ZE7ogul8L5PETnCZfMuSbJ7ySBcGIddEbbZTaOPD6NFZfMIwx420Iv/B+TvZeLNc7aWp1JweG8UtwLrWC14lo5byvus7qgNvkYataWYBi6geYMfCncZFYDYee23h6gjiRAfZvMLtCHZzasoTfb80EPTEqIU22MrW/Poq+sgqXzxT5Nudtvr7OQaS5l1inbBqmHdpEqutvCZGbxZ4XOZxssnTTIJR13TbGwnvFb5y3CSmQFWpfCzuwed4TMOUfjIyJlxoTiGRWef3da9RJsYmjlVO/JlcGHR55u21JW+bKurrOrMaRf09MO/PZt2IiITrMLSrkqkOsCs81445rf6CLsOV6bql02fNje4VxbYGAY/csryWy4XmBfDcHN1rDwVqiLx0jkvbbHgT5zkQkGlCsIJH2RPol2dol/J4VpnelZSU+hJAWs/Vioos0QvhsfFp8/TXtCCgEOfImbkDPmsICgj7tGoYIo13E6Y3AVL4lOFH2yVpVh0/+tyUWQocSMOGBAmnkSHeZRgnSNkz0qsuGzFh+pxZvkD1k5iMc=</source>
   </file>
-  <file path="Api/Pool.php" generated-path="Api.Pool.html" hash="35ca7ddeb8d57053056303dcbe36e787" package="Default">
+  <file path="Api/Pool.php" generated-path="Api.Pool.html" hash="52501872b837cd0e8a85dc8776f178da" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -748,27 +748,18 @@ if it has a redirect will return the redirected path.</long-description>
         <tag name="package" line="12" description="Default"/>
       </docblock>
       <property static="false" visibility="private" namespace="HelpscoutApi\Api" line="13" package="Default">
-        <name>$requestPool</name>
-        <full_name>\HelpscoutApi\Api\Pool::requestPool</full_name>
+        <name>$client</name>
+        <full_name>\HelpscoutApi\Api\Pool::client</full_name>
         <default></default>
         <docblock line="13">
           <description></description>
           <long-description></long-description>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="HelpscoutApi\Api" line="14" package="Default">
-        <name>$client</name>
-        <full_name>\HelpscoutApi\Api\Pool::client</full_name>
-        <default></default>
-        <docblock line="14">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api" line="16" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api" line="15" package="Default">
         <name>__construct</name>
         <full_name>\HelpscoutApi\Api\Pool::__construct()</full_name>
-        <docblock line="16">
+        <docblock line="15">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -777,16 +768,11 @@ if it has a redirect will return the redirected path.</long-description>
           <default></default>
           <type>\GuzzleHttp\Client</type>
         </argument>
-        <argument line="0" by_reference="false">
-          <name>$requestPool</name>
-          <default></default>
-          <type>\HelpscoutApi\Contracts\RequestPool</type>
-        </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api" line="40" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api" line="39" package="Default">
         <name>pool</name>
         <full_name>\HelpscoutApi\Api\Pool::pool()</full_name>
-        <docblock line="40">
+        <docblock line="39">
           <description>We pool all the requests using Guzzels Pool and wait for them all to complete.</description>
           <long-description>This will create a set of promises that we wait on for completion before doing the next set
 which is set by the `RequestPool` `getConcurreny()` function.
@@ -800,13 +786,21 @@ This response objecty will be a `GuzzleHttp\Psr7\Response` object.
 
 For the rejected we pass in the reason and the index, the index corelates to the index in the array
 of requests passed in.</long-description>
-          <tag name="param" line="40" description="" type="\Closure" variable="$rejectCallbackFunction">
+          <tag name="param" line="39" description="" type="\HelpscoutApi\Contracts\RequestPool" variable="$requestPool">
+            <type>\HelpscoutApi\Contracts\RequestPool</type>
+          </tag>
+          <tag name="param" line="39" description="" type="\Closure" variable="$rejectCallbackFunction">
             <type>\Closure</type>
           </tag>
-          <tag name="param" line="40" description="" type="\Closure" variable="$successCallbackFunction">
+          <tag name="param" line="39" description="" type="\Closure" variable="$successCallbackFunction">
             <type>\Closure</type>
           </tag>
         </docblock>
+        <argument line="0" by_reference="false">
+          <name>$requestPool</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\RequestPool</type>
+        </argument>
         <argument line="0" by_reference="false">
           <name>$rejectCallbackFunction</name>
           <default></default>
@@ -821,13 +815,11 @@ of requests passed in.</long-description>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="16" code="PPC:ERR-50015">Argument $client is missing from the Docblock of __construct</error>
-      <error line="16" code="PPC:ERR-50015">Argument $requestPool is missing from the Docblock of __construct</error>
-      <error line="16" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="13" code="PPC:ERR-50007">No summary for property $requestPool</error>
-      <error line="14" code="PPC:ERR-50007">No summary for property $client</error>
+      <error line="15" code="PPC:ERR-50015">Argument $client is missing from the Docblock of __construct</error>
+      <error line="15" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="13" code="PPC:ERR-50007">No summary for property $client</error>
     </parse_markers>
-    <source>eJx9VVFv2zYQftevuALGLAdKUvRlQNNkGwK0xR7aoNuwh2Wwafocc6VFjkfFdVf/995Rki1Z9ggYsKjjd999/O705ie/8llWqjWSVxrhPVpP2lXxF28e+XeTZRUdbd+7MgalIz1+wn8rpPjgnL1Jce+qr18tvo/RP8omKEpbaE+G3FuDZeQU1xcXGVzAH4QLWLoAOqCKpnwCVS4gIDn7LE+eQQjckrdSXrriU9eZtooIUr7/MuDlg3lWEWEUuvx6b3SbOu1Wc2s0LKtSR+NKmE61KymGSse85tgeKKBTcg9/0uSWNYorQ5d3nbdwe4JMJ7RGl6iWmLzc1fSSOrIu4E9MIoCyFuIK90JARSJQrXWjhWi3USYmRTl4XZ9yoN3aW4x41aC24L8zFdgYDkr6IyggjKK3D25tCIlhVIQN1risVLqsGk6EmyNvICyckBF+JX6JAtKm2KyMXgGnEeD5NsXMOpLOYPaEkQ2mqxCw3OaT2f5ahnT57IgqrZHonmubK/35bRM8kyTOy19lC/Hh1lWwVlsoHVegWGxWYuFYpS1fAdNl+g1W0WZYuQ3gM4ZG6n9QRzYoAzPGVSM2YyCV4wjWPQGG4ALnDUBRhEiqi0YVFUAOTBwTmLV3ITKDNk0rqiCkE65iALTPSMc1v62vcs9UjnlxvykbkuTZughuLmylxlpyqV6rUiremLhqBeGLU7Q3Qu2AI4xtbYm52GHW7W8KP/IAqGNnTfA5vnvxBnwVsfBiVXk05QK/FIe/7K2Alq1IUslhuzmtQlDbNlVnLKQUclMDz/zsVVBr4MnjqAr4/9vXJ4eD9F8+qgs6dl0B5/zIrV1Wtj8ldGtzvZXOHwyNy7tuL2huhmZeyTJLyA1NBTTvIk3g27c+9JtbeNnNeyL3q5eHibQ75Bj5enSVuOmM8bw3s4pzxJuupnxSwF+95ONO8jHc3vXYFP3QZWWXbD9cjPmJQ/fXIFdQe48ZJFdMQD4v+Q/nruBYgzRar+FB7Chu+vW3jx9ADojXFHdLffyQkiWX4SGSvx4gyX282F/IOQrCYXBUlmSbMv8wlXTT5OyzMAU071sJJpObAequt7M70rVtyFOySksORG0PDFU9Ievpas5BdMrppT4qqlPC391OGDVfJ+khn9zXbOQdgDbo8k4+Xe2bXbbLvgOqLtRl</source>
+    <source>eJx9VV1v00AQfPevWKSIOJXbIl6QKC2gSoB4gIoP8UBRcrlsmoOLz9yek6aQ/87u2U6cOMFSpPg+ZmbnZs8vXhazIklyNUcqlEZ4h7Yg7crwujC3/LtIkpL2hq9dHrzSgW4/4e8SKdw4Zy/iurflw4PFdyEUtzIIiuIQ2oNLrq3BPDDF+clJAifwlXACU+dBe1TB5Heg8gl4JGcX8lYwCIGb8lDkpTPedZ5oq4gg8v1JgJ/Cm4UKCD3dEMTRcmyNhmmZ62BcDsOhdjkFX+qQVkqaDYMaR55emBk6vaom4HKLKZPrCjnKl+cEvmFUCcpaCDPcKIWSpILKjFqsFLdUJsSSefG82uVAu3lhMeBZjdqAf2EpsDS8KBqEoIAwiCGFd3NDSAyjAiyxwuUio5sVnNQ8Rh5AmDgRI/pyvA8C0lAsZ0bPgGkEeLyKa0atYx7B6A4DJ0CX3mO+SgejjaNduby3R6XWSHTNtY2V/vWmXjwSElfIX2UzCcrKlTBXK8gdV6DYbHZi4tilFR8By2X5NVbWMMzcEnCBvrb6J+rACWJgxjirzWYMpLwfwLo7QO+dZ14PFMSI6Lp4VFIG5MCEPoGZF84HVtDQNKYKQtzhSgZAu0Dar/lNdZQbpbKtkHiavBZJBacOwY1FrdRYWS7Va5VLxUsTZo0hfHCKNkGoErCHsaoiMZY4jNoNSP4Zd2i1dlQvPqZ3Y15HryI2XqIqryaf4H22/cvZ8mg5iiSVbIfr3cp7tWqoWn0bKeSkOpl5VSiv5tBK3N4MXxqOSo//Hz4/2PHSmWkLGnp++5LJm5iwn1SeOJJhvg7y0tqd60I3raFXclu0CE6v2p2juXXqi0keM4XU0FDg0jbGAP7+3QV9cQlP2owHWJ8+udhMr7ccvXgzsWZctm7ldOeGy7qSa8MoHWTwfYe236Ltw+XVjo5sd+m0tFOOKU76/MZLN4eS9po8M3dMzwDkO5E+Pmb7fvXxCj6HG4mtpO79548fQDZIJhV3VbV9S8lmyyUjZj/vIMlJPNocxTEJoqGzVR5hG7J+PxS6YeyAozAZ1PONBYPBRQd1vTOy3vO1adxDtkrrdkxtNnRdPWDr4WqOQbTK2aHeK6pVwo92D/Tqr5j0TRHTVw+kLYBm0emVfOKamXWyTv4BGFTB7Q==</source>
   </file>
   <file path="Api/Post/Article.php" generated-path="Api.Post.Article.html" hash="6c8747668d5c88211d0a8dc1df35abcd" package="Default">
     <docblock line="0">

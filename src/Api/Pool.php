@@ -10,11 +10,9 @@ use GuzzleHttp\Client;
  * Used for creating and resolving pools of requests.
  */
 class Pool {
-    private $requestPool;
     private $client;
 
-    public function __construct(Client $client, RequestPool $requestPool) {
-        $this->requestPool = $requestPool;
+    public function __construct(Client $client) {
         $this->client = $client;
     }
 
@@ -34,17 +32,18 @@ class Pool {
      * For the rejected we pass in the reason and the index, the index corelates to the index in the array
      * of requests passed in.
      *
+     * @param RequestPool
      * @param \Closure
      * @param \Closure
      */
-    public function pool($rejectCallbackFunction, $successCallbackFunction = null) {
-        $concurrency = $this->requestPool->getConcurrency();
+    public function pool(RequestPool $requestPool, $rejectCallbackFunction, $successCallbackFunction = null) {
+        $concurrency = $requestPool->getConcurrency();
 
         if (is_null($concurrency) || $concurrency <= 0) {
             $concurrency = 20;
         }
 
-        $pool = new GuzzelPool($this->client, $this->requestPool->getRequests(), [
+        $pool = new GuzzelPool($this->client, $requestPool->getRequests(), [
             'concurrency' => $concurrency,
             'fulfilled'   => function ($response, $index) use (&$successCallbackFunction) {
                 // Pass the JSON back to a callback function if not null:

@@ -54,8 +54,9 @@ class PoolTest extends TestCase {
                         ->willReturn(1);
 
 
-        $pool = new Pool($client, $requestPoolMock);
+        $pool = new Pool($client);
         $pool->pool(
+            $requestPoolMock,
             function($reason, $index) {},
             function($response) {
                 $this->assertNotEmpty($response);

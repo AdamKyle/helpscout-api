@@ -27,19 +27,6 @@ Properties
 ----------
 
 
-**$requestPool**
-
-
-
-
-
-    private  $requestPool
-
-
-
-
-
-
 **$client**
 
 
@@ -57,7 +44,7 @@ Methods
 -------
 
 
-public **__construct** (  $client,  $requestPool )
+public **__construct** (  $client )
 
 
 
@@ -74,11 +61,10 @@ public **__construct** (  $client,  $requestPool )
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | $client | GuzzleHttp\Client |  |
-| $requestPool | [HelpscoutApi\Contracts\RequestPool](HelpscoutApi-Contracts-RequestPool.md) |  |
 
 --
 
-public **pool** ( Closure $rejectCallbackFunction, Closure $successCallbackFunction )
+public **pool** ( RequestPool $requestPool, Closure $rejectCallbackFunction, Closure $successCallbackFunction )
 
 
 We pool all the requests using Guzzels Pool and wait for them all to complete.
@@ -105,6 +91,7 @@ of requests passed in.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
+| $requestPool | [RequestPool](HelpscoutApi-Contracts-RequestPool.md) |  |
 | $rejectCallbackFunction | Closure |  |
 | $successCallbackFunction | Closure |  |
 

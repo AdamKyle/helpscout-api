@@ -180,7 +180,7 @@ As we can see `createAsync()` simply returns a promise.
 #### `createRequest()`
 
 Create request is meant to be used with the contract [`RequestPool`](https://github.com/AdamKyle/helpscout-api/blob/master/docs/HelpscoutApi-Contracts-RequestPool.md)
-to set the requests, as this method only returns a request object. You then set the requests to the pool array and then pass the `RequestPool` instance to the [`Pool`](https://github.com/AdamKyle/helpscout-api/blob/master/docs/HelpscoutApi-Api-Pool.md) class, along with the client instance.
+to set the requests, as this method only returns a request object. You then set the requests to the pool array and then pass the `RequestPool` instance to the [`Pool`](https://github.com/AdamKyle/helpscout-api/blob/master/docs/HelpscoutApi-Api-Pool.md) class method `pool`, along with the client instance to the instantiation.
 
 From there you call `pool` with a rejected call back function and an optional success callback function.
 
@@ -195,8 +195,8 @@ $request = $article->createRequest($articlePostBodyValue);
 $requestPool->pushRequest($request); // Push the request
 $request->setConcurrency(1); // How many should we do before we wait for them all to complete?
 
-$pool = new Pool($client, $requestPool);
-$pool->pool(function($reason, $index){ ... }, function($response){ ... });
+$pool = new Pool($client);
+$pool->pool($requestPool, function($reason, $index){ ... }, function($response){ ... });
 
 // The first call back function is called when we are rejected.
 // The second is optional and only called on success.
