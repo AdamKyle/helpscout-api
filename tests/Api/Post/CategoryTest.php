@@ -45,4 +45,36 @@ class CategoryTest extends TestCase {
 
         $this->assertNotEmpty($response);
     }
+
+    public function testCreateAsyncCategoryIsPormise() {
+        $client = $this->fakeClient();
+
+        $categoryPostBody = $this->createMock(CategoryPostBody::class);
+
+        $apiKeySub = $this->createMock(ApiKey::class);
+
+        $apiKeySub->method('getKey')
+                  ->willReturn('fakeApiKey');
+
+        $category = new Category($client, $apiKeySub);
+        $async = $category->createAsync($categoryPostBody);
+
+        $this->assertInstanceOf('GuzzleHttp\Promise\Promise', $async);
+    }
+
+    public function testCreateRequestCategory() {
+        $client = $this->fakeClient();
+
+        $categoryPostBody = $this->createMock(CategoryPostBody::class);
+
+        $apiKeySub = $this->createMock(ApiKey::class);
+
+        $apiKeySub->method('getKey')
+                  ->willReturn('fakeApiKey');
+
+        $category = new Category($client, $apiKeySub);
+        $result = $category->createRequest($categoryPostBody);
+
+        $this->assertInstanceOf('GuzzleHttp\Psr7\Request', $result);
+    }
 }

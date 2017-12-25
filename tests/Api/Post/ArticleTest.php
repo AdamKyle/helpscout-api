@@ -94,7 +94,6 @@ class ArticleTest extends TestCase {
         $article = new Article($client, $apiKeySub);
         $result = $article->createRequest($articlePostBodyStub);
 
-
         $this->assertInstanceOf('GuzzleHttp\Psr7\Request', $result);
     }
 }

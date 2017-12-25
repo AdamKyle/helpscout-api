@@ -6,6 +6,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\BadResponseException;
 use HelpscoutApi\Contracts\CategoryPostBody;
 use HelpscoutApi\Contracts\ApiKey;
+use GuzzleHttp\Psr7\Request;
 
 /**
  * Allows you to post an category to Helpscout using the API.
@@ -53,5 +54,58 @@ class Category {
         } catch (BadResponseException $e) {
             return $e->getResponse();
         }
+    }
+
+    /**
+     * Create the category in an asynchronous way.
+     *
+     * Same method signature and options as `create`.
+     *
+     * This is great for when you need to create a set of categories that do not
+     * got over the rate limit.
+     *
+     * @param CategoryPostBody
+     * @return \GuzzleHttp\Promise\Promise
+     * @link https://developer.helpscout.com/docs-api/articles/create/
+     */
+    public function createAsync(CategoryPostBody $categoryPostBody) {
+        return $this->client->requestAsync(
+            'POST',
+            'categories',
+             [
+                 'headers' => [
+                     'Accept' => 'application/json',
+                     'Content-Type' => 'application/json',
+                 ],
+                 'auth' => [$this->apiKey, 'X'],
+                 'body' => $categoryPostBody->createPostBody(),
+             ]
+        );
+    }
+
+    /**
+     * Returns a new request object
+     *
+     * This is good for creating pools of requests. This is when you
+     * don't know how many requests you need to create and thus might go over
+     * the rate limit.
+     *
+     * @param CategoryPostBody
+     * @return \GuzzleHttp\Psr7\Request
+     * @link https://developer.helpscout.com/docs-api/articles/create/
+     */
+    public function createRequest(CategoryPostBody $categoryPostBody) {
+        return new Request(
+            'POST',
+            'https://docsapi.helpscout.net/v1/categories',
+            [
+                'headers' => [
+                    'Accept' => 'application/json',
+                    'Content-Type' => 'application/json',
+                ],
+                'auth' => [$this->apiKey, 'X'],
+                'body' => $categoryPostBody->createPostBody(),
+            ]
+        );
     }
 }

@@ -151,7 +151,7 @@ You can view the [tests](https://github.com/AdamKyle/helpscout-api/tree/master/t
 
 > ## ATTN!!
 >
-> Currently this only works with articles.
+> Currently this only works with articles and categories
 
 When you want to do things in an async matter or you have an undefined amount of entities to post to a particular endpoint you can use the `createAsync` and `createRequest`.
 One will return a [Promise](http://docs.guzzlephp.org/en/stable/quickstart.html#async-requests) and the other is intended to be used with [Guzzels Pools](http://docs.guzzlephp.org/en/stable/quickstart.html?highlight=pool#concurrent-requests);

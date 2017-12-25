@@ -949,7 +949,7 @@ the rate limit.</long-description>
     </parse_markers>
     <source>eJy9lt9v0zAQx9/zV9zDpP7Q1ognJH4MyoQY4oFq2wMSRZvn3Bqz1Da209Kh/e+cnbg/0hRoQUSt0p7vzufv+ePkxSud6ySRbIpWM45wjoW2XJVuqMXYf0fKuudJUlqEd+XDQ4HnzunxWSFQkt2bN0LOlHSGcWfHQ+MEL9DHv1HZ4te+WnzA2mVtlrffOWonlBy/YdkFVaikxaVxy31kzdPxBX4rMZSc9vtJH4ZFoeYWFqoEp0BTNcAksKo4b1qWBKUVcgIuRxiO3g8SH/26EPIecspun6VphjMslEYzyGPQgKtpmiluT5gWaZ3Wptwgc5gm/TThBbMWajXgR5IAXb42f4f+tqr1QBru2ogZZYIjXiveDP+Noq25WD1YWcvbQnC4KyX3qsL1NSeZnSm561YFxcmPocoaE/RoNVBfRy4X9uS0coSXq3obDlWkd6h+nZxO0NG926tcH7cWONpumW/Rqm2hWZVzjHmtmWFTaGzB5ehfNnVD04Z6lU+3MTOtdtOwLp0zi7V/QStT73Wv07qwJ6em2t7dDX9/dUYfL686x9v2WH7LGHzeNoWYHFmGxnbg5ekun+A35J7F4NZhWpMSzKuQfrVKts23DPQb1a/naqFxv/AvO+wdVrq8Knhjqx1D51NnZ9At9SIENRtEiodOxv/dXkuKLxumXg1UvAy60shVM1csPAItlOfdtlMNjrDX2A4xEQZYYkQkJiTcwc5ZWEPgJeIjZIDJLiTPjZKqtDBniyZAl/RAgCm6XGVgxUQyqoByyAxUqNJSBripJLppBl+R/ECfiR+GO2VgnqMMR7BEzDzBVSQwsOhA3cXqLJVKIZkCqeI5CBNFLjM0YRnGhxViKtyezNcijtefF0ZNhcV4/3/Hw9Crv9cZEbdA62FQpdvYMm2nwc6ToIXwPzkBDqL/QPLbAN6b+L+gfUX6zufURWgRgUGbfA51a0DdfkXudgGiCC/PR5jdv3xopQrrgajj7WDpHBmKSTJSysG9VHPI6TtlcrGMamWN4HU54T4Vk9zR3AGqmO2fs7X2Lvb/wKonPAQt37SLtodrK0rLRVCxVOvaEiS6dPYk3cHaNkp/QNohoB3GWQs1+1J2OGQtjD0mPwEGB5UB</source>
   </file>
-  <file path="Api/Post/Category.php" generated-path="Api.Post.Category.html" hash="d479851e2e872b0fb77e77315b3fb846" package="Default">
+  <file path="Api/Post/Category.php" generated-path="Api.Post.Category.html" hash="b5314862e24a307c6c61000ba3201c15" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -959,38 +959,39 @@ the rate limit.</long-description>
     <namespace-alias name="BadResponseException">\GuzzleHttp\Exception\BadResponseException</namespace-alias>
     <namespace-alias name="CategoryPostBody">\HelpscoutApi\Contracts\CategoryPostBody</namespace-alias>
     <namespace-alias name="ApiKey">\HelpscoutApi\Contracts\ApiKey</namespace-alias>
-    <class final="false" abstract="false" namespace="HelpscoutApi\Api\Post" line="15" package="Default">
+    <namespace-alias name="Request">\GuzzleHttp\Psr7\Request</namespace-alias>
+    <class final="false" abstract="false" namespace="HelpscoutApi\Api\Post" line="16" package="Default">
       <extends/>
       <name>Category</name>
       <full_name>\HelpscoutApi\Api\Post\Category</full_name>
-      <docblock line="15">
+      <docblock line="16">
         <description>Allows you to post an category to Helpscout using the API.</description>
         <long-description></long-description>
-        <tag name="link" line="15" description="https://developer.helpscout.com/docs-api/categories/create/" link="https://developer.helpscout.com/docs-api/categories/create/"/>
-        <tag name="package" line="15" description="Default"/>
+        <tag name="link" line="16" description="https://developer.helpscout.com/docs-api/categories/create/" link="https://developer.helpscout.com/docs-api/categories/create/"/>
+        <tag name="package" line="16" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Post" line="19" package="Default">
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Post" line="20" package="Default">
         <name>$client</name>
         <full_name>\HelpscoutApi\Api\Post\Category::client</full_name>
         <default></default>
-        <docblock line="19">
+        <docblock line="20">
           <description>GuzzleHttp\Client</description>
           <long-description></long-description>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Post" line="24" package="Default">
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Post" line="25" package="Default">
         <name>$apiKey</name>
         <full_name>\HelpscoutApi\Api\Post\Category::apiKey</full_name>
         <default></default>
-        <docblock line="24">
+        <docblock line="25">
           <description>HelpscoutApi\Contracts\ApiKey;</description>
           <long-description></long-description>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Post" line="26" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Post" line="27" package="Default">
         <name>__construct</name>
         <full_name>\HelpscoutApi\Api\Post\Category::__construct()</full_name>
-        <docblock line="26">
+        <docblock line="27">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -1005,16 +1006,61 @@ the rate limit.</long-description>
           <type>\HelpscoutApi\Contracts\ApiKey</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Post" line="37" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Post" line="38" package="Default">
         <name>create</name>
         <full_name>\HelpscoutApi\Api\Post\Category::create()</full_name>
-        <docblock line="37">
+        <docblock line="38">
           <description>Post an category to the Helpscout API.</description>
           <long-description></long-description>
-          <tag name="param" line="37" description="" type="\HelpscoutApi\Contracts\CategoryPostBody" variable="$categoryPostBody">
+          <tag name="param" line="38" description="" type="\HelpscoutApi\Contracts\CategoryPostBody" variable="$categoryPostBody">
             <type>\HelpscoutApi\Contracts\CategoryPostBody</type>
           </tag>
-          <tag name="link" line="37" description="https://developer.helpscout.com/docs-api/categories/create/" link="https://developer.helpscout.com/docs-api/categories/create/"/>
+          <tag name="link" line="38" description="https://developer.helpscout.com/docs-api/categories/create/" link="https://developer.helpscout.com/docs-api/categories/create/"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$categoryPostBody</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\CategoryPostBody</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Post" line="71" package="Default">
+        <name>createAsync</name>
+        <full_name>\HelpscoutApi\Api\Post\Category::createAsync()</full_name>
+        <docblock line="71">
+          <description>Create the category in an asynchronous way.</description>
+          <long-description>Same method signature and options as `create`.
+
+This is great for when you need to create a set of categories that do not
+got over the rate limit.</long-description>
+          <tag name="param" line="71" description="" type="\HelpscoutApi\Contracts\CategoryPostBody" variable="$categoryPostBody">
+            <type>\HelpscoutApi\Contracts\CategoryPostBody</type>
+          </tag>
+          <tag name="return" line="71" description="" type="\GuzzleHttp\Promise\Promise">
+            <type>\GuzzleHttp\Promise\Promise</type>
+          </tag>
+          <tag name="link" line="71" description="https://developer.helpscout.com/docs-api/articles/create/" link="https://developer.helpscout.com/docs-api/articles/create/"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$categoryPostBody</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\CategoryPostBody</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Post" line="97" package="Default">
+        <name>createRequest</name>
+        <full_name>\HelpscoutApi\Api\Post\Category::createRequest()</full_name>
+        <docblock line="97">
+          <description>Returns a new request object</description>
+          <long-description>This is good for creating pools of requests. This is when you
+don't know how many requests you need to create and thus might go over
+the rate limit.</long-description>
+          <tag name="param" line="97" description="" type="\HelpscoutApi\Contracts\CategoryPostBody" variable="$categoryPostBody">
+            <type>\HelpscoutApi\Contracts\CategoryPostBody</type>
+          </tag>
+          <tag name="return" line="97" description="" type="\GuzzleHttp\Psr7\Request">
+            <type>\GuzzleHttp\Psr7\Request</type>
+          </tag>
+          <tag name="link" line="97" description="https://developer.helpscout.com/docs-api/articles/create/" link="https://developer.helpscout.com/docs-api/articles/create/"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$categoryPostBody</name>
@@ -1025,11 +1071,11 @@ the rate limit.</long-description>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="26" code="PPC:ERR-50015">Argument $client is missing from the Docblock of __construct</error>
-      <error line="26" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
-      <error line="26" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="27" code="PPC:ERR-50015">Argument $client is missing from the Docblock of __construct</error>
+      <error line="27" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
+      <error line="27" code="PPC:ERR-50008">No summary for method __construct()</error>
     </parse_markers>
-    <source>eJylVE2P0zAQvedXzKFSkqpt7sCW7VaIRRyoYA9IdLXyOkMTSG3jj4Uu6n9f24mTNsmCEJaq1JP3nj1vZvLqtShEFDGyRyUIRbjGSijKjV6Jcut+G670yygyCuGteXys8FprsV1XJTIb74Xf/KIodMnZ9orkH60kZwrbYA0/O2HNmZaEarVdE407Lg/uvCueH/4Itrv3aCFRNp1GMIVVVfGfCg7cgOYgrAQQBrSRdLFWCIwq2Q50gbDavFtYthO4rEr2HQqbg3qRZTk+YMUFykURaAvK91nOqZoTUWaNcokqoxLtJrMiWUQrohSETOB3BHb5K7o1HRrYvMj8U8jywVJhQhtz+/S/mDGqRYJTPmruq5LCV8Ooqwfc3VFbIC0N1Ul9oXD4DGrVIJA2ybg10UWp5ssaCBfdfXuAmukA9b/5cofaPpO0hh4HCW5GCucK1RWvLplHB9KlIJLsod8/7ev/r+yprz0Ha0zSP9x60oucGqjb3mgdk82sOLdO7Z0vJf4wqHRyhncr3nz4dBPPhvEuhZG3XwYRzymQ5ChVDBfLZyAetqJulD0qJkJYK4izIfumOBs5rOW5ZnXZ3BwE/hP7djwcE6OL+rJnzTaD+HP8HOfelsFzBsWxbvs6hn2SDiVuzyJpM1FhSdRGsq6O3TAcXTfTApKxLyJMMO21QlBCPy6BEWbGKzbTc4yeAPZWpj4=</source>
+    <source>eJy9lt1v2jAQwN/5K+6hEh8qRHuatK2sFE3rtIch2odJo2pd50rcBjuzHRid+r/v7HwAIXSFTotAIfZ9+e5+Fz58TKKk0ZBshiZhHOEc48RwldpBIibuO1LGvm80UoPwOX18jPHc2mQyjAVKWq8sf/rFMbFCyckZC8dkUkmD5WImvuFhqKTVjFszGTKLU6WXzt+ZCpfPCtPTV1xuuR8Z/XYyxp8p+piDTqcBHRjEsVoYWKoUrIKE7AOTwHN/bq30AqkRcgo2QhiMvvRI2xk4jYV8gIg8mHdBEOIcY5Wg7kWFWo+rWRAqbrosEUFuWaAJuEZ6CMhI0OAxMwaKY8LvBtDlQ3RXZzu7+Ubg74kWc1KFI55nvqr+l0zV2mL5Zraa3saCw10quSsWXF9zqp7VKbetLKDC+TFkVgsD7fww7jqykTDdfiYIJ6t4KwKZphPIfnX7U7R0b7Uz0aetA45qCucKtSpeVjIvXSidJkyzGVSbq9x+fWXX81rJYCbTqjqnnFRW1hNoy94oM6ZzkFy21tPb7eus11sb8u5qjr5dXDaPt9dXR6jZ/bG14nUiZCFq04ST/g4RLzbgjnMv1WRJQqlgLg3BvVGyxlmp55rVneZymeBe2lf1y02W2igLdqPZjqH5vblL55bK4HW2ikPZ9nUsnlvtbRNXGyvtnKji0mhTLVd1XMHw5LqZR9CqG5dwhO1KKxSW0ONSaBTMeIs76Bn6M3hgSoCEdDwxs5Q80kqq1MCCLasIXdC7AWZoIxWCEVPJKAQkxRCUD9OQBbjJcnRTVb6k/AN9pm4b7pSGRYTSz2KJGDqGM01gYNCCuoNVh1K0pBQqkKoYhjBVJDRH7U+inWIsZsLuy32eyMn6y0OrmTBY3A8cEUxbweO9BsTAFWDPKVE0Qu04yAxuNE7dPHhmFtRQ/pIpcNAIOJD/OpD3Jv812K+Y3/nKGvsqESDU7AvIqwPq9h653QWKIswcJ967+zOSKBUbB0aub3qlcMFSYSSkVFl4kGoBEX1nTC5LrVrmCGIbEfYzMY0s+fZoFdb+PWFrf8/+H165w8MAc3Ub171ka4Eqj0HhUrRrh5Bog/mbYCdx20C9gLdDcDuMthp29mXtFajVkPbU+AOWmqGL</source>
   </file>
   <file path="Api/Post/Collection.php" generated-path="Api.Post.Collection.html" hash="a5112e0e038c340ebd9d43fba5f510cc" package="Default">
     <docblock line="0">

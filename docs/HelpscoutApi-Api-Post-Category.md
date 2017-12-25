@@ -98,4 +98,49 @@ Post an category to the Helpscout API.
 
 --
 
+public **createAsync** ( CategoryPostBody $categoryPostBody )
+
+
+Create the category in an asynchronous way.
+
+Same method signature and options as `create`.
+
+This is great for when you need to create a set of categories that do not
+got over the rate limit.
+
+
+
+
+
+
+**Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| $categoryPostBody | [CategoryPostBody](HelpscoutApi-Contracts-CategoryPostBody.md) |  |
+
+--
+
+public **createRequest** ( CategoryPostBody $categoryPostBody )
+
+
+Returns a new request object
+
+This is good for creating pools of requests. This is when you
+don&#039;t know how many requests you need to create and thus might go over
+the rate limit.
+
+
+
+
+
+
+**Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| $categoryPostBody | [CategoryPostBody](HelpscoutApi-Contracts-CategoryPostBody.md) |  |
+
+--
+
 [API Index](ApiIndex.md)
