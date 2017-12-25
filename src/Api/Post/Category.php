@@ -98,12 +98,12 @@ class Category {
         return new Request(
             'POST',
             'https://docsapi.helpscout.net/v1/categories',
-            'headers' => [
+            [
                 'Accept'        => 'application/json',
                 'Content-Type'  => 'application/json',
                 'Authorization' => 'Basic '. base64_encode($this->apiKey.':X')
             ],
-            'body' => $categoryPostBody->createPostBody(),
+            $categoryPostBody->createPostBody()
         );
     }
 }
