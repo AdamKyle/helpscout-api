@@ -145,6 +145,32 @@ $article->create($articlePostBodyValue);
 // for more information.
 ```
 
+### Delete an article
+
+These concepts apply to categories and collections as well.
+
+> ## ATTN!!
+>
+> At this time only articles can be deleted.
+
+```php
+use HelpscoutApi\Api\Delete\Article;
+use HelpscoutApi\Contracts\ApiKey;
+use HelpscoutApi\Contracts\Article as ArticleContract;
+use GuzzleHttp\Client;
+
+$client = new Client([
+    'base_uri' => 'https://docsapi.helpscout.net/v1/',
+]);
+
+$apiKey = new ApiKeyValue('xxxxxxxxxx');
+
+$articleContract = new ArticleContract('1234');
+$article         = new Article($client, $apiKey);
+
+$article->delete($articleContract); // Returns the \GuzzleHttp\Psr7\Response
+```
+
 You can view the [tests](https://github.com/AdamKyle/helpscout-api/tree/master/tests) to get a better understanding of how you would use the endpoints.
 
 ### Request Async and Pools
