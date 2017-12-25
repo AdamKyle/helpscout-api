@@ -36,7 +36,7 @@ class Pool {
      * @param \Closure
      * @param \Closure
      */
-    public function pool(RequestPool $requestPool, $rejectCallbackFunction, $successCallbackFunction = null) {
+    public function pool(RequestPool $requestPool, $rejectedCallbackFunction, $successCallbackFunction = null) {
         $concurrency = $requestPool->getConcurrency();
 
         if (is_null($concurrency) || $concurrency <= 0) {
