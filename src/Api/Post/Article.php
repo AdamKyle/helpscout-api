@@ -100,13 +100,11 @@ class Article {
             'POST',
             'https://docsapi.helpscout.net/v1/articles',
             [
-                'headers' => [
-                    'Accept' => 'application/json',
-                    'Content-Type' => 'application/json',
-                ],
-                'auth' => [$this->apiKey, 'X'],
-                'body' => $articlePostBody->createPostBody(),
-            ]
+                'Accept' => 'application/json',
+                'Content-Type' => 'application/json',
+                'Authorization' => 'Basic '. base64_encode($this->apiKey.':X')
+            ],
+            $articlePostBody->createPostBody()
         );
     }
 }
