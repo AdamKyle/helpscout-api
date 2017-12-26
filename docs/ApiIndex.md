@@ -3,6 +3,8 @@ API Index
 
 * HelpscoutApi
     * HelpscoutApi\Api
+        * HelpscoutApi\Api\Delete
+            * [Article](HelpscoutApi-Api-Delete-Article.md)
         * HelpscoutApi\Api\Get
             * [Articles](HelpscoutApi-Api-Get-Articles.md)
             * [Categories](HelpscoutApi-Api-Get-Categories.md)
