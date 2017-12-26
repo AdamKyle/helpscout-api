@@ -41,7 +41,7 @@ class Article {
 
         return $this->client->request(
             'DELETE',
-            'article/' . $article->getId(),
+            'articles/' . $article->getId(),
             [
                 'headers' => [
                     'Accept' => 'application/json',
