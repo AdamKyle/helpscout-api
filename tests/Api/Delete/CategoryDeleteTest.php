@@ -33,7 +33,7 @@ class CategoryDeleteTest extends TestCase {
     public function testDeleteArticle() {
         $client = $this->fakeClient();
 
-        $articleStub = $this->createMock(Categorycontract::class);
+        $categoryStub = $this->createMock(CategoryContract::class);
 
         $categoryStub->method('getId')
                      ->willReturn('1');
