@@ -4,17 +4,17 @@ namespace HelpscoutApi\Api\Delete;
 
 use App\HelpScout\lib\HelpScout\Api\ApiClient;
 use HelpscoutApi\Contracts\ApiKey;
-use HelpscoutApi\Contracts\Article as ArticleContract;
+use HelpscoutApi\Contracts\Category as CategoryContract;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Exception\BadResponseException;
 
 /**
- * Deals with Deleteing Articles API from helpscout.
+ * Deals with Deleteing Categories API from helpscout.
  *
- * @link https://developer.helpscout.com/docs-api/articles/delete/
+ * @link https://developer.helpscout.com/docs-api/categories/delete/
  */
-class Article {
+class Category {
 
     /**
      * GuzzleHttp\Client
@@ -32,25 +32,25 @@ class Article {
     }
 
     /**
-     * Delete an article based on the article id.
+     * Delete an article based on the category id.
      *
-     * @param HelpscoutApi\Contracts\Article
+     * @param HelpscoutApi\Contracts\Category
      * @return \GuzzleHttp\Psr7\Response
      */
-    public function delete(ArticleContract $article)
+    public function delete(CategoryContract $category)
     {
 
         try {
             return $this->client->request(
                 'DELETE',
-                'articles/' . $article->getId(),
+                'categories/' . $category->getId(),
                 [
                     'headers' => [
                         'Accept' => 'application/json',
                         'Content-Type' => 'application/json',
                      ],
                     'auth' => [$this->apiKey, 'X'],
-                    'body' => json_encode(['id' => $article->getId()]),
+                    'body' => json_encode(['id' => $category->getId()]),
                 ]
             );
         } catch (BadResponseException $e) {

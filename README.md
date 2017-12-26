@@ -149,10 +149,6 @@ $article->create($articlePostBodyValue);
 
 These concepts apply to categories and collections as well.
 
-> ## ATTN!!
->
-> At this time only articles can be deleted.
-
 ```php
 use HelpscoutApi\Api\Delete\Article;
 use HelpscoutApi\Contracts\ApiKey;
