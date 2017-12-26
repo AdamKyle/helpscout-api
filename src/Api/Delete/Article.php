@@ -47,7 +47,8 @@ class Article {
                     'Accept' => 'application/json',
                     'Content-Type' => 'application/json',
                  ],
-                'auth' => [$this->apiKey, 'X']
+                'auth' => [$this->apiKey, 'X'],
+                'body' => json_encode(['id' => $article->getId()]),
             ]
         );
     }
