@@ -134,9 +134,9 @@ $client = new Client([
 
 $apiKey = new ApiKeyValue('xxxxxxxxxx');
 
-$articlePostBodyValue->collectionID('123');
-$articlePostBodyValue->name('article name');
-$articlePostBodyValue->text('something');
+$articlePostBody->collectionID('123');
+$articlePostBody->name('article name');
+$articlePostBody->text('something');
 
 $article = new Article($client, $apiKey);
 $article->create($articlePostBodyValue);
@@ -168,6 +168,47 @@ $article->delete($articleContract); // Returns the \GuzzleHttp\Psr7\Response
 ```
 
 You can view the [tests](https://github.com/AdamKyle/helpscout-api/tree/master/tests) to get a better understanding of how you would use the endpoints.
+
+### Update an article
+
+> ## ATTN!!
+>
+> You can only update articles at this time.
+
+Updating an article works the same way as creating an article with one minor difference, we pass an [`ArticlePutBody`](https://github.com/AdamKyle/helpscout-api/blob/master/docs/HelpscoutApi-Contracts-ArticlePutBody.md) contract.
+
+This contract contains three methods: `id(string $articleId)`, `getId(): string`, `articlePostBody(ArticlePostBody $articlePostBody)`
+
+There is one final method, the `createPutBody()` which is used to create the actual JSON for the request.
+
+Much like the create, you can update a single, async and return a update request, all of which use `PUT` requests.
+
+```php
+use HelpscoutApi\Api\Post\Article;
+use HelpscoutApi\Contracts\ApiKey; // We will pretend we implemented this as ApiKeyValue;
+use HelpscoutApi\Contracts\ArticlePostBody; // We will pretend we implemented this as ArticlePostBody;
+use HelpscoutApi\Contracts\ArticlePutBody; // We will pretend we implemented this as ArticlePutBody;
+use GuzzleHttp\Client;
+
+$client = new Client([
+    'base_uri' => 'https://docsapi.helpscout.net/v1/',
+]);
+
+$apiKey = new ApiKeyValue('xxxxxxxxxx');
+
+$articlePostBody->collectionID('123');
+$articlePostBody->name('article name');
+$articlePostBody->text('something');
+
+$articlePutBody->id('articleId');
+$articlePutBody->articlePostBody($articlePostBody);
+
+$article = new Article($client, $apiKey);
+$article->update($articlePutBody);
+
+// This will return a response, see https://developer.helpscout.com/docs-api/articles/update/
+// for more information.
+```
 
 ### Request Async and Pools
 
