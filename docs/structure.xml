@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project title="API Documentation" version="2.8.5">
   <partials/>
-  <file path="Api/Delete/Article.php" generated-path="Api.Delete.Article.html" hash="d63ab6e6d614e46b62408c2a3a5edb03" package="Default">
+  <file path="Api/Delete/Article.php" generated-path="Api.Delete.Article.html" hash="6b3eafffe1898360aae5d4e0faf41b5f" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -12,38 +12,39 @@
     <namespace-alias name="ArticleContract">\HelpscoutApi\Contracts\Article</namespace-alias>
     <namespace-alias name="Client">\GuzzleHttp\Client</namespace-alias>
     <namespace-alias name="Response">\GuzzleHttp\Psr7\Response</namespace-alias>
-    <class final="false" abstract="false" namespace="HelpscoutApi\Api\Delete" line="16" package="Default">
+    <namespace-alias name="BadResponseException">\GuzzleHttp\Exception\BadResponseException</namespace-alias>
+    <class final="false" abstract="false" namespace="HelpscoutApi\Api\Delete" line="17" package="Default">
       <extends/>
       <name>Article</name>
       <full_name>\HelpscoutApi\Api\Delete\Article</full_name>
-      <docblock line="16">
+      <docblock line="17">
         <description>Deals with Deleteing Articles API from helpscout.</description>
         <long-description></long-description>
-        <tag name="link" line="16" description="https://developer.helpscout.com/docs-api/articles/delete/" link="https://developer.helpscout.com/docs-api/articles/delete/"/>
-        <tag name="package" line="16" description="Default"/>
+        <tag name="link" line="17" description="https://developer.helpscout.com/docs-api/articles/delete/" link="https://developer.helpscout.com/docs-api/articles/delete/"/>
+        <tag name="package" line="17" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Delete" line="21" package="Default">
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Delete" line="22" package="Default">
         <name>$client</name>
         <full_name>\HelpscoutApi\Api\Delete\Article::client</full_name>
         <default></default>
-        <docblock line="21">
+        <docblock line="22">
           <description>GuzzleHttp\Client</description>
           <long-description></long-description>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Delete" line="26" package="Default">
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Delete" line="27" package="Default">
         <name>$apiKey</name>
         <full_name>\HelpscoutApi\Api\Delete\Article::apiKey</full_name>
         <default></default>
-        <docblock line="26">
+        <docblock line="27">
           <description>HelpscoutApi\Contracts\ApiKey;</description>
           <long-description></long-description>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Delete" line="28" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Delete" line="29" package="Default">
         <name>__construct</name>
         <full_name>\HelpscoutApi\Api\Delete\Article::__construct()</full_name>
-        <docblock line="28">
+        <docblock line="29">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -58,16 +59,16 @@
           <type>\HelpscoutApi\Contracts\ApiKey</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Delete" line="39" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Delete" line="40" package="Default">
         <name>delete</name>
         <full_name>\HelpscoutApi\Api\Delete\Article::delete()</full_name>
-        <docblock line="39">
+        <docblock line="40">
           <description>Delete an article based on the article id.</description>
           <long-description></long-description>
-          <tag name="param" line="39" description="" type="\HelpscoutApi\Api\Delete\HelpscoutApi\Contracts\Article" variable="$article">
+          <tag name="param" line="40" description="" type="\HelpscoutApi\Api\Delete\HelpscoutApi\Contracts\Article" variable="$article">
             <type>\HelpscoutApi\Api\Delete\HelpscoutApi\Contracts\Article</type>
           </tag>
-          <tag name="return" line="39" description="" type="\GuzzleHttp\Psr7\Response">
+          <tag name="return" line="40" description="" type="\GuzzleHttp\Psr7\Response">
             <type>\GuzzleHttp\Psr7\Response</type>
           </tag>
         </docblock>
@@ -80,12 +81,186 @@
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="28" code="PPC:ERR-50015">Argument $client is missing from the Docblock of __construct</error>
-      <error line="28" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
-      <error line="28" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="39" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $article in delete()</error>
+      <error line="29" code="PPC:ERR-50015">Argument $client is missing from the Docblock of __construct</error>
+      <error line="29" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
+      <error line="29" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="40" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $article in delete()</error>
     </parse_markers>
-    <source>eJyNUk1v2zAMvftX8FDATpDExwHrmjVogrXYDsXWw4C5KBSZrbUpsibRHdqh/32SJTtx0o8RMCyR75F8FD981JVOEsU2aDXjCOcoteV1QwstCv8tUSLhcZI0FmGhdeER3zyikGK9c4uEMylQ0XELHyQ7qxUZxsl61Gd8eB1iSHCJwCzEYxcLtE/N46PEcyJd7BbccV9a86746lTVyvr28/E4gTEskUkLfwRVEJQJddeVcLUuL+DW1BuourZmjuR5p1KoX1C5zPZ9npd4j7LWaGZbIK83eVlzO2Va5CxmdEhfJHcp8oRLZns98DdJwFnbl7fxoagYyNu/NuKeEcIRj4L36W9M+9lcLAaDt1lLweG2UZxEreDmhrvhkWk4ZaGhrvgEQtYuwcipgWhHVAk7nQcgnGz73QMEpgeE03R+h+T+2ShAnw4EhgcDpiCOF9bMYgmuVaqwd4pyFhkd8VQzwzZv7FoPNkiNUVC8tEzDSe7NLLx3tre0TmNwjFpSfHpvsdhgaNO5wd8NWsp6mLd0ufqyulqlk6E3Zs5TmPVl2llelNloiP0xuLXsClmJxqZwMn8m3EIWnKOmFpEyrZ1c5qXmP22t9prpOV64V3L1oPH/mdeHvpQ1VIXuBnszgfR7ej2Ab2/bDXpK/gFKHm//</source>
+    <source>eJyVVN9vmzAQfuevuIdIQJSEx0nrmjVrorXaHqqtD5NKFDnmWrwR49mmWzrlf5+NDQkhWbWTEHD3fffj88G79yIXQcDJBpUgFOEGC6FoWemZYKm95ligxosgqBTCTIjUIr5aRFqw9cGbJ1wXDLm+qOGdZNcl15JQrSzqE27/DZGa0QKBKPCPTczRPlYvLwXeaC3Sw4IH7jsl36RfzFQlV9iLLn5TFJqVPP1AsgbVOs20yXAYwBDmSAoFv5jOwQnB+FPTkWnt7hYeZbmBvJliYkiWd1Uw/gNyU0q9TZIMn7EoBcrJHkjLTZKVVI2JYAnxGQ3SFklMiiSgBVHt+PAnCMBY3Ze1YV8DH0jqu5DsmWiEAfX6HNNfOZyTuYgPOm+1LhiFx4pTKxqsVtSoqGVFdeQaaoqPwGVtEsRmGvA20DlT46kDwuW+3yOAY1qAexpPn1CbexQ76K43oDswIBy8vLAmCjMwreocWyfLJp7REK8EkWTzymq2YIm6khzSc7vXVfJIM3fe0dGOmxmdI65J/uitabk90M6aL9+RcTyV+LNCpaMO1Fo4X3xe3C/CUT/SLmEIk7aDWubbLIr7hIeep06TI8lQqhAup2cgNWxG7cdWo0IihFGFWEWS76rkJ7preVYjO+L9VuD/sZen/SGpdO667azaCMJv4TnOusy2NccWXCGnZYbRQ8iy2tkTb3lCvmXHE+8XfgdmGJpDdOrXBAOMz2yAK9cwosOMzReyC/4C3su3KQ==</source>
+  </file>
+  <file path="Api/Delete/Category.php" generated-path="Api.Delete.Category.html" hash="ad9a3743f2f21db277c4bf9804ef168e" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="ApiClient">\App\HelpScout\lib\HelpScout\Api\ApiClient</namespace-alias>
+    <namespace-alias name="ApiKey">\HelpscoutApi\Contracts\ApiKey</namespace-alias>
+    <namespace-alias name="CategoryContract">\HelpscoutApi\Contracts\Category</namespace-alias>
+    <namespace-alias name="Client">\GuzzleHttp\Client</namespace-alias>
+    <namespace-alias name="Response">\GuzzleHttp\Psr7\Response</namespace-alias>
+    <namespace-alias name="BadResponseException">\GuzzleHttp\Exception\BadResponseException</namespace-alias>
+    <class final="false" abstract="false" namespace="HelpscoutApi\Api\Delete" line="17" package="Default">
+      <extends/>
+      <name>Category</name>
+      <full_name>\HelpscoutApi\Api\Delete\Category</full_name>
+      <docblock line="17">
+        <description>Deals with Deleteing Categories API from helpscout.</description>
+        <long-description></long-description>
+        <tag name="link" line="17" description="https://developer.helpscout.com/docs-api/categories/delete/" link="https://developer.helpscout.com/docs-api/categories/delete/"/>
+        <tag name="package" line="17" description="Default"/>
+      </docblock>
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Delete" line="22" package="Default">
+        <name>$client</name>
+        <full_name>\HelpscoutApi\Api\Delete\Category::client</full_name>
+        <default></default>
+        <docblock line="22">
+          <description>GuzzleHttp\Client</description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Delete" line="27" package="Default">
+        <name>$apiKey</name>
+        <full_name>\HelpscoutApi\Api\Delete\Category::apiKey</full_name>
+        <default></default>
+        <docblock line="27">
+          <description>HelpscoutApi\Contracts\ApiKey;</description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Delete" line="29" package="Default">
+        <name>__construct</name>
+        <full_name>\HelpscoutApi\Api\Delete\Category::__construct()</full_name>
+        <docblock line="29">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$client</name>
+          <default></default>
+          <type>\GuzzleHttp\Client</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$apiKey</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\ApiKey</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Delete" line="40" package="Default">
+        <name>delete</name>
+        <full_name>\HelpscoutApi\Api\Delete\Category::delete()</full_name>
+        <docblock line="40">
+          <description>Delete an article based on the category id.</description>
+          <long-description></long-description>
+          <tag name="param" line="40" description="" type="\HelpscoutApi\Api\Delete\HelpscoutApi\Contracts\Category" variable="$category">
+            <type>\HelpscoutApi\Api\Delete\HelpscoutApi\Contracts\Category</type>
+          </tag>
+          <tag name="return" line="40" description="" type="\GuzzleHttp\Psr7\Response">
+            <type>\GuzzleHttp\Psr7\Response</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$category</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\Category</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="29" code="PPC:ERR-50015">Argument $client is missing from the Docblock of __construct</error>
+      <error line="29" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
+      <error line="29" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="40" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $category in delete()</error>
+    </parse_markers>
+    <source>eJyVVE1v2kAQvftXzAHJBgE+VmoaGgqoidpD1OZQKUZoWU/wtma93V2nJRX/vfthg42hUUeybM+8Nx9vx373XmQiCDjZohKEItxiLhQtSj0VLLHXHHPUeBUEpUKYCpFYxFeLSHK2brxVhFnOkOsrB28lmxVcS0K1sqhPuPsnZEY0bgq5A6Kgfq6jnvixfHnJ8VZrkTRLNtz3Sr5Jvpi5Cq6wE138pig0K3jygaQ16uA088aDQQADmCPJFfxiOgMvBeObuiWGCqb3d/Akiy1k9SRjQ7PMm5zxH5CZYuptHKf4jHkhUI6PQFps47SgakQEi+khp8HaQrFJEgc0J+qoAfwJAjDmmrM26ApRBWJ3F5I9Gy70aCXSKf2VMzqbi1RB7y3XOaPwVHJqlYPVihoptSypjnxDdfEh+Kx1gr6ZBirr6Yyp0cQD4frY7wnAMy3AP40mG9TmHvU9dN8Z0J8aEA5EakZzhDVRmIJpVWcItFaWpeOKUjNvBJFk+9qKHtASdSk5JJdWsK3liWr+yKPTXTc6VJ6+o1XHb027bYCGVQ20pBxNJP4sUemoBbUWzhefFw+LcNiNNHYxhPGxCaf2XRr1u5zHjsdlypCkKFUI15MLEAebUvvhOVRIhDDSECtL/F0V/EyDB57VyU75sBP4f+zleX9ISp35blsbN4TwW3iJsy7SnePYgivktEgxegxZ6pxd9ZZn9Fu2PP3j4u/titIMonP/Kehh/8IWoCtXM6JmxvpL2Qd/AQqRveA=</source>
+  </file>
+  <file path="Api/Delete/Collection.php" generated-path="Api.Delete.Collection.html" hash="c76d8974c3488ee156d46a68b015043f" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="ApiClient">\App\HelpScout\lib\HelpScout\Api\ApiClient</namespace-alias>
+    <namespace-alias name="ApiKey">\HelpscoutApi\Contracts\ApiKey</namespace-alias>
+    <namespace-alias name="CollectionContract">\HelpscoutApi\Contracts\Collection</namespace-alias>
+    <namespace-alias name="Client">\GuzzleHttp\Client</namespace-alias>
+    <namespace-alias name="Response">\GuzzleHttp\Psr7\Response</namespace-alias>
+    <namespace-alias name="BadResponseException">\GuzzleHttp\Exception\BadResponseException</namespace-alias>
+    <class final="false" abstract="false" namespace="HelpscoutApi\Api\Delete" line="17" package="Default">
+      <extends/>
+      <name>Collection</name>
+      <full_name>\HelpscoutApi\Api\Delete\Collection</full_name>
+      <docblock line="17">
+        <description>Deals with Deleteing Collections API from helpscout.</description>
+        <long-description></long-description>
+        <tag name="link" line="17" description="https://developer.helpscout.com/docs-api/collection/delete/" link="https://developer.helpscout.com/docs-api/collection/delete/"/>
+        <tag name="package" line="17" description="Default"/>
+      </docblock>
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Delete" line="22" package="Default">
+        <name>$client</name>
+        <full_name>\HelpscoutApi\Api\Delete\Collection::client</full_name>
+        <default></default>
+        <docblock line="22">
+          <description>GuzzleHttp\Client</description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Delete" line="27" package="Default">
+        <name>$apiKey</name>
+        <full_name>\HelpscoutApi\Api\Delete\Collection::apiKey</full_name>
+        <default></default>
+        <docblock line="27">
+          <description>HelpscoutApi\Contracts\ApiKey;</description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Delete" line="29" package="Default">
+        <name>__construct</name>
+        <full_name>\HelpscoutApi\Api\Delete\Collection::__construct()</full_name>
+        <docblock line="29">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$client</name>
+          <default></default>
+          <type>\GuzzleHttp\Client</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$apiKey</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\ApiKey</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Delete" line="40" package="Default">
+        <name>delete</name>
+        <full_name>\HelpscoutApi\Api\Delete\Collection::delete()</full_name>
+        <docblock line="40">
+          <description>Delete an article based on the category id.</description>
+          <long-description></long-description>
+          <tag name="param" line="40" description="" type="\HelpscoutApi\Api\Delete\HelpscoutApi\Contracts\Collection" variable="$collection">
+            <type>\HelpscoutApi\Api\Delete\HelpscoutApi\Contracts\Collection</type>
+          </tag>
+          <tag name="return" line="40" description="" type="\GuzzleHttp\Psr7\Response">
+            <type>\GuzzleHttp\Psr7\Response</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$collection</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\Collection</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="29" code="PPC:ERR-50015">Argument $client is missing from the Docblock of __construct</error>
+      <error line="29" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
+      <error line="29" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="40" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $collection in delete()</error>
+    </parse_markers>
+    <source>eJyVVFFv2jAQfs+vuAekBATkcdK6sjJAa7U9VFsfJjUIGedKvJnYs51udOK/z44TSAismiUUcv6+u+8+n/PuvcxkEORki1oSinCLXGoqCjOVLHG/OXI0eBUEhUaYSpk4xFeHSDhbN94qwowzzM1VCW8lm4ncKEKNdqhPuPsnZCY4R2qYyIFoOL7VCE/+WLy8cLw1RibNso3wvVZvki+2N5Fr7OwuflOULm3ygaQ16hC0PceDQQADmCPhGn4xk4G3g+WbhigN0/s7eFJiC1ndztjyHPWGs/wHZLaafhvHKT4jFxLV+AikYhunguoRkSymh6QW6yrFNkkcUE500wb4EwRgV6nPrUHXi2ojLp9SsWdiEHq08umU/spRnc1Fqk0fLdacUXgqcq9wtaLWGaMKaiIvqC4+BJ+1TtC33UC1eiZjejTxQLg+6j0BeKYD+H+jyQaNfUZ9D913GvQHB8QOlDKMcoQ10ZiClWoyBGo72gi1A5aOK0rNvJFEke3rk3rAKzSFyiG5NIdtN09888cedUfeenGI9UtqNQRuGav86KJblYiWoaOJwp8FahO1oG6F88XnxcMiHHZ3jmV1HMK4qaO0/S6N+l3aYydSJsuQpKh0CNeTC5ASNqXuEpaokEhpHSLlpfiuRX5G44HnzHKNPuwk/h97eT4eksJkXm1r9IYQfgsvcdYi3ZUcV3CFORUpRo8hS8vgOf+WZxxctiL94x3Yu2mlGUTnvlrQw/6FUcCyXM2ImhnrS7MP/gJNsMVI</source>
   </file>
   <file path="Api/Get/Articles.php" generated-path="Api.Get.Articles.html" hash="54a0f0bfe05ff5f6142a73cc5d66aab5" package="Default">
     <docblock line="0">
@@ -815,7 +990,7 @@ if it has a redirect will return the redirected path.</long-description>
     </parse_markers>
     <source>eJztVd9P2zAQfs9fcQ+VklZto71uo9CxDdikjak8TFpRZZyDeHNtz3aYYOJ/n89JCknRhoZ4w1IV5+677359VV7vmtIkiWJrdIZxhEOUxnFd+bkRS/odoH+VJJVDmBuzJPeC3Espzu68Neh9KVAFPME7TPtaecu4d4T6iFd/hSyEx3sAXyq0V8u59YJLBOaguUZ7jT+orq8lHnpvlm0pST4aJTCCt8ikg1/Cl3Dw7gQoR2A4PoJzq9dQtommAUvwPSnUDygDk3uZ5wVeotQG7fQWyPU6LzR3E2ZE7ogul8L5PETnCZfMuSbJ7ySBcGIddEbbZTaOPD6NFZfMIwx420Iv/B+TvZeLNc7aWp1JweG8UtwLrWC14lo5byvus7qgNvkYataWYBi6geYMfCncZFYDYee23h6gjiRAfZvMLtCHZzasoTfb80EPTEqIU22MrW/Poq+sgqXzxT5Nudtvr7OQaS5l1inbBqmHdpEqutvCZGbxZ4XOZxssnTTIJR13TbGwnvFb5y3CSmQFWpfCzuwed4TMOUfjIyJlxoTiGRWef3da9RJsYmjlVO/JlcGHR55u21JW+bKurrOrMaRf09MO/PZt2IiITrMLSrkqkOsCs81445rf6CLsOV6bql02fNje4VxbYGAY/csryWy4XmBfDcHN1rDwVqiLx0jkvbbHgT5zkQkGlCsIJH2RPol2dol/J4VpnelZSU+hJAWs/Vioos0QvhsfFp8/TXtCCgEOfImbkDPmsICgj7tGoYIo13E6Y3AVL4lOFH2yVpVh0/+tyUWQocSMOGBAmnkSHeZRgnSNkz0qsuGzFh+pxZvkD1k5iMc=</source>
   </file>
-  <file path="Api/Pool.php" generated-path="Api.Pool.html" hash="52501872b837cd0e8a85dc8776f178da" package="Default">
+  <file path="Api/Pool.php" generated-path="Api.Pool.html" hash="f049aeff6ddc3418e9d4d2ed9cdac09c" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -875,7 +1050,7 @@ of requests passed in.</long-description>
           <tag name="param" line="39" description="" type="\HelpscoutApi\Contracts\RequestPool" variable="$requestPool">
             <type>\HelpscoutApi\Contracts\RequestPool</type>
           </tag>
-          <tag name="param" line="39" description="" type="\Closure" variable="$rejectCallbackFunction">
+          <tag name="param" line="39" description="" type="\Closure" variable="$rejectedCallbackFunction">
             <type>\Closure</type>
           </tag>
           <tag name="param" line="39" description="" type="\Closure" variable="$successCallbackFunction">
@@ -888,7 +1063,7 @@ of requests passed in.</long-description>
           <type>\HelpscoutApi\Contracts\RequestPool</type>
         </argument>
         <argument line="0" by_reference="false">
-          <name>$rejectCallbackFunction</name>
+          <name>$rejectedCallbackFunction</name>
           <default></default>
           <type/>
         </argument>
@@ -905,9 +1080,9 @@ of requests passed in.</long-description>
       <error line="15" code="PPC:ERR-50008">No summary for method __construct()</error>
       <error line="13" code="PPC:ERR-50007">No summary for property $client</error>
     </parse_markers>
-    <source>eJx9VV1v00AQfPevWKSIOJXbIl6QKC2gSoB4gIoP8UBRcrlsmoOLz9yek6aQ/87u2U6cOMFSpPg+ZmbnZs8vXhazIklyNUcqlEZ4h7Yg7crwujC3/LtIkpL2hq9dHrzSgW4/4e8SKdw4Zy/iurflw4PFdyEUtzIIiuIQ2oNLrq3BPDDF+clJAifwlXACU+dBe1TB5Heg8gl4JGcX8lYwCIGb8lDkpTPedZ5oq4gg8v1JgJ/Cm4UKCD3dEMTRcmyNhmmZ62BcDsOhdjkFX+qQVkqaDYMaR55emBk6vaom4HKLKZPrCjnKl+cEvmFUCcpaCDPcKIWSpILKjFqsFLdUJsSSefG82uVAu3lhMeBZjdqAf2EpsDS8KBqEoIAwiCGFd3NDSAyjAiyxwuUio5sVnNQ8Rh5AmDgRI/pyvA8C0lAsZ0bPgGkEeLyKa0atYx7B6A4DJ0CX3mO+SgejjaNduby3R6XWSHTNtY2V/vWmXjwSElfIX2UzCcrKlTBXK8gdV6DYbHZi4tilFR8By2X5NVbWMMzcEnCBvrb6J+rACWJgxjirzWYMpLwfwLo7QO+dZ14PFMSI6Lp4VFIG5MCEPoGZF84HVtDQNKYKQtzhSgZAu0Dar/lNdZQbpbKtkHiavBZJBacOwY1FrdRYWS7Va5VLxUsTZo0hfHCKNkGoErCHsaoiMZY4jNoNSP4Zd2i1dlQvPqZ3Y15HryI2XqIqryaf4H22/cvZ8mg5iiSVbIfr3cp7tWqoWn0bKeSkOpl5VSiv5tBK3N4MXxqOSo//Hz4/2PHSmWkLGnp++5LJm5iwn1SeOJJhvg7y0tqd60I3raFXclu0CE6v2p2juXXqi0keM4XU0FDg0jbGAP7+3QV9cQlP2owHWJ8+udhMr7ccvXgzsWZctm7ldOeGy7qSa8MoHWTwfYe236Ltw+XVjo5sd+m0tFOOKU76/MZLN4eS9po8M3dMzwDkO5E+Pmb7fvXxCj6HG4mtpO79548fQDZIJhV3VbV9S8lmyyUjZj/vIMlJPNocxTEJoqGzVR5hG7J+PxS6YeyAozAZ1PONBYPBRQd1vTOy3vO1adxDtkrrdkxtNnRdPWDr4WqOQbTK2aHeK6pVwo92D/Tqr5j0TRHTVw+kLYBm0emVfOKamXWyTv4BGFTB7Q==</source>
+    <source>eJx9Vdtu00AQffdXDFJEnMptES9IlBZQJUA8QMVFPFCUbDaTZmHjNTvrpCnk35lZX+LcsBQp3ss5Z86eWb94WcyKJMnVHKlQGuEd2oK0K8Prwtzy7yJJStoZvnZ58EoHuv2Ev0ukcOOcvYjr3pYPDxbfhVDcyiAoikNoDy65tgbzwBTnJycJnMBXwglMnQftUQWT34HKJ+CRnF3IW8EgBG7KQ5GXznjXeaKtIoLI9ycBfgpvFiog9HRDEEfLsTUapmWug3E5DIfa5RR8qUNaKWk2DGoceXphZuj0qpqAyw2mTK4r5ChfnhP4hlElKGshzLBVCiVJBZUZtVgpbqlMiCXz4nm1y4F288JiwLMatQH/wlJgaXhRNAhBAWEQQwrv5oaQGEYFWGKFy0VGNys4qXmMPIAwcSJG9OV4HwSkoVjOjJ4B0wjweBXXjDrHPILRHQZOgC69x3yVDkato/tyeW+PSq2R6JprGyv96029eCQkrpC/ymYSlJUrYa5WkDuuQLHZ7MTEsUsrPgKWy/JrrKxhmLkl4AJ9bfVP1IETxMCMcVabzRhIeT+AdXeA3jvPvB4oiBHRdfGopAzIgQl9AjMvnA+soKFpTBWEuMOVDIB2gbRb85vqKFulsq2QeJq8FkkFpw7BjUWt1FhZLtVrlUvFSxNmjSF8cIraIFQJ2MFYVZEYSxxG3QYk/4w7tFo7qhcf09uat6dXERsvUZVXk0/wPtv85Wx5tBxFkko2w/Vu5b1aNVSdvo0UclJ7mXlVKK/m0EnczgxfGo5Kj/8fPj/Y8dKZaQcaen7zkslbZcJuVnnqSIr5QshLa7cuDN00h17JfdGhOL3q9o7m5qmvJnnMFFJDQ4FLuxgD+Pt3G/TFJTzpMh5gffrkop1ebzh68W5izbjs3Mvp1h2X7UuuLaN0kMH3Ldp+h7YPl1dbOrLtpdPSTjmoOOnzGy9tjyXtNYlm7pifAciXIn18zPbd6uMlfA43ElzJ3fvPHz+AbJBUKu6ravuGks2Wa0bMfr6HJCfxqD2KYxJEw95WeYRtyPr9UOiGsQeOwmRQzzcWDAYXe6jrrZH1jq9Nag/ZKs27Z+qxmA/ggK2HqzneKe2CLeqdojol/Oj2QK/+jknfFDF99UDaAWgWnV7JR66ZWSfr5B9btsK2</source>
   </file>
-  <file path="Api/Post/Article.php" generated-path="Api.Post.Article.html" hash="6c8747668d5c88211d0a8dc1df35abcd" package="Default">
+  <file path="Api/Post/Article.php" generated-path="Api.Post.Article.html" hash="67e39ba5584b9a19c5e80624e0e7a85c" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -1033,9 +1208,9 @@ the rate limit.</long-description>
       <error line="28" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
       <error line="28" code="PPC:ERR-50008">No summary for method __construct()</error>
     </parse_markers>
-    <source>eJy9lt9v0zAQx9/zV9zDpP7Q1ognJH4MyoQY4oFq2wMSRZvn3Bqz1Da209Kh/e+cnbg/0hRoQUSt0p7vzufv+ePkxSud6ySRbIpWM45wjoW2XJVuqMXYf0fKuudJUlqEd+XDQ4HnzunxWSFQkt2bN0LOlHSGcWfHQ+MEL9DHv1HZ4te+WnzA2mVtlrffOWonlBy/YdkFVaikxaVxy31kzdPxBX4rMZSc9vtJH4ZFoeYWFqoEp0BTNcAksKo4b1qWBKUVcgIuRxiO3g8SH/26EPIecspun6VphjMslEYzyGPQgKtpmiluT5gWaZ3Wptwgc5gm/TThBbMWajXgR5IAXb42f4f+tqr1QBru2ogZZYIjXiveDP+Noq25WD1YWcvbQnC4KyX3qsL1NSeZnSm561YFxcmPocoaE/RoNVBfRy4X9uS0coSXq3obDlWkd6h+nZxO0NG926tcH7cWONpumW/Rqm2hWZVzjHmtmWFTaGzB5ehfNnVD04Z6lU+3MTOtdtOwLp0zi7V/QStT73Wv07qwJ6em2t7dDX9/dUYfL686x9v2WH7LGHzeNoWYHFmGxnbg5ekun+A35J7F4NZhWpMSzKuQfrVKts23DPQb1a/naqFxv/AvO+wdVrq8Knhjqx1D51NnZ9At9SIENRtEiodOxv/dXkuKLxumXg1UvAy60shVM1csPAItlOfdtlMNjrDX2A4xEQZYYkQkJiTcwc5ZWEPgJeIjZIDJLiTPjZKqtDBniyZAl/RAgCm6XGVgxUQyqoByyAxUqNJSBripJLppBl+R/ECfiR+GO2VgnqMMR7BEzDzBVSQwsOhA3cXqLJVKIZkCqeI5CBNFLjM0YRnGhxViKtyezNcijtefF0ZNhcV4/3/Hw9Crv9cZEbdA62FQpdvYMm2nwc6ToIXwPzkBDqL/QPLbAN6b+L+gfUX6zufURWgRgUGbfA51a0DdfkXudgGiCC/PR5jdv3xopQrrgajj7WDpHBmKSTJSysG9VHPI6TtlcrGMamWN4HU54T4Vk9zR3AGqmO2fs7X2Lvb/wKonPAQt37SLtodrK0rLRVCxVOvaEiS6dPYk3cHaNkp/QNohoB3GWQs1+1J2OGQtjD0mPwEGB5UB</source>
+    <source>eJy9lm9v0zoUxt/nU5wXk9JWW6MroYvEn1266QrQfUE19gKJouE5Z40htY3trHRo351jJ26bNAU6rohWZXXOc3z8HP+cPvtHFzpJJFug1YwjvMJSW64qN9Fi5j9TZd3TJKkswsvq7q7EV87p2XkpUNK4H25JzpV0hnFnZxPjBC/R689UvvpxrBb/YROyNcu/XzlqJ5ScnbH8gipU0uJ6cCd8as3j2QV+qTCUnI1GyQgmZamWFlaqAqdAUzXAJLC6OD+0LgkqK+QcXIEwmb4eJ179ohTyMxSU3T7JshxvsVQazbiIojFXiyxX3J4wLbImrc24QeYwS0ZZwktmLTRuwLckAbp8bf4Oo11XmwdZuGsjbikTHPHG8a78J4725mLNw3q0ui4Fh5tKcu8qXF1xstmZirtBXVCc/BjqrDHBkFYDzXXkCmFPTutAeL6ptxNQK31A/d/J6Rwd3QfDOvR+Z4HT3Zb5Fm3aFppVB0fNC80MW0BnC66f/mZTW5523KtjBp2ZabXtgW3rnFltfQtemWave5+2jT05NfX2HrTi/ZVO37y9TI93x2P5Pc/g/e5Q0BTIcjQ2heen+2JC3IR7FkNYyrQmJ5h3Iftkleybby30G9Wv53Kl8TD5hz3jKatcURfc2mrHkL5L94quqRdB1G0QOR46Gb8Phj0pPrSGhg1Q8TLoKiM3zdywcA+0UF4M+k41OMJhZzvERBhgiYpITEi4h53zsIbAS8RHyACTXUleGCVVZWHJVl2A3tILARboCpWDFXPJqALKIXNQoUpLGeBjbdHHrviS7Af6m/vHcKMMLAuU4QiWiLknuFYCA4sO1E2szlKpJMkVSBXPQZgrCrlFE5ZhvKwUC+EOZL4xcbb9vjBqISzG+587Hibe/YPOiLgFeg+DOl1ry/SdBntPgh7Cf+UEeBD9DyS/D+CDif8N2jek731PXYQWERi0yZfQtAbU9Sfkbh8givDyfITZ/Y8PrVRpPRCN3o7XwZGhmCQnpxx8lmoJBX0WTK7Wql7WCF5XEO4LMS8czR2gitn+d7a2fov9ObCaCR+Clm/aRd/LtRel9SKoWKp1awkSXXb7V7aHtV2UDqXoYQClE2JFGXEXomrZGbPkYDqGa2bx70dXKLnKcdBiaZw+eZcOW+k6ZP0cpV107pPvEGOSpQ==</source>
   </file>
-  <file path="Api/Post/Category.php" generated-path="Api.Post.Category.html" hash="b5314862e24a307c6c61000ba3201c15" package="Default">
+  <file path="Api/Post/Category.php" generated-path="Api.Post.Category.html" hash="20585a3fd070930ffbce9488f63a102f" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -1161,7 +1336,7 @@ the rate limit.</long-description>
       <error line="27" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
       <error line="27" code="PPC:ERR-50008">No summary for method __construct()</error>
     </parse_markers>
-    <source>eJy9lt1v2jAQwN/5K+6hEh8qRHuatK2sFE3rtIch2odJo2pd50rcBjuzHRid+r/v7HwAIXSFTotAIfZ9+e5+Fz58TKKk0ZBshiZhHOEc48RwldpBIibuO1LGvm80UoPwOX18jPHc2mQyjAVKWq8sf/rFMbFCyckZC8dkUkmD5WImvuFhqKTVjFszGTKLU6WXzt+ZCpfPCtPTV1xuuR8Z/XYyxp8p+piDTqcBHRjEsVoYWKoUrIKE7AOTwHN/bq30AqkRcgo2QhiMvvRI2xk4jYV8gIg8mHdBEOIcY5Wg7kWFWo+rWRAqbrosEUFuWaAJuEZ6CMhI0OAxMwaKY8LvBtDlQ3RXZzu7+Ubg74kWc1KFI55nvqr+l0zV2mL5Zraa3saCw10quSsWXF9zqp7VKbetLKDC+TFkVgsD7fww7jqykTDdfiYIJ6t4KwKZphPIfnX7U7R0b7Uz0aetA45qCucKtSpeVjIvXSidJkyzGVSbq9x+fWXX81rJYCbTqjqnnFRW1hNoy94oM6ZzkFy21tPb7eus11sb8u5qjr5dXDaPt9dXR6jZ/bG14nUiZCFq04ST/g4RLzbgjnMv1WRJQqlgLg3BvVGyxlmp55rVneZymeBe2lf1y02W2igLdqPZjqH5vblL55bK4HW2ikPZ9nUsnlvtbRNXGyvtnKji0mhTLVd1XMHw5LqZR9CqG5dwhO1KKxSW0ONSaBTMeIs76Bn6M3hgSoCEdDwxs5Q80kqq1MCCLasIXdC7AWZoIxWCEVPJKAQkxRCUD9OQBbjJcnRTVb6k/AN9pm4b7pSGRYTSz2KJGDqGM01gYNCCuoNVh1K0pBQqkKoYhjBVJDRH7U+inWIsZsLuy32eyMn6y0OrmTBY3A8cEUxbweO9BsTAFWDPKVE0Qu04yAxuNE7dPHhmFtRQ/pIpcNAIOJD/OpD3Jv812K+Y3/nKGvsqESDU7AvIqwPq9h653QWKIswcJ967+zOSKBUbB0aub3qlcMFSYSSkVFl4kGoBEX1nTC5LrVrmCGIbEfYzMY0s+fZoFdb+PWFrf8/+H165w8MAc3Ub171ka4Eqj0HhUrRrh5Bog/mbYCdx20C9gLdDcDuMthp29mXtFajVkPbU+AOWmqGL</source>
+    <source>eJy9lt1P2zAQwN/7V9wDUloEjSZNm8QGo6BpTHtYVXhAWhEY52gMqZ3ZDl2Z+N93dj7aJimjMM1qlca5L9/d79KPn9I47XQkm6JJGUc4wSQ1XGV2kIqx+w6VsR86ncwgfMkeHhI8sTYdHycCJe3Xtj//4phaoeT4iEUjMqmkwWozF1/xcKyk1YxbMz5mFidKz52/IxXNnxSmu284b7gfGv1+PMKfGfqYw+3tDmzDIEnUzMBcZWAVpGQfmARe+HN7lRfIjJATsDHCYPi1T9rOwGEi5B3E5MHshWGE95ioFHU/LtX6XE3DSHGzy1IRFpYFmpBrpJuQjIQdnjBjoDwm/O4ALR+iW9vN7BYPQn9NtbgnVdjiRebr6n/JVKstVjzMd7PrRHC4ySR3xYLLS07VszrjtpsHVDrfgdxqaaBXHMatLRsLs3uQC8L+It6aQK7pBPJfuwcTtHTt9nLRx8YBhy2Fc4VaFC8vmZculQ5TptkU6s1VPX59ZZfzWstgLtOtO6ec1HaWE2ir3qgypguQXLaW07t7oPNe767IuxUMv5+eBTvN/cURWp7+aOx4nRhZhNoEsH+wRsSLDbjj3EsFLE0pFcylIbw1SrY4q/Rcs7rTnM1T3Ej7on07YJmN82BXmm0HgvNgnc41lcHrNIpD2fZ1LO+7vaaJi5WdXkFUuTTaTMtFHRcwPLpu5jF028YlbGGv1gqlJfS4lBolM97iGnqO/Rk8MBVAQjqemJlLHmslVWZgxuZ1hE7p3QBTtLGKwIiJZBQCkmIEyodpyAJc5Tm6qiufUf6BPhP3GG6UhlmM0s9iiRg5hnNNYGDQgrqBRYdStKQUKZCqHIYwUSR0j9qfRDvFREyF3ZT7IpHj5ZeHVlNhsLy+cEQwbQVPNhoQA1eADadE2Qit4yA3uNI4bfPgiVnQQvlzpsCLRsAL+W8DeWPyX4P9gvm1r6yRrxIBQs0+g6I6oK5vkdt1oCjCzHHivbs/I6lSiXFgFPqmXwmXLJVGIkqVhTupZhDTd8rkvNJqZY4gtjFhPxWT2JJvj1Zp7d8TtvT37P/hVTh8GWCubqO2l2wrUNUxKFyKdukQEm14/yZcS1wTqIqlYj2TixpNz1YbEDkU2IOXyik8YoayGfThmhl89/YSJVcRdlfI6gd750FvxVyNs2eA1QTpsfMHnwGgLw==</source>
   </file>
   <file path="Api/Post/Collection.php" generated-path="Api.Post.Collection.html" hash="a5112e0e038c340ebd9d43fba5f510cc" package="Default">
     <docblock line="0">
@@ -1244,6 +1419,135 @@ the rate limit.</long-description>
       <error line="26" code="PPC:ERR-50008">No summary for method __construct()</error>
     </parse_markers>
     <source>eJylVNtu00AQffdXzEMkO1ESvwMNTStEEQ9E0AckUlXb9VAbNrvLXgopyr93L74ktgtCrBTZOz7nzM6Znbx6LUuZJJzsUEtCEa6QSU2FNWtZbf1vI7R5mSRWI7y1j48Mr4yR20tWIXfxXvjNL4rSVIJvL0jx0UkKrrENRvhJhkvBjSLUaPfGGFIP8xkvRLH/I9zt3qODJPlslsAM1oyJnxr2woIRIJ0EEA60FfXRVgqsrvg9mBJhvXm3dHwvcc4q/h1KV4d+kecFPiATEtWybGhLKnZ5IaheEFnlnXZOFRKDuRPJE8qI1tBVA78TcCsc06/Z0Mb6Qx6eUlUPTgwmtLa4T/+LIaNapHErRO0dqyh8tTwe8PaWujYZZanJ4oGa5HOIqo3AtC7Gr4kpK71YRSCcdeftASLTA+LbYnWPxj2zaYQeBgVuRpvnm9U1MLYt4BvauSSK7GB4j1rA//f32NueixGTDdM7ZwaxYyON2h/tgnOqnhzv2rHNi5XCHxa1yU7wfqWbD5+u0/kw3iXXI5+/DCKBVCIpUOkUzlbPQAJsTf1kB1RKpHR+kODXNy34SLKW52+tL+d6L/Gf2Dfj4ZRYU8bDnty6OaSf0+c4d64PgTPSH2d4aGezz6ZDkZuTyLQermYpNFbxrpXdXBzA1UlLyMb+ImGC095taJQwTE7DaMYnKNaDdEieADB3rTM=</source>
+  </file>
+  <file path="Api/Put/Article.php" generated-path="Api.Put.Article.html" hash="9862d00196e54d167824ff74c0af779e" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Client">\GuzzleHttp\Client</namespace-alias>
+    <namespace-alias name="ArticlePutBody">\HelpscoutApi\Contracts\ArticlePutBody</namespace-alias>
+    <namespace-alias name="ApiKey">\HelpscoutApi\Contracts\ApiKey</namespace-alias>
+    <namespace-alias name="BadResponseException">\GuzzleHttp\Exception\BadResponseException</namespace-alias>
+    <namespace-alias name="Request">\GuzzleHttp\Psr7\Request</namespace-alias>
+    <class final="false" abstract="false" namespace="HelpscoutApi\Api\Put" line="16" package="Default">
+      <extends/>
+      <name>Article</name>
+      <full_name>\HelpscoutApi\Api\Put\Article</full_name>
+      <docblock line="16">
+        <description>Allows you to put an article to Helpscout using the API.</description>
+        <long-description></long-description>
+        <tag name="link" line="16" description="https://developer.helpscout.com/docs-api/articles/update/" link="https://developer.helpscout.com/docs-api/articles/update/"/>
+        <tag name="package" line="16" description="Default"/>
+      </docblock>
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Put" line="21" package="Default">
+        <name>$client</name>
+        <full_name>\HelpscoutApi\Api\Put\Article::client</full_name>
+        <default></default>
+        <docblock line="21">
+          <description>GuzzleHttp\Client</description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Put" line="26" package="Default">
+        <name>$apiKey</name>
+        <full_name>\HelpscoutApi\Api\Put\Article::apiKey</full_name>
+        <default></default>
+        <docblock line="26">
+          <description>HelpscoutApi\Contracts\ApiKey;</description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Put" line="28" package="Default">
+        <name>__construct</name>
+        <full_name>\HelpscoutApi\Api\Put\Article::__construct()</full_name>
+        <docblock line="28">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$client</name>
+          <default></default>
+          <type>\GuzzleHttp\Client</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$apiKey</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\ApiKey</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Put" line="39" package="Default">
+        <name>update</name>
+        <full_name>\HelpscoutApi\Api\Put\Article::update()</full_name>
+        <docblock line="39">
+          <description>PUT an article to the Helpscout API.</description>
+          <long-description></long-description>
+          <tag name="param" line="39" description="" type="\HelpscoutApi\Api\Put\ArticlePostBody" variable="$articlePutBody">
+            <type>\HelpscoutApi\Api\Put\ArticlePostBody</type>
+          </tag>
+          <tag name="link" line="39" description="https://developer.helpscout.com/docs-api/articles/update/" link="https://developer.helpscout.com/docs-api/articles/update/"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$articlePutBody</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\ArticlePutBody</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Put" line="72" package="Default">
+        <name>updateAsync</name>
+        <full_name>\HelpscoutApi\Api\Put\Article::updateAsync()</full_name>
+        <docblock line="72">
+          <description>PUT the article in an asynchronous way.</description>
+          <long-description>Same method signature and options as `update`.
+
+This is great for when you need to put a set of articles that do not
+got over the rate limit.</long-description>
+          <tag name="param" line="72" description="" type="\HelpscoutApi\Contracts\ArticlePutBody" variable="$articlePutBody">
+            <type>\HelpscoutApi\Contracts\ArticlePutBody</type>
+          </tag>
+          <tag name="return" line="72" description="" type="\GuzzleHttp\Promise\Promise">
+            <type>\GuzzleHttp\Promise\Promise</type>
+          </tag>
+          <tag name="link" line="72" description="https://developer.helpscout.com/docs-api/articles/update/" link="https://developer.helpscout.com/docs-api/articles/update/"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$articlePutBody</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\ArticlePutBody</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Put" line="98" package="Default">
+        <name>updateRequest</name>
+        <full_name>\HelpscoutApi\Api\Put\Article::updateRequest()</full_name>
+        <docblock line="98">
+          <description>Returns a new request object</description>
+          <long-description>This is good for creating pools of requests. This is when you
+don't know how many requests you need to create and thus might go over
+the rate limit.</long-description>
+          <tag name="param" line="98" description="" type="\HelpscoutApi\Contracts\ArticlePutBody" variable="$articlePutBody">
+            <type>\HelpscoutApi\Contracts\ArticlePutBody</type>
+          </tag>
+          <tag name="return" line="98" description="" type="\GuzzleHttp\Psr7\Request">
+            <type>\GuzzleHttp\Psr7\Request</type>
+          </tag>
+          <tag name="link" line="98" description="https://developer.helpscout.com/docs-api/articles/update/" link="https://developer.helpscout.com/docs-api/articles/update/"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$articlePutBody</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\ArticlePutBody</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="28" code="PPC:ERR-50015">Argument $client is missing from the Docblock of __construct</error>
+      <error line="28" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
+      <error line="28" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="39" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $articlePutBody in update()</error>
+    </parse_markers>
+    <source>eJy9lm1v2zYQx9/rU9yLALKNxMKAYQPaNatTDGuxN0aWAgXmImWoi8VWJjmSiucM+e47UqJtPbiZvaGCBVnU3fH4P/5O+ulnXegkkWyFVjOO8BZLbbmq3EyLhT/nlXuZJJVF+LV6fCzxrXN68aYUKGncD7c83ijpDOPOLmbGCV4iuV+pfPN1Uy1+w8Zkb5Jf/uKonVByccXya8pPSYvbwZ753JofF9f4Z4XWZ5xNJskEZmWp1hY2qgKnQFcOmARWp+ZHthlBZYVcgisQZvN308Q7vy6F/AIFBbcvsizHByyVRjMtotOUq1WWK24vmBZZE9Zmlc6ZwyyZZAkvmbXQaAF/JwnQ4VPzV5j0NW0eZOGqjXigSHDGG7277s8IOhiLNQ/r0equFBzuK8m9qHB7y0llZyruRnVCcfJzqKPGAGNaDTTHmSuEvbisDeHVLt+OQe3pDep/F5dLdHQdjWvTp94C5+9vOhXzFdpVLdSqto0urzUzbBU1nysbNuD26X+saUvSjni1zai982mtrft93ZzZ7N0FoUyzz71I+6peXJp6a49a9v5ISaT0vD+8zT2FaTeLoPy7fDTu+8Ef/aEQr0CWo7EpvLo8ZBPsZtwjGsxSpjVJxLw82Wer5ECeO0e/gf1SbzYaj3P/eGA8ZZUr6oRbW/Ac0g/pQac7Eig49UTjBqnCze2geB9bQ+MGs3gYdJWRuyrvCHkCWiYvRkOtDs5w3NknMRCGQkaPyFEI+BWiPEMRKSEDYHYjeWGUVJWFNdt0ofqdXhCwQleoHKxYSkbTUwyZgwopWooAn2oAPnWdb0h5oN/Sqwf3ysC6QBmaskTMt50ZLDpQ9zE1S3mSfa5AqtgXYanI5AFNWIPxDa0UK+GeaQJVuwc06i323x5GrYTFeP127WLmlT+iZ8TKDzaHOlhrpwx0h5M6wwDx/6YjnNQNTuwEQ0Af3QFOpn9H/sG32XWoHbFC+34NTc1A3X1G7g4xo4g4j0yY3H+iaKVK6zFp/O10axyxikFy0snBF6nWUNC5YnKz9WrhV68s8OwK6gArsSwczR1Qi9H+b+L2vte+HW7NhMcD5yt2PfQKHgJsuwLKlBLdy1+iyx6+y04gsA/YsWydhlU6I4KUEY/Bqna7YpakTadwxyz+8P0tSq5yHLUIm6YvPqTjVrgOb88B1gfqKfkHvU2jFQ==</source>
   </file>
   <file path="Contracts/ApiKey.php" generated-path="Contracts.ApiKey.html" hash="d6cff61ea4f308c616452cbf76c40776" package="Default">
     <docblock line="0">
@@ -1397,6 +1701,89 @@ the rate limit.</long-description>
       <error line="31" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $text in text()</error>
     </parse_markers>
     <source>eJylksFPwjAUxu/9K97BBCS63cFEEA7iQU24eqB0b6yxa2v7ZiCE/922Y4BGDsZdtn7r+37v6+vdva0sY5rX6C0XCI+orBemoYmVb1OjyXFBfsRYPhgwGMBEw8SRFApBakJXxqLSOBAOOUm9BqPVFqhCcPjRSIcFlBJV4bNQHh3GSup3qIisH+Z5gZ+ojEWXVR05E6bOCyP8Lbcy5y3N5wmAebDI2Ql9aObVeHowxRZ2jAGkXiGwFkipFWGUQkHSaJjPksLxkGIV8HrtgUyWatrCseWO17AgFyIlKYDBNislBZSNbr1OtvNZv90LV2dicT36tZ143GDKb438nR5djtS4uEAj3ND/adHlSIuLH7RpGk+CPC1enoF7G06h49owH1iFAZ2Dl8tlvH3pe9e+4PxMiyH0NuHp3XQ/Y8ogel5bhSc5thPkhakPaSt0CFmWdVv2R+DyPLhDapyGN0/FVHHvLw86hesuWT9E37MvRn/6fA==</source>
+  </file>
+  <file path="Contracts/ArticlePutBody.php" generated-path="Contracts.ArticlePutBody.html" hash="51900d44e3c8c69a46c0bf7e6ceaf17e" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="ArticlePostBody">\HelpscoutApi\Contracts\ArticlePostBody</namespace-alias>
+    <interface namespace="HelpscoutApi\Contracts" line="12" package="Default">
+      <name>ArticlePutBody</name>
+      <full_name>\HelpscoutApi\Contracts\ArticlePutBody</full_name>
+      <docblock line="12">
+        <description>An Article interface for creating only the required fields.</description>
+        <long-description></long-description>
+        <tag name="link" line="12" description="https://developer.helpscout.com/docs-api/articles/update/" link="https://developer.helpscout.com/docs-api/articles/update/"/>
+        <tag name="package" line="12" description="Default"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="19" package="Default">
+        <name>id</name>
+        <full_name>\HelpscoutApi\Contracts\ArticlePutBody::id()</full_name>
+        <docblock line="19">
+          <description>Set the article id.</description>
+          <long-description></long-description>
+          <tag name="param" line="19" description="" type="string" variable="$articleId">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$articleId</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="26" package="Default">
+        <name>getId</name>
+        <full_name>\HelpscoutApi\Contracts\ArticlePutBody::getId()</full_name>
+        <docblock line="26">
+          <description>Returns the article id.</description>
+          <long-description></long-description>
+          <tag name="return" line="26" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="33" package="Default">
+        <name>articlePostBody</name>
+        <full_name>\HelpscoutApi\Contracts\ArticlePutBody::articlePostBody()</full_name>
+        <docblock line="33">
+          <description>Sets the article post body.</description>
+          <long-description></long-description>
+          <tag name="param" line="33" description="" type="\HelpscoutApi\Contracts\ArticlePostBody" variable="$articlePostBody">
+            <type>\HelpscoutApi\Contracts\ArticlePostBody</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$articlePostBody</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\ArticlePostBody</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="48" package="Default">
+        <name>createPutBody</name>
+        <full_name>\HelpscoutApi\Contracts\ArticlePutBody::createPutBody()</full_name>
+        <docblock line="48">
+          <description>Create the JSON aspect of the put body.</description>
+          <long-description>```php
+{
+  collectionId: 'xxxx',
+  name: 'sample',
+  text: 'Some text here ...',
+}
+````</long-description>
+          <tag name="return" line="48" description="" type="\stdClass">
+            <type>\stdClass</type>
+          </tag>
+        </docblock>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="19" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $articleId in id()</error>
+    </parse_markers>
+    <source>eJyNU8Fu2zAMvesreBiQxNisezpgzXJZdtiG5ZpDFImuhcmSJlFDiiL/Plmx0yRF2vIim3zkeyKpz1986xmzosPohUT4hsZH6RItvN4snaUgJMU7xlK8FdwsAmlp8JeL9NWpxwzmVcWggoWFIQbaEoamZ2hcABlQkLYP4Kx5BGoRAv5NOqCCRqNRsc7pfYV7o+0faIl8nHOu8B8a5zHU7aiklq7jysn4SXjNxZEt8uSVIOS5BGfP1KPQVHTCE2OQrYjtrYI1UlEjRtWqHkIj4t6LIDqIFLL8wcnL6dPOaAlNspK0szl3ekTBh6HcSs3uXlD+RkrBxrdoQ4G9h/cBaaWms/mAfcmYL3lJ5/PgYJc7cuOyV/N9lV1cYqdXuadejI7rjlSw7HcDi8Dv658/QESPksA1xeXTudQxZ7vd9nt8/HkaTgDpjMGia6XmMNlnm3w8Rfulz94oOm/wzE+4p+xfuw7LN7QYEOq6PmEOz7TbCx3jmDaR1NKIGNkrrSqPYFzGaW7Egf0H3voO5Q==</source>
   </file>
   <file path="Contracts/Category.php" generated-path="Contracts.Category.html" hash="765a3dd87aa26207a78722d30f24aa30" package="Default">
     <docblock line="0">
@@ -2320,6 +2707,7 @@ id of created or updated resources.</long-description>
       <namespace name="Delete" full_name="HelpscoutApi\Api\Delete"/>
       <namespace name="Get" full_name="HelpscoutApi\Api\Get"/>
       <namespace name="Post" full_name="HelpscoutApi\Api\Post"/>
+      <namespace name="Put" full_name="HelpscoutApi\Api\Put"/>
     </namespace>
     <namespace name="Contracts" full_name="HelpscoutApi\Contracts"/>
     <namespace name="Params" full_name="HelpscoutApi\Params"/>

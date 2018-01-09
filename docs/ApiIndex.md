@@ -5,6 +5,8 @@ API Index
     * HelpscoutApi\Api
         * HelpscoutApi\Api\Delete
             * [Article](HelpscoutApi-Api-Delete-Article.md)
+            * [Category](HelpscoutApi-Api-Delete-Category.md)
+            * [Collection](HelpscoutApi-Api-Delete-Collection.md)
         * HelpscoutApi\Api\Get
             * [Articles](HelpscoutApi-Api-Get-Articles.md)
             * [Categories](HelpscoutApi-Api-Get-Categories.md)
@@ -16,10 +18,13 @@ API Index
             * [Article](HelpscoutApi-Api-Post-Article.md)
             * [Category](HelpscoutApi-Api-Post-Category.md)
             * [Collection](HelpscoutApi-Api-Post-Collection.md)
+        * HelpscoutApi\Api\Put
+            * [Article](HelpscoutApi-Api-Put-Article.md)
     * HelpscoutApi\Contracts
         * [ApiKey](HelpscoutApi-Contracts-ApiKey.md)
         * [Article](HelpscoutApi-Contracts-Article.md)
         * [ArticlePostBody](HelpscoutApi-Contracts-ArticlePostBody.md)
+        * [ArticlePutBody](HelpscoutApi-Contracts-ArticlePutBody.md)
         * [Category](HelpscoutApi-Contracts-Category.md)
         * [CategoryPostBody](HelpscoutApi-Contracts-CategoryPostBody.md)
         * [Collection](HelpscoutApi-Contracts-Collection.md)

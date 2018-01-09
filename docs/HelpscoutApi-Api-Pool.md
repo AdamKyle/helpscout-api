@@ -64,7 +64,7 @@ public **__construct** (  $client )
 
 --
 
-public **pool** ( RequestPool $requestPool, Closure $rejectCallbackFunction, Closure $successCallbackFunction )
+public **pool** ( RequestPool $requestPool, Closure $rejectedCallbackFunction, Closure $successCallbackFunction )
 
 
 We pool all the requests using Guzzels Pool and wait for them all to complete.
@@ -92,7 +92,7 @@ of requests passed in.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | $requestPool | [RequestPool](HelpscoutApi-Contracts-RequestPool.md) |  |
-| $rejectCallbackFunction | Closure |  |
+| $rejectedCallbackFunction | Closure |  |
 | $successCallbackFunction | Closure |  |
 
 --
