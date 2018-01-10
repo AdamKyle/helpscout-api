@@ -97,7 +97,7 @@ class Articles {
 
         $response = $this->client->request(
             'GET',
-            'categories/' . $collection->getId() . '/articles' . $params,
+            'collections/' . $collection->getId() . '/articles' . $params,
             [
                 'headers' => [
                     'Accept' => 'application/json',
