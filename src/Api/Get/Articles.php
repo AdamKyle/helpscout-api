@@ -11,6 +11,7 @@ use HelpscoutApi\Contracts\Revision;
 use HelpscoutApi\Query\Article as ArticleQuery;
 use HelpscoutApi\Params\Article as ArticleParams;
 use GuzzleHttp\Client;
+use GuzzleHttp\Psr7\Request;
 
 /**
  * Deals with GET Articles API from helpscout.
@@ -108,6 +109,41 @@ class Articles {
         );
 
         return json_decode($response->getBody()->getContents());
+    }
+
+    /**
+     *  Create a Collection Get Request.
+     *
+     * This works the same was as a `getAllFromCollection` function, instead
+     * of returning a JSON repersentation, we return a Request object that you
+     * would then use the the Pool class.
+     *
+     * @param Collection
+     * @param ArticleParams
+     * @return \GuzzleHttp\Psr7\Request
+     * @link https://developer.helpscout.com/docs-api/articles/create/
+     */
+    public function collectionGetRequest(
+        Collection $collection,
+        ArticleParams $articleParams = null)
+    {
+        $params = '';
+
+        if ($articleParams !== null) {
+            $params = $articleParams->getParams();
+        }
+
+        return new Request(
+            'GET',
+            'collections/' . $collection->getId() . '/articles' . $params,
+            [
+                'headers' => [
+                    'Accept' => 'application/json',
+                    'Content-Type' => 'application/json',
+                 ],
+                'auth' => [$this->apiKey, 'X']
+            ]
+        );
     }
 
     /**

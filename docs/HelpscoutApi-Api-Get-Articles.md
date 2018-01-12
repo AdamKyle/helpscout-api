@@ -130,6 +130,29 @@ the order in which the articles are sorted by.
 
 --
 
+public **collectionGetRequest** ( Collection $collection, Article $articleParams )
+
+
+Create a Collection Get Request.
+
+This works the same was as a `getAllFromCollection` function, instead
+of returning a JSON repersentation, we return a Request object that you
+would then use the the Pool class.
+
+
+
+
+
+
+**Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| $collection | [Collection](HelpscoutApi-Contracts-Collection.md) |  |
+| $articleParams | [Article](HelpscoutApi-Params-Article.md) |  |
+
+--
+
 public **getSingle** ( Boolean $articleValue, CategoryValue $draft )
 
 

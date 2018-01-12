@@ -163,4 +163,23 @@ class ArticlesTest extends TestCase {
 
         $this->assertNotEmpty($response);
     }
+
+    public function testGetCollectionRequest() {
+        $client = $this->fakeClient();
+
+        $collectionSub = $this->createMock(Collection::class);
+
+        $collectionSub->method('getId')
+                      ->willReturn('1');
+
+        $apiKeySub = $this->createMock(ApiKey::class);
+
+        $apiKeySub->method('getKey')
+                  ->willReturn('fakeApiKey');
+
+        $articles = new Articles($client, $apiKeySub);
+        $result   = $articles->collectionGetRequest($collectionSub);
+
+        $this->assertInstanceOf('GuzzleHttp\Psr7\Request', $result);
+    }
 }
