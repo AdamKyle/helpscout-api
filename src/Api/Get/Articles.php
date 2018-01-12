@@ -137,11 +137,9 @@ class Articles {
             'GET',
             'collections/' . $collection->getId() . '/articles' . $params,
             [
-                'headers' => [
-                    'Accept' => 'application/json',
-                    'Content-Type' => 'application/json',
-                 ],
-                'auth' => [$this->apiKey, 'X']
+                'Accept' => 'application/json',
+                'Content-Type' => 'application/json',
+                'Authorization' => 'Basic '. base64_encode($this->apiKey.':X')
             ]
         );
     }
