@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "dbc50064559987546f0b6ced2d7eefd0",
+    "content-hash": "e6842681058ab9f30d70df393370be99",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -1303,6 +1303,42 @@
                 "psr-3"
             ],
             "time": "2017-06-19T01:22:40+00:00"
+        },
+        {
+            "name": "mschuett/jmem",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/michaeljs1990/jmem.git",
+                "reference": "3252fa2cccc90e564cf7295abf8625e07b52f908"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/michaeljs1990/jmem/zipball/3252fa2cccc90e564cf7295abf8625e07b52f908",
+                "reference": "3252fa2cccc90e564cf7295abf8625e07b52f908",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Jmem\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Schuett",
+                    "email": "michaeljs1990@gmail.com"
+                }
+            ],
+            "description": "Break up large json files into reasonable sizes.",
+            "time": "2016-02-21T23:29:30+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -4554,7 +4590,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "mschuett/jmem": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

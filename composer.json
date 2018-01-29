@@ -13,7 +13,7 @@
         "dcramble/phpdoc-md" : "~0.1.1",
         "phpdocumentor/phpdocumentor": "2.9.0",
         "codedungeon/phpunit-result-printer": "^0.4.4",
-        "violet/streaming-json-encoder":"^1.1"
+        "mschuett/jmem": "dev-master"
     },
     "license": "MIT",
     "authors": [

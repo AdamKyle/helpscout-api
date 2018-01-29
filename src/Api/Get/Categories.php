@@ -59,7 +59,7 @@ class Categories {
             ]
         );
 
-        return (new BufferJsonEncoder($response->getBody()->getContents()))->setOptions(JSON_FORCE_OBJECT)->encode();
+        return json_decode($response->getBody()->getContents());
     }
 
     /**
@@ -81,7 +81,7 @@ class Categories {
             ]
         );
 
-        return (new BufferJsonEncoder($response->getBody()->getContents()))->setOptions(JSON_FORCE_OBJECT)->encode();
+        return json_decode($response->getBody()->getContents());
     }
 
     /**
@@ -103,6 +103,6 @@ class Categories {
             ]
         );
 
-        return (new BufferJsonEncoder($response->getBody()->getContents()))->setOptions(JSON_FORCE_OBJECT)->encode();
+        return json_decode($response->getBody()->getContents());
     }
 }
