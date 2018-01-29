@@ -36,6 +36,7 @@ API Index
         * [Article](HelpscoutApi-Params-Article.md)
         * [Base](HelpscoutApi-Params-Base.md)
         * [Category](HelpscoutApi-Params-Category.md)
+        * [Collection](HelpscoutApi-Params-Collection.md)
     * HelpscoutApi\Query
         * [Article](HelpscoutApi-Query-Article.md)
     * HelpscoutApi\Response

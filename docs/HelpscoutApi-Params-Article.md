@@ -67,26 +67,6 @@ The default is `all`
 
 --
 
-public **pageSize** ( Integer $pageSize )
-
-
-Set the page size.
-
-The maximum is 100.
-
-
-
-
-
-
-**Parameters**:
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| $pageSize | Integer |  |
-
---
-
 public **page** ( String $page )
 
 
@@ -147,6 +127,26 @@ We accept `asc` and `desc` with the default of `asc`
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | $order | String |  |
+
+--
+
+public **pageSize** ( Integer $pageSize )
+
+
+Set the page size.
+
+The maximum is 100.
+
+
+
+
+
+
+**Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| $pageSize | Integer |  |
 
 --
 

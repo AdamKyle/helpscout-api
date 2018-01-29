@@ -77,6 +77,21 @@ class Base {
     }
 
     /**
+     * Set the page size.
+     *
+     * The maximum is 100.
+     *
+     * @param Integer
+     */
+    public function pageSize(int $pageSize) {
+        if ($pageSize > 100) {
+            $this->params['pageSize'] = '100';
+        } else {
+            $this->params['pageSize'] = (string)$pageSize;
+        }
+    }
+
+    /**
      * Build the query for the params we can pass.
      *
      * For example `?pageSize=20&sort=number`

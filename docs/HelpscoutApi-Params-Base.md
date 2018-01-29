@@ -107,6 +107,26 @@ We accept `asc` and `desc` with the default of `asc`
 
 --
 
+public **pageSize** ( Integer $pageSize )
+
+
+Set the page size.
+
+The maximum is 100.
+
+
+
+
+
+
+**Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| $pageSize | Integer |  |
+
+--
+
 public **getParams** (  )
 
 

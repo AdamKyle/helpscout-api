@@ -139,4 +139,26 @@ Get a single category based off the number
 
 --
 
+public **collectionGetRequest** ( Collection $collection, Category $categoryParams )
+
+
+Create a Collection Get Request.
+
+Creates a request object for getting categories with multiple
+pages or to get multiple categories in general.
+
+
+
+
+
+
+**Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| $collection | [Collection](HelpscoutApi-Contracts-Collection.md) |  |
+| $categoryParams | [Category](HelpscoutApi-Params-Category.md) |  |
+
+--
+
 [API Index](ApiIndex.md)

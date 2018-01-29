@@ -1,11 +1,11 @@
 [API Index](ApiIndex.md)
 
 
-HelpscoutApi\Params\Category
+HelpscoutApi\Params\Collection
 ---------------
 
 
-**Class name**: Category
+**Class name**: Collection
 
 **Namespace**: HelpscoutApi\Params
 
@@ -16,7 +16,7 @@ HelpscoutApi\Params\Category
 
 
 
-    Category doesnt have anything other then page, sort and order.
+    Collection doesnt have anything other then page, sort and order.
 
     
 
