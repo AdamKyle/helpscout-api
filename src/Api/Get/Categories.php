@@ -108,6 +108,44 @@ class Categories {
     }
 
     /**
+     * Get all categories from a collection and return as JSON.
+     *
+     * Uses the collection to get the category information.
+     *
+     * You can pass in an optional Categoryparams object in which you set
+     * the order in which the categories are sorted by.
+     *
+     * @param CollectionValue
+     * @param CategoryParams - Optional
+     * @return \stdClass
+     * @see CategoryParams
+     */
+    public function getAllFromCollection(
+        Collection $collection,
+        CategoryParams $categoryParams = null)
+    {
+        $params = '';
+
+        if ($categoryParams !== null) {
+            $params = $categoryParams->getParams();
+        }
+
+        $response = $this->client->request(
+            'GET',
+            'collections/' . $collection->getId() . '/categories' . $params,
+            [
+                'headers' => [
+                    'Accept' => 'application/json',
+                    'Content-Type' => 'application/json',
+                 ],
+                'auth' => [$this->apiKey, 'X']
+            ]
+        );
+
+        return json_decode($response->getBody()->getContents());
+    }
+
+    /**
      * Create a Collection Get Request.
      *
      * Creates a request object for getting categories with multiple

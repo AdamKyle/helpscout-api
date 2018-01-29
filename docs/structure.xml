@@ -262,7 +262,7 @@
     </parse_markers>
     <source>eJyVVFFv2jAQfs+vuAekBATkcdK6sjJAa7U9VFsfJjUIGedKvJnYs51udOK/z44TSAismiUUcv6+u+8+n/PuvcxkEORki1oSinCLXGoqCjOVLHG/OXI0eBUEhUaYSpk4xFeHSDhbN94qwowzzM1VCW8lm4ncKEKNdqhPuPsnZCY4R2qYyIFoOL7VCE/+WLy8cLw1RibNso3wvVZvki+2N5Fr7OwuflOULm3ygaQ16hC0PceDQQADmCPhGn4xk4G3g+WbhigN0/s7eFJiC1ndztjyHPWGs/wHZLaafhvHKT4jFxLV+AikYhunguoRkSymh6QW6yrFNkkcUE500wb4EwRgV6nPrUHXi2ojLp9SsWdiEHq08umU/spRnc1Fqk0fLdacUXgqcq9wtaLWGaMKaiIvqC4+BJ+1TtC33UC1eiZjejTxQLg+6j0BeKYD+H+jyQaNfUZ9D913GvQHB8QOlDKMcoQ10ZiClWoyBGo72gi1A5aOK0rNvJFEke3rk3rAKzSFyiG5NIdtN09888cedUfeenGI9UtqNQRuGav86KJblYiWoaOJwp8FahO1oG6F88XnxcMiHHZ3jmV1HMK4qaO0/S6N+l3aYydSJsuQpKh0CNeTC5ASNqXuEpaokEhpHSLlpfiuRX5G44HnzHKNPuwk/h97eT4eksJkXm1r9IYQfgsvcdYi3ZUcV3CFORUpRo8hS8vgOf+WZxxctiL94x3Yu2mlGUTnvlrQw/6FUcCyXM2ImhnrS7MP/gJNsMVI</source>
   </file>
-  <file path="Api/Get/Articles.php" generated-path="Api.Get.Articles.html" hash="8192776f6db5059dd4d82ce2600c87cc" package="Default">
+  <file path="Api/Get/Articles.php" generated-path="Api.Get.Articles.html" hash="bd13b6294aa527090ce0504bca25f95e" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -365,8 +365,8 @@ the order in which the articles are sorted by.</long-description>
 
 You can pass in an optional ArticleParams object in which you set
 the order in which the articles are sorted by.</long-description>
-          <tag name="param" line="90" description="" type="\HelpscoutApi\Api\Get\CategoryValue" variable="$collection">
-            <type>\HelpscoutApi\Api\Get\CategoryValue</type>
+          <tag name="param" line="90" description="" type="\HelpscoutApi\Contracts\Collection" variable="$collection">
+            <type>\HelpscoutApi\Contracts\Collection</type>
           </tag>
           <tag name="param" line="90" description="&lt;ul&gt;&#10;&lt;li&gt;Optional&lt;/li&gt;&#10;&lt;/ul&gt;" type="\HelpscoutApi\Params\Article" variable="$articleParams">
             <type>\HelpscoutApi\Params\Article</type>
@@ -553,16 +553,15 @@ get back.</long-description>
       <error line="34" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
       <error line="34" code="PPC:ERR-50008">No summary for method __construct()</error>
       <error line="52" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $categoryValue in getAllFromCategory()</error>
-      <error line="90" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $collection in getAllFromCollection()</error>
       <error line="160" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $articleValue in getSingle()</error>
       <error line="160" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $draft in getSingle()</error>
       <error line="193" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $articleValue in getRelatedArticles()</error>
       <error line="254" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $page in getRevisions()</error>
       <error line="282" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $article in getRevision()</error>
     </parse_markers>
-    <source>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</source>
+    <source>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</source>
   </file>
-  <file path="Api/Get/Categories.php" generated-path="Api.Get.Categories.html" hash="dd82f25bf34f66bcd4f042f6ebbc9329" package="Default">
+  <file path="Api/Get/Categories.php" generated-path="Api.Get.Categories.html" hash="837736398c5cf9b886d81fa7ed6c9759" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -683,23 +682,54 @@ get back.</long-description>
           <type>\HelpscoutApi\Contracts\Category</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="121" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="123" package="Default">
+        <name>getAllFromCollection</name>
+        <full_name>\HelpscoutApi\Api\Get\Categories::getAllFromCollection()</full_name>
+        <docblock line="123">
+          <description>Get all categories from a collection and return as JSON.</description>
+          <long-description>Uses the collection to get the category information.
+
+You can pass in an optional Categoryparams object in which you set
+the order in which the categories are sorted by.</long-description>
+          <tag name="param" line="123" description="" type="\HelpscoutApi\Api\Get\CollectionValue" variable="$collection">
+            <type>\HelpscoutApi\Api\Get\CollectionValue</type>
+          </tag>
+          <tag name="param" line="123" description="&lt;ul&gt;&#10;&lt;li&gt;Optional&lt;/li&gt;&#10;&lt;/ul&gt;" type="\HelpscoutApi\Params\Category" variable="$categoryParams">
+            <type>\HelpscoutApi\Params\Category</type>
+          </tag>
+          <tag name="return" line="123" description="" type="\stdClass">
+            <type>\stdClass</type>
+          </tag>
+          <tag name="see" line="123" description="" link="\HelpscoutApi\Api\Get\CategoryParams"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$collection</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\Collection</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$categoryParams</name>
+          <default>null</default>
+          <type>\HelpscoutApi\Params\Category</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="159" package="Default">
         <name>collectionGetRequest</name>
         <full_name>\HelpscoutApi\Api\Get\Categories::collectionGetRequest()</full_name>
-        <docblock line="121">
+        <docblock line="159">
           <description>Create a Collection Get Request.</description>
           <long-description>Creates a request object for getting categories with multiple
 pages or to get multiple categories in general.</long-description>
-          <tag name="param" line="121" description="" type="\HelpscoutApi\Contracts\Collection" variable="$collection">
+          <tag name="param" line="159" description="" type="\HelpscoutApi\Contracts\Collection" variable="$collection">
             <type>\HelpscoutApi\Contracts\Collection</type>
           </tag>
-          <tag name="param" line="121" description="" type="\HelpscoutApi\Params\Category" variable="$categoryParams">
+          <tag name="param" line="159" description="" type="\HelpscoutApi\Params\Category" variable="$categoryParams">
             <type>\HelpscoutApi\Params\Category</type>
           </tag>
-          <tag name="return" line="121" description="" type="\GuzzleHttp\Psr7\Request">
+          <tag name="return" line="159" description="" type="\GuzzleHttp\Psr7\Request">
             <type>\GuzzleHttp\Psr7\Request</type>
           </tag>
-          <tag name="link" line="121" description="https://developer.helpscout.com/docs-api/articles/create/" link="https://developer.helpscout.com/docs-api/articles/create/"/>
+          <tag name="link" line="159" description="https://developer.helpscout.com/docs-api/articles/create/" link="https://developer.helpscout.com/docs-api/articles/create/"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$collection</name>
@@ -721,8 +751,9 @@ pages or to get multiple categories in general.</long-description>
       <error line="41" code="PPC:ERR-50015">Argument $categoryParams is missing from the Docblock of getAll</error>
       <error line="41" code="PPC:ERR-50014">Name of argument $categoryParams does not match with the DocBlock's name $collection in getAll()</error>
       <error line="41" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $categoryParams in getAll()</error>
+      <error line="123" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $collection in getAllFromCollection()</error>
     </parse_markers>
-    <source>eJztVm1rFDEQ/r6/YgRh70p7+0UU1FavVWoVpKiI4JWSy871UnObmGSVVvzvTpJ9b3taqfVLF47LZp6ZTGaemZ2nz/RSJ0nBVmg14wivUGrLVemmWsz8bx/dkyQpLcJ+eX4u8ZVzerYnBRa077d7GnuqcIZxZ2klJXInVLEexhyeKHO2FkRvb/AyyCEzbNUaAWahXkdR1PkolEQ3e+8MspUoTl5bVbwsuMrRzHbLxQJNZ+fJ8LKH1jyavcOvJVofimxjI4ENeIFMWvgu3BL2X35ojoXp4QEsjFrBsnZ0QnCv8VyK4gssyaR9nGU5fkOpNJpJC+RqleWK2y2mRcajRYE2k8K6jExkCZfMNnckEfxIEqAnOOWfjcvSFCVZ+NdGfCN1uM8r4VD/Nzm41BarhHG3nEvBYVEWIf1wfMxVYZ0puRtFj+rDNyFarQ2M6TpQPffdUtitnQiE7dbfASBqekBcbe2coKP/0ThCf14MEDpgUgJvGGphfgYin1SIGvhcew5By+RGYNCVpoCZdfmez0g/KoP7kz9TKUeN4609ulSz3mzlPQYTpv++DUUpZUD34qVrcZpWifCPWMBoaOHedrTRVe+bGGiEmEZhHdZOaIOqof5BgUSv3M3c1o6JlTPqHZVSzaSb/a1OPrIUJt3gBAcO8tGYttNOZQRYdKxv7HPvLZhfIqPqJpXtnUvEATLlHLULiJRpTVlk/vTslLrDwNtGx1eIv+eHM41/rHl0cStlpVtG53rM3oT0U3rUg7dv406mK076E49z9K1s1GQlxG9X5VQVYVk5TdlcXyVgqVtKhJoOMGcWc1CLBbglwsGLKyqmgv91vdQGds8o6U1rbVjZ4/1NMK9ttZF41TkN7e7IdfvkKsrVHM0/J9jbcMz/JlnlxR3RbphoezTx0YDCuh9dT75qnBt+8SPcEr5KK6j5KanBQhlPG0eMhTaRcfxbldIJLbE2otkJiUjBKa/TyLuKwrOwQMPknw8dferHL/OFArhibm1w15tBmXGCS2IsD4HJ1pZV+7mmCL8blsWNTD3jAL/Foedw3dBTxbzA73DhuqEYbn/IuWbt/13dp1MqcnLtPKCi2i6zxIV0Epr4wwfHWMTa7TaBSfr4Uzq+ugnE8P5MfgFmtBs+</source>
+    <source>eJztV21v2zYQ/u5fcQMKyA4S68uwAe2SxUm7NB3QBm1XdJiLgJbOETua5EiqgTP0v+9I6j3OS4M2w4YIMCyRzx2Pd89zon76WRd6NJJshVazDOE5Cm0zVbqZ5nP/O0L3ZDQqLcJReXEh8Llzen4oOEoa98M9i0MlnWGZs3QnBGaOK3k9jDk8U2Z9LYiefsVNkBNm2Kp1AsxCfR+nos07rgS6+RtnkK24PHthlXwmM5WjmR+UyyWazsiT4WZPrPlx/hr/KtH6VKRbWyPYgqfIhIVz7go4eva2WRZmJ8ewNGoFRR3olODeYl9w+ScU5NI+TtMcP6FQGs20BWZqleYqsztM8zSLHjnaVHDrUnKRjjLBbLNHmoK/RyOgKwTlr61NZYozafjXhn8ic3iUVZND+xtqsNEXqybjaLkQPINlKUP54fQ0U9I6U2ZuHCOqF9+G6LV2MKHtQHU9cgW3O3sRCLttvANAtPSAeLezd4aO/seTCP18OUHogAkBWcNQC4s18HxaIWrgvvYcgpbJzYRBVxoJc+vyQ1+RflYG+6d4ZkKMm8Bbf7Sp5n67ne8xmDD9512QpRAB3cuXrqeTpCqEv/gSxkMP3+1GH13zvouBRchpnKzT2kltMDXUPyiR6I27ldvZM1E5495SCWkm2e4PdeqRJjDtJicEcJyPJzScdJQRYDGwvrM/ek/BfYGM1E0mu3sbpgNklmWoXUAkTGuqIvOrpx+pOwyibWy8Qvw+36413tryw+WhhJWuiMH1mL0NyfvkQw/ePk06la446Vc8zdG3snFTlZC/A5WTKsJtFTRV83qVgKVuKRBqOsCCWcxBLZfgCoTjp1copoLfWS+1g4M1Fb1prQ0re7z/GsxrW20kXrVOQ7sHct0/uWS5WqD55gR7GZb5t0lWRfFAtG9BNP+ub09M4XDGOm9/YDKv16UD5Is3r14OTwK/WTL0pOxYOeWJFEdr8nC5VGYVkjZ08bsqCSdB+wMc94uC0h7IREPn6v2rFh9pDQ86L3hWwJpMLbrak19RGWJBi+gE4bfIDIJVxpGaFusbTzXvmCjxCoFVJ4YdeFXFepPiYN8iDsxvcTr6hYrSRvSVz0qTAL/Ho9LJw1Fpk82dmsx/ocsc0nclfQaxLl1956k+GocKjHCSKVQFrxVPzcPrwdF7sSvn8JG5KoXjWjRC1eyMpsig6kP1fNeQe3lJNEzc/tNmk/4vif6Kr+MG92Vfusw4ngl6L2YhMem1/aJlOmX49VAw/8N+UeVc4jlc2m4Qw/33hy8U/92En8xI5BTaRUBFswNmiQvJNBwVf/j+FGXUbrcJTJPH75PJ1U0gpvfz6B/6dFbW</source>
   </file>
   <file path="Api/Get/Collections.php" generated-path="Api.Get.Collections.html" hash="ea2fc971068e474cd061c1e280abc957" package="Default">
     <docblock line="0">

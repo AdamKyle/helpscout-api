@@ -82,7 +82,7 @@ class Articles {
      * You can pass in an optional ArticleParams object in which you set
      * the order in which the articles are sorted by.
      *
-     * @param CategoryValue
+     * @param Collection
      * @param ArticleParams - Optional
      * @return \stdClass
      * @see ArticleParams

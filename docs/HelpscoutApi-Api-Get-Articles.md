@@ -104,7 +104,7 @@ the order in which the articles are sorted by.
 
 --
 
-public **getAllFromCollection** ( CategoryValue $collection, Article $articleParams )
+public **getAllFromCollection** ( Collection $collection, Article $articleParams )
 
 
 Get all articles from a collection and return as JSON.
@@ -123,7 +123,7 @@ the order in which the articles are sorted by.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| $collection | HelpscoutApi\Api\Get\CategoryValue |  |
+| $collection | [Collection](HelpscoutApi-Contracts-Collection.md) |  |
 | $articleParams | [Article](HelpscoutApi-Params-Article.md) | &lt;ul&gt;
 &lt;li&gt;Optional&lt;/li&gt;
 &lt;/ul&gt; |

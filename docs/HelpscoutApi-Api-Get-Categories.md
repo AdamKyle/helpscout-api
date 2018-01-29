@@ -139,6 +139,32 @@ Get a single category based off the number
 
 --
 
+public **getAllFromCollection** ( CollectionValue $collection, Category $categoryParams )
+
+
+Get all categories from a collection and return as JSON.
+
+Uses the collection to get the category information.
+
+You can pass in an optional Categoryparams object in which you set
+the order in which the categories are sorted by.
+
+
+
+
+
+
+**Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| $collection | HelpscoutApi\Api\Get\CollectionValue |  |
+| $categoryParams | [Category](HelpscoutApi-Params-Category.md) | &lt;ul&gt;
+&lt;li&gt;Optional&lt;/li&gt;
+&lt;/ul&gt; |
+
+--
+
 public **collectionGetRequest** ( Collection $collection, Category $categoryParams )
 
 

@@ -131,4 +131,23 @@ class CategoriesTest extends TestCase {
 
         $this->assertInstanceOf('GuzzleHttp\Psr7\Request', $result);
     }
+
+    public function testGetAllCategoriesBasedOnCollection() {
+        $client = $this->fakeClient();
+
+        $collectionSub = $this->createMock(Collection::class);
+
+        $collectionSub->method('getId')
+                      ->willReturn('1');
+
+        $apiKeySub = $this->createMock(ApiKey::class);
+
+        $apiKeySub->method('getKey')
+                  ->willReturn('fakeApiKey');
+
+        $category = new Categories($client, $apiKeySub);
+        $response = $category->getAllFromCollection($collectionSub);
+
+        $this->assertNotEmpty($response);
+    }
 }
