@@ -7,6 +7,7 @@ use HelpscoutApi\Contracts\ApiKey;
 use HelpscoutApi\Contracts\Site;
 use HelpscoutApi\Contracts\Redirect;
 use GuzzleHttp\Client;
+use Violet\StreamingJsonEncoder\BufferJsonEncoder;
 
 /**
  * Deals with GET Redirects API from helpscout.
@@ -49,7 +50,7 @@ class Redirects {
             ]
         );
 
-        return json_decode($response->getBody()->getContents());
+        return (new BufferJsonEncoder($response->getBody()->getContents()))->encode();
     }
 
     /**
@@ -71,7 +72,7 @@ class Redirects {
             ]
         );
 
-        return json_decode($response->getBody()->getContents());
+        return (new BufferJsonEncoder($response->getBody()->getContents()))->encode();
     }
 
     /**
@@ -103,6 +104,6 @@ class Redirects {
             ]
         );
 
-        return json_decode($response->getBody()->getContents());
+        return (new BufferJsonEncoder($response->getBody()->getContents()))->encode();
     }
 }

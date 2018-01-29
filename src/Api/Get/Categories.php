@@ -7,6 +7,7 @@ use HelpscoutApi\Contracts\Collection;
 use HelpscoutApi\Contracts\Category;
 use HelpscoutApi\Contracts\ApiKey;
 use HelpscoutApi\Params\Category as CategoryParams;
+use Violet\StreamingJsonEncoder\BufferJsonEncoder;
 
 /**
  * Deals with GET Category API from helpscout.
@@ -58,7 +59,7 @@ class Categories {
             ]
         );
 
-        return json_decode($response->getBody()->getContents());
+        return (new BufferJsonEncoder($response->getBody()->getContents()))->encode();
     }
 
     /**
@@ -80,7 +81,7 @@ class Categories {
             ]
         );
 
-        return json_decode($response->getBody()->getContents());
+        return (new BufferJsonEncoder($response->getBody()->getContents()))->encode();
     }
 
     /**
@@ -102,6 +103,6 @@ class Categories {
             ]
         );
 
-        return json_decode($response->getBody()->getContents());
+        return (new BufferJsonEncoder($response->getBody()->getContents()))->encode();
     }
 }

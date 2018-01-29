@@ -4,6 +4,7 @@ namespace HelpscoutApi\Api\Get;
 
 use GuzzleHttp\Client;
 use HelpscoutApi\Contracts\ApiKey;
+use Violet\StreamingJsonEncoder\BufferJsonEncoder;
 
 /**
  * Deals with GET Collection API from helpscout.
@@ -45,6 +46,6 @@ class Collections {
             ]
         );
 
-        return json_decode($response->getBody()->getContents());
+        return (new BufferJsonEncoder($response->getBody()->getContents()))->encode();
     }
 }

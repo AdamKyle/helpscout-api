@@ -12,6 +12,7 @@ use HelpscoutApi\Query\Article as ArticleQuery;
 use HelpscoutApi\Params\Article as ArticleParams;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Request;
+use Violet\StreamingJsonEncoder\BufferJsonEncoder;
 
 /**
  * Deals with GET Articles API from helpscout.
@@ -70,7 +71,7 @@ class Articles {
             ]
         );
 
-        return json_decode($response->getBody()->getContents());
+        return (new BufferJsonEncoder($response->getBody()->getContents()))->encode();
     }
 
     /**
@@ -108,7 +109,7 @@ class Articles {
             ]
         );
 
-        return json_decode($response->getBody()->getContents());
+        return (new BufferJsonEncoder($response->getBody()->getContents()))->encode();
     }
 
     /**
@@ -173,7 +174,7 @@ class Articles {
             ]
         );
 
-        return json_decode($response->getBody()->getContents());
+        return (new BufferJsonEncoder($response->getBody()->getContents()))->encode();
     }
 
     /**
@@ -211,7 +212,7 @@ class Articles {
             ]
         );
 
-        return json_decode($response->getBody()->getContents());
+        return (new BufferJsonEncoder($response->getBody()->getContents()))->encode();
     }
 
     /**
@@ -237,7 +238,7 @@ class Articles {
             ]
         );
 
-        return json_decode($response->getBody()->getContents());
+        return (new BufferJsonEncoder($response->getBody()->getContents()))->encode();
     }
 
     /**
@@ -269,7 +270,7 @@ class Articles {
             ]
         );
 
-        return json_decode($response->getBody()->getContents());
+        return (new BufferJsonEncoder($response->getBody()->getContents()))->encode();
     }
 
     /**
@@ -291,6 +292,6 @@ class Articles {
             ]
         );
 
-        return json_decode($response->getBody()->getContents());
+        return (new BufferJsonEncoder($response->getBody()->getContents()))->encode();
     }
 }

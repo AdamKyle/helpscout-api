@@ -7,6 +7,7 @@ use HelpscoutApi\Contracts\ApiKey;
 use HelpscoutApi\Contracts\Site;
 use HelpscoutApi\Query\Article as ArticleQuery;
 use GuzzleHttp\Client;
+use Violet\StreamingJsonEncoder\BufferJsonEncoder;
 
 /**
  * Deals with GET Sites API from helpscout.
@@ -48,7 +49,7 @@ class Sites {
             ]
         );
 
-        return json_decode($response->getBody()->getContents());
+        return (new BufferJsonEncoder($response->getBody()->getContents()))->encode();
     }
 
     /**
@@ -70,7 +71,7 @@ class Sites {
             ]
         );
 
-        return json_decode($response->getBody()->getContents());
+        return (new BufferJsonEncoder($response->getBody()->getContents()))->encode();
     }
 
     /**
@@ -94,6 +95,6 @@ class Sites {
             ]
         );
 
-        return json_decode($response->getBody()->getContents());
+        return (new BufferJsonEncoder($response->getBody()->getContents()))->encode();
     }
 }
