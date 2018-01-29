@@ -44,5 +44,7 @@ class Collections {
                 'auth' => [$this->apiKey, 'X']
             ]
         );
+
+        return json_decode($response->getBody()->getContents());
     }
 }
