@@ -150,4 +150,23 @@ class CategoriesTest extends TestCase {
 
         $this->assertNotEmpty($response);
     }
+
+    public function testGetSingleCategory() {
+        $client      = $this->fakeClient();
+
+        $categorySub = $this->createMock(Category::class);
+
+        $categorySub->method('getId')
+                    ->willReturn('1');
+
+        $apiKeySub = $this->createMock(ApiKey::class);
+
+        $apiKeySub->method('getKey')
+                  ->willReturn('fakeApiKey');
+
+        $categories = new Categories($client, $apiKeySub);
+        $response = $categories->getSingle($categorySub);
+
+        $this->assertNotEmpty($response);
+    }
 }

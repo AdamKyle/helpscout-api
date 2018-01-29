@@ -165,6 +165,32 @@ the order in which the categories are sorted by.
 
 --
 
+public **getSingle** ( Boolean $categoryValue, CategoryValue $draft )
+
+
+Get a category and return as JSON.
+
+Gets the article based on the category information, such as id.
+
+Optional param is draft, which gets back or allows you to get back a draft
+article.
+
+
+
+
+
+
+**Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| $categoryValue | Boolean | &lt;ul&gt;
+&lt;li&gt;optional&lt;/li&gt;
+&lt;/ul&gt; |
+| $draft | HelpscoutApi\Api\Get\CategoryValue |  |
+
+--
+
 public **collectionGetRequest** ( Collection $collection, Category $categoryParams )
 
 

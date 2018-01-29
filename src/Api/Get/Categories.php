@@ -146,6 +146,38 @@ class Categories {
     }
 
     /**
+     * Get a category and return as JSON.
+     *
+     * Gets the article based on the category information, such as id.
+     *
+     * Optional param is draft, which gets back or allows you to get back a draft
+     * article.
+     *
+     * @param Boolean - optional
+     * @param CategoryValue
+     * @return \stdClass
+     */
+    public function getSingle(Category $categoryValue, bool $draft = false) {
+
+        // Convert draft to string
+        $stringDraft = ($draft) ? 'true' : 'false';
+
+        $response = $this->client->request(
+            'GET',
+            'categories/' . $categoryValue->getId() . '?draft=' . $stringDraft,
+            [
+                'headers' => [
+                    'Accept' => 'application/json',
+                    'Content-Type' => 'application/json',
+                 ],
+                'auth' => [$this->apiKey, 'X']
+            ]
+        );
+
+        return json_decode($response->getBody()->getContents());
+    }
+
+    /**
      * Create a Collection Get Request.
      *
      * Creates a request object for getting categories with multiple
