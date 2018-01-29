@@ -49,7 +49,7 @@ class Sites {
             ]
         );
 
-        return (new BufferJsonEncoder($response->getBody()->getContents()))->encode();
+        return (new BufferJsonEncoder($response->getBody()->getContents()))->->setOptions(JSON_FORCE_OBJECT)->encode();
     }
 
     /**
@@ -71,7 +71,7 @@ class Sites {
             ]
         );
 
-        return (new BufferJsonEncoder($response->getBody()->getContents()))->encode();
+        return (new BufferJsonEncoder($response->getBody()->getContents()))->->setOptions(JSON_FORCE_OBJECT)->encode();
     }
 
     /**
@@ -95,6 +95,6 @@ class Sites {
             ]
         );
 
-        return (new BufferJsonEncoder($response->getBody()->getContents()))->encode();
+        return (new BufferJsonEncoder($response->getBody()->getContents()))->->setOptions(JSON_FORCE_OBJECT)->encode();
     }
 }
