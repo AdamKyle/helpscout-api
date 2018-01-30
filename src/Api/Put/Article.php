@@ -40,7 +40,7 @@ class Article {
         try {
             $response = $this->client->request(
                 'PUT',
-                'articles/' . $articlePutBody->getId(),
+                'articles/' . $articlePutBody->getId() . '?reload=true',
                  [
                      'headers' => [
                          'Accept' => 'application/json',

@@ -39,7 +39,7 @@ class Category {
         try {
             $response = $this->client->request(
                 'POST',
-                'categories',
+                'categories?reload=true',
                 [
                     'headers' => [
                         'Accept' => 'application/json',

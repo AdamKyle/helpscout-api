@@ -40,7 +40,7 @@ class Article {
         try {
             $response = $this->client->request(
                 'POST',
-                'articles',
+                'articles?reload=true',
                  [
                      'headers' => [
                          'Accept' => 'application/json',
