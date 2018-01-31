@@ -72,7 +72,7 @@ class Article {
     public function createAsync(ArticlePostBody $articlePostBody) {
         return $this->client->requestAsync(
             'POST',
-            'articles',
+            'articles?reload=true',
              [
                  'headers' => [
                      'Accept' => 'application/json',
@@ -98,7 +98,7 @@ class Article {
     public function createRequest(ArticlePostBody $articlePostBody) {
         return new Request(
             'POST',
-            'https://docsapi.helpscout.net/v1/articles',
+            'https://docsapi.helpscout.net/v1/articles?reload=true',
             [
                 'Accept' => 'application/json',
                 'Content-Type' => 'application/json',
