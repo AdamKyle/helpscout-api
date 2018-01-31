@@ -71,7 +71,7 @@ class Category {
     public function createAsync(CategoryPostBody $categoryPostBody) {
         return $this->client->requestAsync(
             'POST',
-            'categories',
+            'categories?reload=true',
              [
                  'headers' => [
                      'Accept' => 'application/json',
@@ -97,7 +97,7 @@ class Category {
     public function createRequest(CategoryPostBody $categoryPostBody) {
         return new Request(
             'POST',
-            'https://docsapi.helpscout.net/v1/categories',
+            'https://docsapi.helpscout.net/v1/categories?reload=true',
             [
                 'Accept'        => 'application/json',
                 'Content-Type'  => 'application/json',
