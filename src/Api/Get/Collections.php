@@ -3,6 +3,7 @@
 namespace HelpscoutApi\Api\Get;
 
 use GuzzleHttp\Client;
+use HelpscoutApi\Contracts\Collection;
 use HelpscoutApi\Contracts\ApiKey;
 
 /**
@@ -36,6 +37,50 @@ class Collections {
         $response = $this->client->request(
             'GET',
             'collections',
+            [
+                'headers' => [
+                    'Accept' => 'application/json',
+                    'Content-Type' => 'application/json',
+                ],
+                'auth' => [$this->apiKey, 'X']
+            ]
+        );
+
+        return json_decode($response->getBody()->getContents());
+    }
+
+    /**
+     * Get a single collection based off the ID
+     *
+     * @param Collection
+     * @return \stdClass
+     */
+    public function getCollectionById(Collection $collection) {
+        $response = $this->client->request(
+            'GET',
+            'collections/' . $collection->getId(),
+            [
+                'headers' => [
+                    'Accept' => 'application/json',
+                    'Content-Type' => 'application/json',
+                ],
+                'auth' => [$this->apiKey, 'X']
+            ]
+        );
+
+        return json_decode($response->getBody()->getContents());
+    }
+
+    /**
+     * Get a single collection based off the number
+     *
+     * @param Category
+     * @return \stdClass
+     */
+    public function getCollectionByNumber(Collection $collection) {
+        $response = $this->client->request(
+            'GET',
+            'collections/' . $collection->getNumber(),
             [
                 'headers' => [
                     'Accept' => 'application/json',

@@ -7,6 +7,7 @@ use GuzzleHttp\Psr7\Request;
 use HelpscoutApi\Contracts\ApiKey;
 use PHPUnit\Framework\TestCase;
 use HelpscoutApi\Api\Get\Collections;
+use HelpscoutApi\Contracts\Collection as CollectionContract;
 
 class CollectionsTest extends TestCase {
 
@@ -33,13 +34,51 @@ class CollectionsTest extends TestCase {
     public function testGetAllArticles() {
         $client = $this->fakeClient();
 
-        $apiKeySub = $this->createMock(ApiKey::class);
+        $apiKeyStub = $this->createMock(ApiKey::class);
 
-        $apiKeySub->method('getKey')
+        $apiKeyStub->method('getKey')
                   ->willReturn('fakeApiKey');
 
-        $collections = new Collections($client, $apiKeySub);
+        $collections = new Collections($client, $apiKeyStub);
         $response = $collections->getAll();
+
+        $this->assertNotEmpty($response);
+    }
+
+    public function testGetCollectionWithId() {
+        $client = $this->fakeClient();
+
+        $collectionStub = $this->createMock(CollectionContract::class);
+
+        $collectionStub->method('getId')
+                       ->willReturn('1');
+
+        $apiKeyStub = $this->createMock(ApiKey::class);
+
+        $apiKeyStub->method('getKey')
+                   ->willReturn('fakeApiKey');
+
+        $collections = new Collections($client, $apiKeyStub);
+        $response = $collections->getCollectionById($collectionStub);
+
+        $this->assertNotEmpty($response);
+    }
+
+    public function testGetCollectionWithNumber() {
+        $client = $this->fakeClient();
+
+        $collectionStub = $this->createMock(CollectionContract::class);
+
+        $collectionStub->method('getNumber')
+                       ->willReturn('1');
+
+        $apiKeyStub = $this->createMock(ApiKey::class);
+
+        $apiKeyStub->method('getKey')
+                   ->willReturn('fakeApiKey');
+
+        $collections = new Collections($client, $apiKeyStub);
+        $response = $collections->getCollectionByNumber($collectionStub);
 
         $this->assertNotEmpty($response);
     }

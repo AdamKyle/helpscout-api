@@ -11,4 +11,11 @@ interface Collection {
      */
     public function getId(): string;
 
+    /**
+     * Get number of collection
+     *
+     * @return string
+     */
+    public function getNumber(): string;
+
 }
