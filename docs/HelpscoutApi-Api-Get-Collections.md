@@ -92,4 +92,44 @@ Get all collections
 
 --
 
+public **getCollectionById** ( Collection $collection )
+
+
+Get a single collection based off the ID
+
+
+
+
+
+
+
+
+**Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| $collection | [Collection](HelpscoutApi-Contracts-Collection.md) |  |
+
+--
+
+public **getCollectionByNumber** ( Category $collection )
+
+
+Get a single collection based off the number
+
+
+
+
+
+
+
+
+**Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| $collection | HelpscoutApi\Api\Get\Category |  |
+
+--
+
 [API Index](ApiIndex.md)

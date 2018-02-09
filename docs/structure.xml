@@ -787,46 +787,47 @@ pages or to get multiple categories in general.</long-description>
     </parse_markers>
     <source>eJztWG1v2zYQ/u5fcQMCyA5s68uwAemc9y5NB7RB0xUd5iKg5XPMlhY1kkrgDP3vO77oNXbekGTYEAGGJfK54/HunjtKv+xk86zTSdkCdcYShDcoMp3I3OxlfGx/R2hedTq5RjjKr64EvjEmGx8IjimN2+GGxIFMjWKJ0XQnBCaGy/RmGDN4LtXyRhA9/YarICdMsUWlBJiG4t5PeZlPXAo041OjkC14ev5Wy/R1msgpqvF+Ppuhqo28am/2RKufxx/wrxy1dUW8udmBTThEJjRccjOHo9cfy2Vh7+QYZkouYF4YOiS4ldgVPP0Gc1Kpt+J4ihcoZIZqWAETuYinMtEDlvE48Ro56lhwbWJSEXcSwXS5R5qCvzsdoMsZZa/NVWHyM7H7zxS/IHHYSMJkW/6WGKzUxcKkH80ngicwy1MXfjg7S2SqjcoT0/UWFYv3wWstFPRoOxCuDTPnerDtgTCq7G0BvKQF+LvB9jka+u/2PPT7dQehASYEJGWGapgsgU+HAVEAdzObQ1Blcjmh0OQqhbE20wMbkaZXWvsne/aE6JaGV/poU+V9v5pvZDBhms8jSHMhHLrhr6yYjqIQCHvxGXTbGn4YeR118aaKloTzqZ8s3FpzrRNVVD/IkWiF65EbbCvPnG5jqYg4E/WbQ7V4xBEM685xBhxPuz0ajmrMcDBvWFPZn40np36OjNhNIqPtFdMOspckmBmHiFiWURSZXT3+StWhZW0pYxli9/lxmeGdJb9cH4pYbubeuEZm9yH6HH1pwKunXi3SISftimdTtKWsW0bF+W9fTokV7jYYTdG8mSWgqVoKhCIdYMI0TkHOZmDmCMeHaxgT4A/mS6Fgf0lBL0trmZWNvH+MzKtKrU+8sE6Zdi/J9fzJleaLCaonT7B3bpl/O8mCFS+J9hSJZnt9dWJyhzNW6/7A0mmxLh0g356+f9c+CfyuSdAmZU3KSJtIfrRIHp7OpFo4p7VV/CFzwqWQ2QMct4uCzCyQiTKdQ/+Vk6+0hgVdznkyhyWJajSFJruiVJQFFaJmhN0iUwhaKkNsmixvPdV8YiLHNQQLJ4YBvA+23sY42NWILfE7nI5+paBUFj3yWann4M94VDp5OSqtknlQkfnPVJmqCtxeT0jA1xOmDE+oB4bWl64tJ33QORGd9F1/Tym4CZ67XMNUsRm9XfnicG4Xm7DkG1UNWwzlpXYlJRQwN8O8SKExmLWmdOxLep2m+jUoK9ia6tGsLPft0afueLCiMzu1fZiQGbDh7CYqzeh1HHvF+7ALUEzlI71AZfzm7IbpNZS0Vlz0z4dBR9dr68EORPS+Skm6BZFTXK8TT3kYcFtrUHjHmTRyqJq1Lxx+ZA4fKLSfMli95Vhehw8/bSp4OLVaCDEvujYx1iavoUDVW7L7ULTIheGZKCmRsXOaIoFAxWK+LsgtF1JUTNz988SqHn6Nhmu+cJW4+32tChVDx4lzTHwjuatuRR7+0ObM/7DnB5+neAnXtuvI8Pw9/p7kfxjxoz0iOZl25VBebJ9pyoVo6HreTz+eYeq5Wy8Cw2jrc9RbXwS8e793/gFOFmB+</source>
   </file>
-  <file path="Api/Get/Collections.php" generated-path="Api.Get.Collections.html" hash="ea2fc971068e474cd061c1e280abc957" package="Default">
+  <file path="Api/Get/Collections.php" generated-path="Api.Get.Collections.html" hash="86911d5bccf2f1beaf24619bd307b6ad" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
     <namespace-alias name="Client">\GuzzleHttp\Client</namespace-alias>
+    <namespace-alias name="Collection">\HelpscoutApi\Contracts\Collection</namespace-alias>
     <namespace-alias name="ApiKey">\HelpscoutApi\Contracts\ApiKey</namespace-alias>
-    <class final="false" abstract="false" namespace="HelpscoutApi\Api\Get" line="13" package="Default">
+    <class final="false" abstract="false" namespace="HelpscoutApi\Api\Get" line="14" package="Default">
       <extends/>
       <name>Collections</name>
       <full_name>\HelpscoutApi\Api\Get\Collections</full_name>
-      <docblock line="13">
+      <docblock line="14">
         <description>Deals with GET Collection API from helpscout.</description>
         <long-description></long-description>
-        <tag name="link" line="13" description="https://developer.helpscout.com/docs-api/collections/list/" link="https://developer.helpscout.com/docs-api/collections/list/"/>
-        <tag name="package" line="13" description="Default"/>
+        <tag name="link" line="14" description="https://developer.helpscout.com/docs-api/collections/list/" link="https://developer.helpscout.com/docs-api/collections/list/"/>
+        <tag name="package" line="14" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Get" line="18" package="Default">
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Get" line="19" package="Default">
         <name>$client</name>
         <full_name>\HelpscoutApi\Api\Get\Collections::client</full_name>
         <default></default>
-        <docblock line="18">
+        <docblock line="19">
           <description>GuzzleHttp\Client;</description>
           <long-description></long-description>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Get" line="23" package="Default">
+      <property static="false" visibility="private" namespace="HelpscoutApi\Api\Get" line="24" package="Default">
         <name>$apiKey</name>
         <full_name>\HelpscoutApi\Api\Get\Collections::apiKey</full_name>
         <default></default>
-        <docblock line="23">
+        <docblock line="24">
           <description>HelpscoutApi\Contracts\ApiKey;</description>
           <long-description></long-description>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="25" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="26" package="Default">
         <name>__construct</name>
         <full_name>\HelpscoutApi\Api\Get\Collections::__construct()</full_name>
-        <docblock line="25">
+        <docblock line="26">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -841,25 +842,64 @@ pages or to get multiple categories in general.</long-description>
           <type>\HelpscoutApi\Contracts\ApiKey</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="35" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="36" package="Default">
         <name>getAll</name>
         <full_name>\HelpscoutApi\Api\Get\Collections::getAll()</full_name>
-        <docblock line="35">
+        <docblock line="36">
           <description>Get all collections</description>
           <long-description></long-description>
-          <tag name="return" line="35" description="" type="\stdClass">
+          <tag name="return" line="36" description="" type="\stdClass">
             <type>\stdClass</type>
           </tag>
         </docblock>
       </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="58" package="Default">
+        <name>getCollectionById</name>
+        <full_name>\HelpscoutApi\Api\Get\Collections::getCollectionById()</full_name>
+        <docblock line="58">
+          <description>Get a single collection based off the ID</description>
+          <long-description></long-description>
+          <tag name="param" line="58" description="" type="\HelpscoutApi\Contracts\Collection" variable="$collection">
+            <type>\HelpscoutApi\Contracts\Collection</type>
+          </tag>
+          <tag name="return" line="58" description="" type="\stdClass">
+            <type>\stdClass</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$collection</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\Collection</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Api\Get" line="80" package="Default">
+        <name>getCollectionByNumber</name>
+        <full_name>\HelpscoutApi\Api\Get\Collections::getCollectionByNumber()</full_name>
+        <docblock line="80">
+          <description>Get a single collection based off the number</description>
+          <long-description></long-description>
+          <tag name="param" line="80" description="" type="\HelpscoutApi\Api\Get\Category" variable="$collection">
+            <type>\HelpscoutApi\Api\Get\Category</type>
+          </tag>
+          <tag name="return" line="80" description="" type="\stdClass">
+            <type>\stdClass</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$collection</name>
+          <default></default>
+          <type>\HelpscoutApi\Contracts\Collection</type>
+        </argument>
+      </method>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="25" code="PPC:ERR-50015">Argument $client is missing from the Docblock of __construct</error>
-      <error line="25" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
-      <error line="25" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="26" code="PPC:ERR-50015">Argument $client is missing from the Docblock of __construct</error>
+      <error line="26" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
+      <error line="26" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="80" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $collection in getCollectionByNumber()</error>
     </parse_markers>
-    <source>eJyNUsFu2zAMvesreChgJ0iq+7ZmzbIhHXbZoYcBSxFoMjtrUyxNojq0Q/99kmU7sRtgI2BYIt8jH0m9eWtry1gjDuitkAg3qK2XJtDaql36tkivGQseYRuenjTeENndRitsoj+5R4yNacgJST5xP+FjpPL5nMEc3qPQHn4rqmH74RY2RmuUpEwD688f4d6ZA9R9pstISJxrrZqfUMeK/hXnFT6gNhbd5REozYFXRvqlsIrLIafnWnniMQdnUgvvT+p5+MMYRGuFJZufay1HePu3Tj0IQriQXXDK/8cMzuYS/YBab/imlYT70OSZ7PcyKiUXJJVZUV98ATlrn2AW24HOLqhWfrnKQLg66p0AMjMB8mm5+o4U/+UsQ59fDggJhNZwMuIu1COuHVJwDew8VZs08nHXk/5ivbXW5Ui8i08w5sWk67SR5crhr4CeygGbrIjPqFiMXSfyJqGvo1sLrlFU6HwBV6sz4RaylhIttYhCWBtbECk5/+FNMykwcNL6k+rbR4v/zbx76SpEoDqLG61tAcWX4m4EP95m3XtK1i0kVdxXKE2F5TDjduPvTBVX3h470b6cDU/gmf0FRrwnwA==</source>
+    <source>eJztVEtv2zAMvvtX8BDATpBE923NmqZDGgwYduhhQFMEiszE2mRLk+QO6dD/PsmP+NGsG/bAdigBwxL1kfxIffar1ypRQZDRFI2iDOEKhTJM5nau+No/S7QvgyA3CMv8/l7glbVqvRAcM+f37k7EQmZWU2aNWwmBzHKZPQlzu7d4cBXIaBTACC6RCgNfuE1g+eYamiwwf7+CnZYpJHWmqQvwMeeCZ58gccTMC0JivEMhFeppA2QyJbFkZkIVJ+yY0xDBjSUuBwmYoMa06hn4GgTgrCDmbXRqAuUJKd5K8ztqEQasOuzH/2AGJ3PRekCFN98KzmCXZ+VMNhvmmFqdMxuVjOriYyiz1gmGrh2obGATbiazEghnDd8eoIz0gHI1me3Runc0LKEPjweEFqgQ0BpxdVQjzjXaXGewNjZe+JF3u+715+rNhYg65LVTqsuLnle7kclM4+ccjY2OWG+hk1E47rpa9HpHN51dAU6QxqhNCGezE8cFZM4YKlsgQqqUa4H65OSjkVmvwDHGX79nfX1Q+NORt49dIc1tUpLrXNsYwg/hbQfe7IaVnrxVF+IrbmJkMsboOOPixi9k7K68WFakTTR8WgJgeLYX2NIBbKnBGORuBzZBWF32daGopmnr+/tlwTQpLg6rOGr9QQYNnb+oKBLCtF2qGJwjMnxW2r9QWpanW9TfUZv7w+6lPvwRrb0rCv0neqvIPGvuNzX3EHwDZL9/PQ==</source>
   </file>
   <file path="Api/Get/Redirects.php" generated-path="Api.Get.Redirects.html" hash="7176170fa181564573814c857647b7fb" package="Default">
     <docblock line="0">
@@ -1210,7 +1250,7 @@ of requests passed in.</long-description>
     </parse_markers>
     <source>eJx9Vdtu00AQffdXDFJEnMptES9IlBZQJUA8QMVFPFCUbDaTZmHjNTvrpCnk35lZX+LcsBQp3ss5Z86eWb94WcyKJMnVHKlQGuEd2oK0K8Prwtzy7yJJStoZvnZ58EoHuv2Ev0ukcOOcvYjr3pYPDxbfhVDcyiAoikNoDy65tgbzwBTnJycJnMBXwglMnQftUQWT34HKJ+CRnF3IW8EgBG7KQ5GXznjXeaKtIoLI9ycBfgpvFiog9HRDEEfLsTUapmWug3E5DIfa5RR8qUNaKWk2DGoceXphZuj0qpqAyw2mTK4r5ChfnhP4hlElKGshzLBVCiVJBZUZtVgpbqlMiCXz4nm1y4F288JiwLMatQH/wlJgaXhRNAhBAWEQQwrv5oaQGEYFWGKFy0VGNys4qXmMPIAwcSJG9OV4HwSkoVjOjJ4B0wjweBXXjDrHPILRHQZOgC69x3yVDkato/tyeW+PSq2R6JprGyv96029eCQkrpC/ymYSlJUrYa5WkDuuQLHZ7MTEsUsrPgKWy/JrrKxhmLkl4AJ9bfVP1IETxMCMcVabzRhIeT+AdXeA3jvPvB4oiBHRdfGopAzIgQl9AjMvnA+soKFpTBWEuMOVDIB2gbRb85vqKFulsq2QeJq8FkkFpw7BjUWt1FhZLtVrlUvFSxNmjSF8cIraIFQJ2MFYVZEYSxxG3QYk/4w7tFo7qhcf09uat6dXERsvUZVXk0/wPtv85Wx5tBxFkko2w/Vu5b1aNVSdvo0UclJ7mXlVKK/m0EnczgxfGo5Kj/8fPj/Y8dKZaQcaen7zkslbZcJuVnnqSIr5QshLa7cuDN00h17JfdGhOL3q9o7m5qmvJnnMFFJDQ4FLuxgD+Pt3G/TFJTzpMh5gffrkop1ebzh68W5izbjs3Mvp1h2X7UuuLaN0kMH3Ldp+h7YPl1dbOrLtpdPSTjmoOOnzGy9tjyXtNYlm7pifAciXIn18zPbd6uMlfA43ElzJ3fvPHz+AbJBUKu6ravuGks2Wa0bMfr6HJCfxqD2KYxJEw95WeYRtyPr9UOiGsQeOwmRQzzcWDAYXe6jrrZH1jq9Nag/ZKs27Z+qxmA/ggK2HqzneKe2CLeqdojol/Oj2QK/+jknfFDF99UDaAWgWnV7JR66ZWSfr5B9btsK2</source>
   </file>
-  <file path="Api/Post/Article.php" generated-path="Api.Post.Article.html" hash="67e39ba5584b9a19c5e80624e0e7a85c" package="Default">
+  <file path="Api/Post/Article.php" generated-path="Api.Post.Article.html" hash="a644b4af6dc50057d18300dfc7ae960e" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -1336,9 +1376,9 @@ the rate limit.</long-description>
       <error line="28" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
       <error line="28" code="PPC:ERR-50008">No summary for method __construct()</error>
     </parse_markers>
-    <source>eJy9lm9v0zoUxt/nU5wXk9JWW6MroYvEn1266QrQfUE19gKJouE5Z40htY3trHRo351jJ26bNAU6rohWZXXOc3z8HP+cPvtHFzpJJFug1YwjvMJSW64qN9Fi5j9TZd3TJKkswsvq7q7EV87p2XkpUNK4H25JzpV0hnFnZxPjBC/R689UvvpxrBb/YROyNcu/XzlqJ5ScnbH8gipU0uJ6cCd8as3j2QV+qTCUnI1GyQgmZamWFlaqAqdAUzXAJLC6OD+0LgkqK+QcXIEwmb4eJ179ohTyMxSU3T7JshxvsVQazbiIojFXiyxX3J4wLbImrc24QeYwS0ZZwktmLTRuwLckAbp8bf4Oo11XmwdZuGsjbikTHPHG8a78J4725mLNw3q0ui4Fh5tKcu8qXF1xstmZirtBXVCc/BjqrDHBkFYDzXXkCmFPTutAeL6ptxNQK31A/d/J6Rwd3QfDOvR+Z4HT3Zb5Fm3aFppVB0fNC80MW0BnC66f/mZTW5523KtjBp2ZabXtgW3rnFltfQtemWave5+2jT05NfX2HrTi/ZVO37y9TI93x2P5Pc/g/e5Q0BTIcjQ2heen+2JC3IR7FkNYyrQmJ5h3Iftkleybby30G9Wv53Kl8TD5hz3jKatcURfc2mrHkL5L94quqRdB1G0QOR46Gb8Phj0pPrSGhg1Q8TLoKiM3zdywcA+0UF4M+k41OMJhZzvERBhgiYpITEi4h53zsIbAS8RHyACTXUleGCVVZWHJVl2A3tILARboCpWDFXPJqALKIXNQoUpLGeBjbdHHrviS7Af6m/vHcKMMLAuU4QiWiLknuFYCA4sO1E2szlKpJMkVSBXPQZgrCrlFE5ZhvKwUC+EOZL4xcbb9vjBqISzG+587Hibe/YPOiLgFeg+DOl1ry/SdBntPgh7Cf+UEeBD9DyS/D+CDif8N2jek731PXYQWERi0yZfQtAbU9Sfkbh8givDyfITZ/Y8PrVRpPRCN3o7XwZGhmCQnpxx8lmoJBX0WTK7Wql7WCF5XEO4LMS8czR2gitn+d7a2fov9ObCaCR+Clm/aRd/LtRel9SKoWKp1awkSXXb7V7aHtV2UDqXoYQClE2JFGXEXomrZGbPkYDqGa2bx70dXKLnKcdBiaZw+eZcOW+k6ZP0cpV107pPvEGOSpQ==</source>
+    <source>eJy9llFv2zgMx9/9KfhQwEnQxjhguAG7tVtaHLbDPSzo+jBgGTpVZmNtjqST5ObSQ7/7UbKVxI6zNd0wo4EbmqSoP/Wj8/KVLnSSSLZAqxlHeIultlxVbqLFzH+myro/kqSyCG+q+/sS3zqnZxelQEl2b26FXCjpDOPOzibGCV6ijz9X+erbvlr8jY3L1ip//stRO6Hk7Jzll1ShkhbXxh33qTXPZ5f4T4Wh5Gw0SkYwKUu1tLBSFTgFmqoBJoHVxXnTuiSorJBzcAXCZPrXOPHRr0shv0JB2e2LLMvxDkul0YyLGDTmapHlitsTpkXWpLUZN8gcZskoS3jJrIVGDfgvSYAuX5u/w2hX1eZBFu7aiDvKBEe8Ubwb/h1Fe3Ox5mFtrW5KweG2ktyrCtfXnGR2puJuUBcUFz+GOmtMMKTdQHMduULYk7PaEU439XYc6kjvUP93cjZHR/fBsHZ92NngdLdlvkWbtoVm1c4x5rVmhi2gcwTXT3+wqS1NO+rVPoPOyrTbtmFbOmdWW9+CVqY5616nbWFPzkx9vActf3+l03fvr9LjXXss/5WhbbL8lDqLPX7wcdcU4gtkORqbwunZPp/gN+Gey+CWMq1JFeYVyb5YJfvWWwf6Q+v3drXSeFj4pz32lFWuqAtuHbtjSD+ke4NuqC8hqNssUj90NX4fDHtSfGqZhg1c8TLoKiM3jd1w8QC0UV4M+iYcHOGwczRiIgzgxIhIT0i4h6OLsIfATkRJyACWXUleGCVVZWHJVl2Y3tPLARboCpWDFXPJqALKIXNQoUpLGeBzLdHnbvAVyQ/0N/eP4VYZWBYowziWiLmnuY4EBhYdqNtYnaVSKSRXIFWciTBX5HKHJmzD+LBSLIQ7kP9GxNn2u8OohbAY779uVEy8+gfNi3gEegdDna51ZPomw6OmQg/tj5kGT5oET5wCfTAfTP8PkL+hfu/76zK0iyChA7+Epk2gbr4gd/tgUYSaZyWs7n+UaKVK6+Fo4u147Rx5iklyUsrBV6mWUNBnweRqHdXLHYHsCkJ/IeaFo7UDYDHbT+ds6zfar4OsWfApmPmmXfa9dHuxWm+CiqVat7Yg0WV3v2WP4G4Xq0OJehpM6YS4UUbcB6867JxZUjMdww2z+Puza5Rc5ThocTVOX3xIh610Hcq+j9UuRg/J//kmoL4=</source>
   </file>
-  <file path="Api/Post/Category.php" generated-path="Api.Post.Category.html" hash="20585a3fd070930ffbce9488f63a102f" package="Default">
+  <file path="Api/Post/Category.php" generated-path="Api.Post.Category.html" hash="b6e4c8ebe55126958577a3cfe254c8f9" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -1464,9 +1504,9 @@ the rate limit.</long-description>
       <error line="27" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
       <error line="27" code="PPC:ERR-50008">No summary for method __construct()</error>
     </parse_markers>
-    <source>eJy9lt1P2zAQwN/7V9wDUloEjSZNm8QGo6BpTHtYVXhAWhEY52gMqZ3ZDl2Z+N93dj7aJimjMM1qlca5L9/d79KPn9I47XQkm6JJGUc4wSQ1XGV2kIqx+w6VsR86ncwgfMkeHhI8sTYdHycCJe3Xtj//4phaoeT4iEUjMqmkwWozF1/xcKyk1YxbMz5mFidKz52/IxXNnxSmu284b7gfGv1+PMKfGfqYw+3tDmzDIEnUzMBcZWAVpGQfmARe+HN7lRfIjJATsDHCYPi1T9rOwGEi5B3E5MHshWGE95ioFHU/LtX6XE3DSHGzy1IRFpYFmpBrpJuQjIQdnjBjoDwm/O4ALR+iW9vN7BYPQn9NtbgnVdjiRebr6n/JVKstVjzMd7PrRHC4ySR3xYLLS07VszrjtpsHVDrfgdxqaaBXHMatLRsLs3uQC8L+It6aQK7pBPJfuwcTtHTt9nLRx8YBhy2Fc4VaFC8vmZculQ5TptkU6s1VPX59ZZfzWstgLtOtO6ec1HaWE2ir3qgypguQXLaW07t7oPNe767IuxUMv5+eBTvN/cURWp7+aOx4nRhZhNoEsH+wRsSLDbjj3EsFLE0pFcylIbw1SrY4q/Rcs7rTnM1T3Ej7on07YJmN82BXmm0HgvNgnc41lcHrNIpD2fZ1LO+7vaaJi5WdXkFUuTTaTMtFHRcwPLpu5jF028YlbGGv1gqlJfS4lBolM97iGnqO/Rk8MBVAQjqemJlLHmslVWZgxuZ1hE7p3QBTtLGKwIiJZBQCkmIEyodpyAJc5Tm6qiufUf6BPhP3GG6UhlmM0s9iiRg5hnNNYGDQgrqBRYdStKQUKZCqHIYwUSR0j9qfRDvFREyF3ZT7IpHj5ZeHVlNhsLy+cEQwbQVPNhoQA1eADadE2Qit4yA3uNI4bfPgiVnQQvlzpsCLRsAL+W8DeWPyX4P9gvm1r6yRrxIBQs0+g6I6oK5vkdt1oCjCzHHivbs/I6lSiXFgFPqmXwmXLJVGIkqVhTupZhDTd8rkvNJqZY4gtjFhPxWT2JJvj1Zp7d8TtvT37P/hVTh8GWCubqO2l2wrUNUxKFyKdukQEm14/yZcS1wTqIqlYj2TixpNz1YbEDkU2IOXyik8YoayGfThmhl89/YSJVcRdlfI6gd750FvxVyNs2eA1QTpsfMHnwGgLw==</source>
+    <source>eJy9VttO20AQfc9XzAOSEwSxKlWtRMsloKpUfWgEPCA1CJb1EC84u+7umjRU/Htn15ckttMmUHWVyPF4ztzPOB8P0zjtdCSboEkZRzjFJDVcZXaQipH7DpWxHzqdzCB8zp6eEjy1Nh2dJAIlyWviTz85plYoOTpm0RmZVNJgJczVlzycKGk149aMTpjFsdIz5+9YRbM/KtPdV5w13A+Nfj86wx8Z+pjD7e0ObMMgSdTUwExlYBWkZB+YBF74c7LKC2RGyDHYGGEw/NIntDNwlAj5ADF5MHthGOEjJipF3Y9LWJ+rSRgpbnZZKsLCskATco10E5KRsMMTZgyUacKvDtDxIbqz3axu8SD011SLR4LCFi8qX4f/pVKttljxMJdmt4ngcJdJ7poF19ecumd1xm03D6h0vgO51dJAr0jGnS0bC7N7kCvC/jzemkKOdAr5r92DMVq6dnu56nMjwWFL41yj5s3LW+a1S9BRyjSbQH24qsev7+xiXWsVzHW6dedUk5pksYC2mo2qYrogkqvWYnl3D3Q+690lfXeC4bfzi2CnKZ+ncKgpWRbtU4exRfN7Q+LxMbIItQlg/2CFilcbcMd5rxWwNKWyMFeS8N4o2eKswrnBdZldzFLcCH3VLg5YZuM82KXB24HgMliFuaWWeEyjUVR539PyvttrmrhakvQKdpVHo820nPd0ToxnN9k8hm7b6oQt7NXGorSEnjolouSPt7iCSSc+B0+eikxCOm4xM5M81kqqzMCUzep0Oqf3BEzQxioCI8aSUQhIwAiUD9OQBbjJa3RTB19Q/YE+Y/cY7pSGaYzS72WJGDk+50hgYNCCuoP5tFK0BIoUSFUuRhgrUnpE7TPRDpiIibCb7oCikKPFF4lWE2GwvL5wXTBtBU82WhYD14ANN0Y5CK2rITe4NDhtu2HNvdDC+HU2wovWwQt3QRupN94Cr1kBc/6vfJWd+Y4RWWjwp1B0CtTtPXK7ijSKKOc44727PympUolxJCnwpl8pl7wqjURUKgsPUk0hpu+EyVmFauUfEdrGtAImYhxb8u1pVlr792xb+Nv2/6hWOHwZ2Vzfztpevq3kqtKgcCnahSQk2vDxTbgW+5rkqnhVnDU5UmPW2rABsYiCfPJaOSOPmaHKBn24ZQbfvb1GyVWE3SWW9YO9y6C3ZK7GuTVI1iTVc+c3lDSuSA==</source>
   </file>
-  <file path="Api/Post/Collection.php" generated-path="Api.Post.Collection.html" hash="a5112e0e038c340ebd9d43fba5f510cc" package="Default">
+  <file path="Api/Post/Collection.php" generated-path="Api.Post.Collection.html" hash="6b8d7a195bbc98d592e7a55319cd4f4c" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -1546,9 +1586,9 @@ the rate limit.</long-description>
       <error line="26" code="PPC:ERR-50015">Argument $apiKey is missing from the Docblock of __construct</error>
       <error line="26" code="PPC:ERR-50008">No summary for method __construct()</error>
     </parse_markers>
-    <source>eJylVNtu00AQffdXzEMkO1ESvwMNTStEEQ9E0AckUlXb9VAbNrvLXgopyr93L74ktgtCrBTZOz7nzM6Znbx6LUuZJJzsUEtCEa6QSU2FNWtZbf1vI7R5mSRWI7y1j48Mr4yR20tWIXfxXvjNL4rSVIJvL0jx0UkKrrENRvhJhkvBjSLUaPfGGFIP8xkvRLH/I9zt3qODJPlslsAM1oyJnxr2woIRIJ0EEA60FfXRVgqsrvg9mBJhvXm3dHwvcc4q/h1KV4d+kecFPiATEtWybGhLKnZ5IaheEFnlnXZOFRKDuRPJE8qI1tBVA78TcCsc06/Z0Mb6Qx6eUlUPTgwmtLa4T/+LIaNapHErRO0dqyh8tTwe8PaWujYZZanJ4oGa5HOIqo3AtC7Gr4kpK71YRSCcdeftASLTA+LbYnWPxj2zaYQeBgVuRpvnm9U1MLYt4BvauSSK7GB4j1rA//f32NueixGTDdM7ZwaxYyON2h/tgnOqnhzv2rHNi5XCHxa1yU7wfqWbD5+u0/kw3iXXI5+/DCKBVCIpUOkUzlbPQAJsTf1kB1RKpHR+kODXNy34SLKW52+tL+d6L/Gf2Dfj4ZRYU8bDnty6OaSf0+c4d64PgTPSH2d4aGezz6ZDkZuTyLQermYpNFbxrpXdXBzA1UlLyMb+ImGC095taJQwTE7DaMYnKNaDdEieADB3rTM=</source>
+    <source>eJylVE1v00AQvftXzCGSnSiJ70DSphWiiAMR9IBEqmq7HmrDZnfZj0KK8t/ZDztObBdUdaXI3smbNzvv7fjNmSxlknCyRS0JRbhCJjUV1qxktfG/tdDmdZJYjfDOPj4yvDJGbi5ZhdzFO+G3vylKUwm+uSDFJ0cpuMZDMMJPKlwKbhShRrs3xpB6mK94IYrdP+Fu9wEdJMknkwQmsGJM/NKwExaMAOkogHCgB1IfPVCB1RW/B1MirNbv5y7fU5yziv+A0vWhX+V5gQ/IhEQ1L5u0ORXbvBBUz4is8pY7pwqJwdyR5AllRGtou4E/CbgVjunXpC9j/UcenlJVD44MRrSWuJv+H0EGuUijVojaO1ZR+GZ5PODtLXU2GWWpyeKBmuJTiKwNwbhuxq+RKSs9W0YgLNrzdgAx0wPi22x5j8Y9s3GE7nsNrgfN82a1BkbbAr5JO5dEkS3079EB8HJ/j7XtqBgxWb+8U6YXOxbSqN3RLiin6snxqh3LPFsq/GlRm+wE71e6/vj5Op32421xfaZcx6RYOKtxAPq1FwkEJZIClU5hsXwCEmAr6qc8oFIipdOGBO2+a8EHih3y/A32rV3vJD4r+2Y4nBJrynjYkxs4hfRL+lTOnfMk5Ax45cQP1jb7bNwnuTmJjOtBa5ZCYxVvbW1nZA+uT1pCNvS5hBGOOzejYcIwRU1GM0qBsR6qffIXBYqx5g==</source>
   </file>
-  <file path="Api/Put/Article.php" generated-path="Api.Put.Article.html" hash="9862d00196e54d167824ff74c0af779e" package="Default">
+  <file path="Api/Put/Article.php" generated-path="Api.Put.Article.html" hash="4bd1ec1b785356de215cae8b4d43c82d" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -1675,7 +1715,7 @@ the rate limit.</long-description>
       <error line="28" code="PPC:ERR-50008">No summary for method __construct()</error>
       <error line="39" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $articlePutBody in update()</error>
     </parse_markers>
-    <source>eJy9lm1v2zYQx9/rU9yLALKNxMKAYQPaNatTDGuxN0aWAgXmImWoi8VWJjmSiucM+e47UqJtPbiZvaGCBVnU3fH4P/5O+ulnXegkkWyFVjOO8BZLbbmq3EyLhT/nlXuZJJVF+LV6fCzxrXN68aYUKGncD7c83ijpDOPOLmbGCV4iuV+pfPN1Uy1+w8Zkb5Jf/uKonVByccXya8pPSYvbwZ753JofF9f4Z4XWZ5xNJskEZmWp1hY2qgKnQFcOmARWp+ZHthlBZYVcgisQZvN308Q7vy6F/AIFBbcvsizHByyVRjMtotOUq1WWK24vmBZZE9Zmlc6ZwyyZZAkvmbXQaAF/JwnQ4VPzV5j0NW0eZOGqjXigSHDGG7277s8IOhiLNQ/r0equFBzuK8m9qHB7y0llZyruRnVCcfJzqKPGAGNaDTTHmSuEvbisDeHVLt+OQe3pDep/F5dLdHQdjWvTp94C5+9vOhXzFdpVLdSqto0urzUzbBU1nysbNuD26X+saUvSjni1zai982mtrft93ZzZ7N0FoUyzz71I+6peXJp6a49a9v5ISaT0vD+8zT2FaTeLoPy7fDTu+8Ef/aEQr0CWo7EpvLo8ZBPsZtwjGsxSpjVJxLw82Wer5ECeO0e/gf1SbzYaj3P/eGA8ZZUr6oRbW/Ac0g/pQac7Eig49UTjBqnCze2geB9bQ+MGs3gYdJWRuyrvCHkCWiYvRkOtDs5w3NknMRCGQkaPyFEI+BWiPEMRKSEDYHYjeWGUVJWFNdt0ofqdXhCwQleoHKxYSkbTUwyZgwopWooAn2oAPnWdb0h5oN/Sqwf3ysC6QBmaskTMt50ZLDpQ9zE1S3mSfa5AqtgXYanI5AFNWIPxDa0UK+GeaQJVuwc06i323x5GrYTFeP127WLmlT+iZ8TKDzaHOlhrpwx0h5M6wwDx/6YjnNQNTuwEQ0Af3QFOpn9H/sG32XWoHbFC+34NTc1A3X1G7g4xo4g4j0yY3H+iaKVK6zFp/O10axyxikFy0snBF6nWUNC5YnKz9WrhV68s8OwK6gArsSwczR1Qi9H+b+L2vte+HW7NhMcD5yt2PfQKHgJsuwLKlBLdy1+iyx6+y04gsA/YsWydhlU6I4KUEY/Bqna7YpakTadwxyz+8P0tSq5yHLUIm6YvPqTjVrgOb88B1gfqKfkHvU2jFQ==</source>
+    <source>eJy9lm1v2zgMx9/7U/BFASdBG2PA4QZs127pMNyGvQm6DhhwGTpVZmNtjqST5Gbp0O8+Sn5I7DhtkzvMaOBGJinqT/7o/PVKZzqKJFug1YwjvMNcW64KN9Fi5j/Twr2MosIi/F3c3eX4zjk9e5MLlLTul1seb5R0hnFnZxPjBM+R3M9VunrYVIsPWJlsbPL2B0fthJKzc5ZeUH5KWmwWt8yn1jyfXeC/BVqfcTIaRSOY5LlaWlipApwCXThgEliZml9pMoLCCjkHlyFMpu/HkXd+nQv5HTIKbl8kSYq3mCuNZpzVTmOuFkmquD1hWiRVWJsUOmUOk2iURDxn1kKlBfyMIqDLp+bvMNrWtHqQhLs24pYiwRGv9O66PyJobyxWPSxXi+tccLgpJPeiwtUVJ5WdKbgblAnVmx9DGbUOMKTTQHUduUzYk7PSEE7X+XYMSk9vUP53cjZHR/fBsDS93zrg9NNlp2K+QuuqhVqVtrXLa80MW9SaT5UNDdg8/Y81bUnaEa+0GbQ7n87a+r6pmzOrjW9BKFP1uRdpU9WTM1O29qBl76+YRIqPt5eb3GMYd7MIyr9PB0N6FL8yJAJLT6ns2BMI/tleChtkyFI0NobTs102wW7CPbPBLGZak2bM65V8s0r27dc4+o72Z79cadzP/cuO9ZgVLisTbvXkMcSf451O16RYcNpSkRukkldfB8OeAF9aS8OKu/oy6Aoj12VfI3MPdEyeDfpmHxzhsNM4dSAMla09arBCwAcQ81DVjAkZiLMryTOjpCosLNmqS9lHemPAAl2mUrBiLhltTzFkCiqkaCkCfC2J+Np1viTlgf7mXj24UQaWGcowpSVi2oxqsOhA3dSpWcqT7FMFUtWDEuaKTG7RhDMYP+FysRDukalQtIdCpd5s83Vi1EJYrO+/b35MvPJ7DJG68r3TogzW6pSecfG0UdFp7h7inzIRDpoGB06CPqD3ngAH078mf+fr7SLUjlihvl9CVTNQ19+Qu13MKCLOIxM2979ZtFK59ZhU/nbcGNdY1UFS0snBd6mWkNFnweSq8WrhV54s8OwymgALMc8c7R1Qq6P938Rt/ID7fbhVG+4PnK/YRd87uQ+w5gSUKSW6kb9El9w+Sw4gcBuwfdk6DKt4QgQpI+6CVel2zixJG4/hmln8848rlFylOGgRNo5ffI6HrXAd3h4DbBuo++gXgTuohA==</source>
   </file>
   <file path="Contracts/ApiKey.php" generated-path="Contracts.ApiKey.html" hash="d6cff61ea4f308c616452cbf76c40776" package="Default">
     <docblock line="0">
@@ -2027,7 +2067,7 @@ the rate limit.</long-description>
     </parse_markers>
     <source>eJx1Uk9PwjAUv/dTvAMJSHS7g4ngPIgHNeHKYaV7Y41dW/s6IyF8d7suY6DSy7r3+n7/2vsHW1nGNK+RLBcIz6gsCdP4pZWbzGjvuPA0Zw1d64WdUii8NHrOWDqdMpjCUkPGPe6M24PUHl3ZgpfGgXDIvdQ7MFrtwVcIDj8b6bCAUqIqKAnzLcRCSf0BlfeWZmla4BcqY9ElVa8iEaZOCyPojluZio5OIqWRAtMAkrKBvNfzbsg/mmIPB8YAol4IdGv0UY04uYHVU1fpjWyDAr0j8CaJM93gwnLHaxhSiOXADrbZKimgbHSHN0CvislwHkZD42b+r6j2fsCUF3L+Slh7F4K9St+CTCiegVH784ssi7FFjpf12ytwskFUT2tDbLANuZ17z/O8fT9xf+g+cGFzBuPvsMa3fbPlDUXitVXYl48ntPzclUPfOA0b8kWmONH1YKPy/mInwdeR/QDI6+Rf</source>
   </file>
-  <file path="Contracts/Collection.php" generated-path="Contracts.Collection.html" hash="535c526c87676d1841abb0052c6918b0" package="Default">
+  <file path="Contracts/Collection.php" generated-path="Contracts.Collection.html" hash="acdf15c1075a253880d6733fcbbd19df" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -2052,12 +2092,23 @@ the rate limit.</long-description>
           </tag>
         </docblock>
       </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="HelpscoutApi\Contracts" line="19" package="Default">
+        <name>getNumber</name>
+        <full_name>\HelpscoutApi\Contracts\Collection::getNumber()</full_name>
+        <docblock line="19">
+          <description>Get number of collection</description>
+          <long-description></long-description>
+          <tag name="return" line="19" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
     </interface>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
       <error line="5" code="PPC:ERR-50009">No summary for interface \HelpscoutApi\Contracts\Collection</error>
     </parse_markers>
-    <source>eJw9jrEOwjAMRHd/hUfI0h2QAHUA/oEluE6xFJwocSbEv1NK4ZaT7p5Ot9vnewZQ/+CaPTGeOeZKqdkxy7VPasWT1S2AqHEJH6RPMTKZJMUnAE7qnJsdHZ7YUAZMAemPLd0PORS2VhSrFdFxSbvZc7tFIQxNv/sj22VYrTcLO914wRuplzW5</source>
+    <source>eJytjTEOwjAMRXefwiNk6U6RAHUAFk7AkqZuiZQ6UeJMiLsDISAhMeLlS/5P/6034RIAWM+UgjaEB3IhGZ9lF+y58yxRG0ktgGWhOD6RzjtHRqxnvALg4xqlSqLCPQnaAf2I5oPV7o1sI0mOjEmi5al+m5Ih984aHDO/9ieS47BYrirb/tRxnnuKf1SeyuCX9gZ36btXBQ==</source>
   </file>
   <file path="Contracts/CollectionPostBody.php" generated-path="Contracts.CollectionPostBody.html" hash="5770882e95cf36196b6386fcdd83d4bf" package="Default">
     <docblock line="0">

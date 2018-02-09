@@ -41,4 +41,18 @@ Get id of collection
 
 --
 
+public **getNumber** (  )
+
+
+Get number of collection
+
+
+
+
+
+
+
+
+--
+
 [API Index](ApiIndex.md)
