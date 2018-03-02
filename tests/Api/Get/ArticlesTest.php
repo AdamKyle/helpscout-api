@@ -11,6 +11,7 @@ use HelpscoutApi\Contracts\ApiKey;
 use HelpscoutApi\Contracts\Article;
 use HelpscoutApi\Query\Article as ArticleQuery;
 use PHPUnit\Framework\TestCase;
+use GuzzleHttp\Promise;
 
 class ArticlesTest extends TestCase {
 
@@ -90,13 +91,13 @@ class ArticlesTest extends TestCase {
         $this->assertNotEmpty($response);
     }
 
-    public function testGetRelatedArticles() {
+    public function testGetSingleRequestAsync() {
         $client = $this->fakeClient();
 
-        $articleSub = $this->createMock(Article::class);
+        $collectionStub = $this->createMock(Collection::class);
 
-        $articleSub->method('getId')
-                   ->willReturn('1');
+        $collectionStub->method('getId')
+                       ->willReturn('1');
 
         $apiKeySub = $this->createMock(ApiKey::class);
 
@@ -104,7 +105,32 @@ class ArticlesTest extends TestCase {
                   ->willReturn('fakeApiKey');
 
         $articles = new Articles($client, $apiKeySub);
-        $response = $articles->getRelatedArticles($articleSub);
+        $request  = $articles->collectionGetRequest($collectionStub);
+
+        $this->assertInstanceOf('GuzzleHttp\Psr7\Request', $request);
+
+        $async = $articles->getSingleRequestAsync($request);
+
+        $results = Promise\settle($async)->wait();
+
+        $this->assertNotEmpty($results);
+    }
+
+    public function testGetRelatedArticles() {
+        $client = $this->fakeClient();
+
+        $articleStub = $this->createMock(Article::class);
+
+        $articleStub->method('getId')
+                    ->willReturn('1');
+
+        $apiKeySub = $this->createMock(ApiKey::class);
+
+        $apiKeySub->method('getKey')
+                  ->willReturn('fakeApiKey');
+
+        $articles = new Articles($client, $apiKeySub);
+        $response = $articles->getRelatedArticles($articleStub);
 
         $this->assertNotEmpty($response);
     }
