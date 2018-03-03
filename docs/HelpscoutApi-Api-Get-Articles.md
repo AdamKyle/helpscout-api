@@ -153,7 +153,7 @@ would then use the the Pool class.
 
 --
 
-public **getSingle** ( Boolean $articleValue, CategoryValue $draft )
+public **getSingle** ( Article $articleValue, Boolean $draft )
 
 
 Get an article and return as JSON.
@@ -172,10 +172,53 @@ article.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| $articleValue | Boolean | &lt;ul&gt;
+| $articleValue | [Article](HelpscoutApi-Contracts-Article.md) |  |
+| $draft | Boolean | &lt;ul&gt;
 &lt;li&gt;optional&lt;/li&gt;
 &lt;/ul&gt; |
-| $draft | HelpscoutApi\Api\Get\CategoryValue |  |
+
+--
+
+public **getSingleRequest** ( Article $articleValue, Boolean $draft )
+
+
+Simmilar to getSingle, returns a request object instead.
+
+
+
+
+
+
+
+
+**Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| $articleValue | [Article](HelpscoutApi-Contracts-Article.md) |  |
+| $draft | Boolean | &lt;ul&gt;
+&lt;li&gt;optional&lt;/li&gt;
+&lt;/ul&gt; |
+
+--
+
+public **getSingleAsync** ( Request $request )
+
+
+Uses sendAsync to send a psr7 request.
+
+
+
+
+
+
+
+
+**Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| $request | GuzzleHttp\Psr7\Request |  |
 
 --
 

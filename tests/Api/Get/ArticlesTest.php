@@ -91,7 +91,7 @@ class ArticlesTest extends TestCase {
         $this->assertNotEmpty($response);
     }
 
-    public function testGetSingleRequestAsync() {
+    public function testGetSingleAsync() {
         $client = $this->fakeClient();
 
         $collectionStub = $this->createMock(Collection::class);
@@ -109,7 +109,7 @@ class ArticlesTest extends TestCase {
 
         $this->assertInstanceOf('GuzzleHttp\Psr7\Request', $request);
 
-        $async = $articles->getSingleRequestAsync($request);
+        $async = $articles->getSingleAsync($request);
 
         $results = Promise\settle($async)->wait();
 
@@ -205,6 +205,25 @@ class ArticlesTest extends TestCase {
 
         $articles = new Articles($client, $apiKeySub);
         $result   = $articles->collectionGetRequest($collectionSub);
+
+        $this->assertInstanceOf('GuzzleHttp\Psr7\Request', $result);
+    }
+
+    public function testGetSingleRequest() {
+        $client = $this->fakeClient();
+
+        $articleSub = $this->createMock(Article::class);
+
+        $articleSub->method('getId')
+                   ->willReturn('1');
+
+        $apiKeySub = $this->createMock(ApiKey::class);
+
+        $apiKeySub->method('getKey')
+                  ->willReturn('fakeApiKey');
+
+        $articles = new Articles($client, $apiKeySub);
+        $result   = $articles->getSingleRequest($articleSub);
 
         $this->assertInstanceOf('GuzzleHttp\Psr7\Request', $result);
     }

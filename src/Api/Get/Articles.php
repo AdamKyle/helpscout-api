@@ -152,8 +152,8 @@ class Articles {
      * Optional param is draft, which gets back or allows you to get back a draft
      * article.
      *
+     * @param Article
      * @param Boolean - optional
-     * @param CategoryValue
      * @return \stdClass
      */
     public function getSingle(Article $articleValue, bool $draft = false) {
@@ -177,12 +177,36 @@ class Articles {
     }
 
     /**
+     * Simmilar to getSingle, returns a request object instead.
+     *
+     * @param Article
+     * @param Boolean - optional
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function getSingleRequest(Article $articleValue, bool $draft = false) {
+        // Convert draft to string
+        $stringDraft = ($draft) ? 'true' : 'false';
+
+        return new Request(
+            'GET',
+            'articles/' . $articleValue->getId() . '?draft=' . $stringDraft,
+            [
+                'headers' => [
+                    'Accept' => 'application/json',
+                    'Content-Type' => 'application/json',
+                 ],
+                'auth' => [$this->apiKey, 'X']
+            ]
+        );
+    }
+
+    /**
      * Uses sendAsync to send a psr7 request.
      *
      * @param \GuzzleHttp\Psr7\Request
      * @return \GuzzleHttp\Promise\Promise
      */
-    public function getSingleRequestAsync(Request $request) {
+    public function getSingleAsync(Request $request) {
         return $this->client->sendAsync($request);
     }
 
