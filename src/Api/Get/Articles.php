@@ -191,11 +191,9 @@ class Articles {
             'GET',
             'articles/' . $articleValue->getId() . '?draft=' . $stringDraft,
             [
-                'headers' => [
-                    'Accept' => 'application/json',
-                    'Content-Type' => 'application/json',
-                 ],
-                'auth' => [$this->apiKey, 'X']
+                'Accept' => 'application/json',
+                'Content-Type' => 'application/json',
+                'Authorization' => 'Basic '. base64_encode($this->apiKey.':X')
             ]
         );
     }
